@@ -103,7 +103,7 @@ const AmalaSpecificLoader: React.FC = () => (
   return (
     <div className="py-4 sm:py-8 md:py-12 lg:py-24">
       <div
-        className="relative flex justify-center items-center min-h-screen text-center px-4 sm:px-8 md:px-16 lg:px-24 py-16"
+        className="relative flex justify-center items-center drop-shadow-red-800 min-h-screen text-center px-4 sm:px-8 md:px-16 lg:px-24 py-16"
         style={{
           backgroundImage: "url('/cfd.png')",
           backgroundSize: "cover",
@@ -118,11 +118,11 @@ const AmalaSpecificLoader: React.FC = () => (
         <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12 max-w-7xl">
           {/* Left Section: Text and Button */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-full lg:max-w-xl px-4 sm:px-0">
-            <h1 className="text-4xl md:text-4xl lg:text-5xl font-medium leading-tight text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 mb-4">
               Ancient Stories.
               <br />Modern Design.
             </h1>
-            <p className="text-4xl md:text-4xl lg:text-5xl font-serif  italic text-gray-900 mb-8">
+            <p className="text-4xl md:text-4xl lg:text-5xl font-serif italic text-gray-900 mb-8">
               Instantly.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-10 max-w-md">
@@ -178,7 +178,7 @@ const AmalaSpecificLoader: React.FC = () => (
               <svg className="w-6 h-6 text-purple-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
-              <span className=" text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full"></span>
+              <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Her</span>
             </div>
 
             <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Generated Assets</h2>

@@ -122,7 +122,7 @@ const AmalaSpecificLoader: React.FC = () => (
               Ancient Stories.
               <br />Modern Design.
             </h1>
-            <p className="text-4xl md:text-4xl lg:text-5xl font-serif  italic text-gray-900 mb-8">
+            <p className="text-4xl md:text-4xl lg:text-5xl font-serif italic text-gray-900 mb-8">
               Instantly.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-10 max-w-md">
@@ -178,7 +178,7 @@ const AmalaSpecificLoader: React.FC = () => (
               <svg className="w-6 h-6 text-purple-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
-              <span className=" text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full"></span>
+              <span className="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Her</span>
             </div>
 
             <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Generated Assets</h2>
