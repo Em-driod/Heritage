@@ -137,7 +137,7 @@ const AmalaSpecificLoader: React.FC = () => (
           </div>
 
           {/* Right Section: White Card with UI Elements */}
-          <div className="bg-white rounded-xl -translate-y-16 shadow-2xl p-6 top-0 sm:p-8 w-full max-w-md lg:max-w-lg mt-8 lg:mt-0">
+          <div className="bg-white rounded-xl translate-y-[-24px] shadow-2xl p-6 top-0 sm:p-8 w-full max-w-md lg:max-w-lg mt-8 lg:mt-0">
             <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-6">Select Culture</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
               {/* Yoruba Culture Button with Image */}

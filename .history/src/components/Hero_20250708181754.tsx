@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
         setShowAmalaSpecificLoading(true);
         setTimeout(() => {
           setShowAmalaSpecificLoading(false); // Make it disappear after 2 seconds
-        }, 5000); // 2 seconds
+        }, 2000); // 2 seconds
       }
 
     }, 1500); // Simulate 1.5 second general loading time
@@ -88,9 +88,9 @@ const Hero: React.FC = () => {
 
   // Specific Amala Loading Component - now with an image!
 const AmalaSpecificLoader: React.FC = () => (
-  <div className="flex flex-col justify-center bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm text-gray-800 space-y-4">
+  <div className="flex flex-col items-start justify-center bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm text-gray-800 space-y-2">
     <p><span className="font-semibold text-red-500">Symbol:</span> Symbolic of earthiness, heritage, and resilience.</p>
-    <p><span className="font-semibold text-red-500 items-start">Color:</span> Dark Brown/Charcoal</p>
+    <p><span className="font-semibold text-red-500">Color:</span> Dark Brown/Charcoal</p>
     <p><span className="font-semibold text-red-500">Made From:</span> Elubo (yam flour), sometimes cassava flour or plantain.</p>
     <p><span className="font-semibold text-red-500">Regions Known For It:</span> Deeply rooted in Oyo, Osun, Ibadan. Especially beloved in Ibadan, where people.</p>
     <p><span className="font-semibold text-red-500">Enjoyed With:</span> Typically served with ewedu, gbegiri, and obe ata.</p>
@@ -101,7 +101,7 @@ const AmalaSpecificLoader: React.FC = () => (
 
 
   return (
-    <div className="py-4 sm:py-8 md:py-12 lg:py-24">
+    <div className="p-4 sm:p-8 md:p-12 lg:p-24">
       <div
         className="relative flex justify-center items-center min-h-screen text-center px-4 sm:px-8 md:px-16 lg:px-24 py-16"
         style={{
@@ -137,7 +137,7 @@ const AmalaSpecificLoader: React.FC = () => (
           </div>
 
           {/* Right Section: White Card with UI Elements */}
-          <div className="bg-white rounded-xl -translate-y-16 shadow-2xl p-6 top-0 sm:p-8 w-full max-w-md lg:max-w-lg mt-8 lg:mt-0">
+          <div className="bg-white rounded-xl shadow-2xl p-6 sm:p-8 w-full max-w-md lg:max-w-lg mt-8 lg:mt-0">
             <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-6">Select Culture</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
               {/* Yoruba Culture Button with Image */}

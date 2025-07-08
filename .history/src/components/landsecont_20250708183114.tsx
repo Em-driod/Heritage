@@ -3,12 +3,12 @@ const Landsecont = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       {/* Top Section: Main Heading and Subheading */}
       <div className="text-center mb-16 max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-gray-900 leading-tight">
           Design shouldn't feel
           <br />
           like guesswork.
         </h1>
-        <p className="mt-6 text-sm sm:text-sm w-104 text-gray-700 leading-relaxed">
+        <p className="mt-6 text-lg sm:text-xl text-gray-700 leading-relaxed">
           Let's be honest, typing "tribal pattern" into Google
           isn't design research.
           <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text"> Hard </span>

@@ -8,7 +8,7 @@ const Landsecont = () => {
           <br />
           like guesswork.
         </h1>
-        <p className="mt-6 text-sm sm:text-sm w-104 text-gray-700 leading-relaxed">
+        <p className="mt-6 text-sm sm:text-sm w-10 text-gray-700 leading-relaxed">
           Let's be honest, typing "tribal pattern" into Google
           isn't design research.
           <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text"> Hard </span>
