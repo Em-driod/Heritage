@@ -40,8 +40,8 @@ const Landsecont = () => {
         </div>
 
         {/* Right Column: After HeritageAI */}
-            <div className="  flex-1    flex flex-col mt-6">
-                <span role="img" aria-label="party popper" className="text-2xl -translate-x-12">
+            <div className="  flex-1    flex flex-col">
+                <span role="img" aria-label="party popper" className="text-2xl translate-x-12">
           
         </span>
         

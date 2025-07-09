@@ -175,7 +175,7 @@ const Landfifth = () => {
           <div className="lg:hidden w-full h-0.5 bg-pink-300 my-8"></div>
           <div className="lg:w-1/2 flex items-center justify-center">
             <img
-              src="/teli.png" // Placeholder for Computer Workstation image
+              src="/" // Placeholder for Computer Workstation image
               alt="Computer Workstation"
               className="w-full h-auto rounded-xl max-w-md"
             />

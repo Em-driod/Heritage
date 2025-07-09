@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
         
         <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12 max-w-7xl">
           {/* Left Section */}
-          <div className="flex flex-col items-center mt-6 lg:items-start text-center lg:text-left max-w-full lg:max-w-xl px-4 sm:px-0">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-full lg:max-w-xl px-4 sm:px-0">
             <h1 className="text-4xl md:text-4xl lg:text-5xl font-medium leading-tight text-gray-900 mb-8">
               Ancient Stories.<br />Modern Design.
             </h1>

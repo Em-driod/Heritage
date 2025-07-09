@@ -19,10 +19,10 @@ const Landsecont = () => {
 
       {/* Middle Section: Emojis */}
       <div className="flex justify-between w-full max-w-5xl px-8 mb-12">
-        <span role="img" aria-label="sad face" className="text-4xl  translate-x-40">
+        <span role="img" aria-label="sad face" className="text-4xl  translate-x-12">
           😔
         </span>
-        <span role="img" aria-label="party popper" className="text-6xl -translate-x-40">
+        <span role="img" aria-label="party popper" className="text-6xl translate-x-12">
           🎉
         </span>
       </div>
@@ -30,7 +30,7 @@ const Landsecont = () => {
       {/* Bottom Section: Before & After Cards */}
       <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 w-full max-w-5xl">
         {/* Left Column: Before Google Search */}
-        <div className="  flex-1  p-6 flex flex-col">
+        <div className="bg-white rounded-2xl shadow-xl flex-1 border-4 border-red-200 p-6 flex flex-col">
         
           <img
             src="/afre.png"
@@ -40,9 +40,9 @@ const Landsecont = () => {
         </div>
 
         {/* Right Column: After HeritageAI */}
-            <div className="  flex-1    flex flex-col mt-6">
-                <span role="img" aria-label="party popper" className="text-2xl -translate-x-12">
-          
+            <div className="bg-white rounded-2xl shadow-xl flex-1 border-4 border-red-200 p-6 flex flex-col">
+                <span role="img" aria-label="party popper" className="text-2xl translate-x-12">
+          🎉
         </span>
         
           <img
