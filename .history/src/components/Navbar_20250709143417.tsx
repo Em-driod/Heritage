@@ -99,8 +99,7 @@ const Navbar: React.FC = () => {
             {/* Mobile Search Bar */}
             <li className="w-full px-4">
               <div className="flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 w-full">
-              <CiSearch />
-
+              
                 <input
                   type="text"
                   placeholder="Yoruba culture"

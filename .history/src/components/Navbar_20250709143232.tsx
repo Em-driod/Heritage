@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { CiMenuBurger } from "react-icons/ci";
-import { CiMenuKebab } from "react-icons/ci";
-import { CiSearch } from "react-icons/ci";
-// Import menu and close icons
- // Import a search icon (e.g., from ionicons)
+import { CiMenuBurger } from "react-icons/ci";// Import menu and close icons
+import { IoSearch } from 'react-icons'; // Import a search icon (e.g., from ionicons)
 
 // No specific props for Navbar, so we can use React.FC<object> or just React.FC
 const Navbar: React.FC = () => {
@@ -50,8 +47,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center">
           {/* Desktop Search Bar */}
           <div className="hidden md:flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 max-w-sm w-80 focus-within:ring-2 focus-within:ring-blue-300">
-            
-          <CiSearch />
+            <IoSearch />
             <input
               type="text"
               placeholder="Yoruba culture"
@@ -99,8 +95,7 @@ const Navbar: React.FC = () => {
             {/* Mobile Search Bar */}
             <li className="w-full px-4">
               <div className="flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 w-full">
-              <CiSearch />
-
+                <IoSearch />
                 <input
                   type="text"
                   placeholder="Yoruba culture"

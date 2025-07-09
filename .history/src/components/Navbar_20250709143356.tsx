@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { CiMenuBurger } from "react-icons/ci";
 import { CiMenuKebab } from "react-icons/ci";
-import { CiSearch } from "react-icons/ci";
 // Import menu and close icons
  // Import a search icon (e.g., from ionicons)
 
@@ -99,8 +98,7 @@ const Navbar: React.FC = () => {
             {/* Mobile Search Bar */}
             <li className="w-full px-4">
               <div className="flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 w-full">
-              <CiSearch />
-
+                <IoSearch />
                 <input
                   type="text"
                   placeholder="Yoruba culture"
