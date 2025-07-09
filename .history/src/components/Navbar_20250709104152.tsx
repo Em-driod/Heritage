@@ -14,12 +14,6 @@ const Navbar = () => {
         </div>
        
       </div>
-       <nav className="hidden md:flex space-x-6">
-          {/* Using standard <a> tags */}
-          <a href="/culture" className="text-gray-700 hover:text-gray-900">Culture</a>
-          <a href="/gallery" className="text-gray-700 hover:text-gray-900">Gallery</a>
-          <a href="/about" className="text-gray-700 hover:text-gray-900">About</a>
-        </nav>
       <div className="relative flex items-center">
         <input
           type="text"

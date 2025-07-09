@@ -84,9 +84,9 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <div className="py-4 sm:py-8 md:py-12 lg:py-24">
+    <div className="py-4 sm:py-8 md:py-12 lg:py-24 h-screen">
       <div
-        className="relative flex justify-center items-center min-h-screen text-center "
+        className="relative flex justify-center items-center h-screen text-center px-0 sm:px-8 md:px-0 lg:pt-24 pt-16"
         style={{
           backgroundImage: "url('/cfd.png')",
           backgroundSize: "cover",
@@ -115,9 +115,9 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Right Section Card + Aura */}
-          <div className="relative w-full max-w-md lg:max-w-lg  lg:mt-0">
+          <div className="relative w-full max-w-md h-3/4 lg:max-w-lg  lg:mt-0">
             {/* Glow effects behind the card */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-60 h-60 bg-purple-800 opacity- blur-2xl rounded-full z-[-1]" />
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-60 h-60 bg-purple-800 opacity-10 blur-2xl rounded-full z-[-1]" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-green-400 opacity-30 blur-xl rounded-full z-[-1]" />
             <div className="absolute left-0 bottom-20 w-40 h-40 bg-yellow-400 opacity-40 blur-xl rounded-full z-[-1]" />
 

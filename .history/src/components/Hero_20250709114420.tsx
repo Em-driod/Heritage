@@ -84,9 +84,9 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <div className="py-4 sm:py-8 md:py-12 lg:py-24">
+    <div className="">
       <div
-        className="relative flex justify-center items-center min-h-screen text-center "
+        className="relative flex justify-center items-center min-h-screen text-center px-0 sm:px-8 md:px-0 lg:pt-24 pt-16"
         style={{
           backgroundImage: "url('/cfd.png')",
           backgroundSize: "cover",
