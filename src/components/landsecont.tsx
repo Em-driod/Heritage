@@ -1,6 +1,6 @@
 const Landsecont = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col overflow-hidden items-center justify-center min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       {/* Top Section: Main Heading and Subheading */}
       <div className="text-center mb-16 max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight">

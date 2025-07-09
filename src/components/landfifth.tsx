@@ -40,7 +40,7 @@ const Landfifth = () => {
           <div className="lg:hidden w-full h-0.5 bg-pink-300 my-8"></div>
           <div className="lg:w-1/2 flex items-center justify-center"> {/* Centering image in its half */}
             <img
-              src="https://via.placeholder.com/400x250/F8F8F8/000000?text=Masks+Image" // Placeholder for Masks image
+              src="/teli.png" // Placeholder for Masks image
               alt="Cultural Masks"
               className="w-full h-auto rounded-xl max-w-md"
             />
@@ -175,7 +175,7 @@ const Landfifth = () => {
           <div className="lg:hidden w-full h-0.5 bg-pink-300 my-8"></div>
           <div className="lg:w-1/2 flex items-center justify-center">
             <img
-              src="/teli.png" // Placeholder for Computer Workstation image
+              src="/" // Placeholder for Computer Workstation image
               alt="Computer Workstation"
               className="w-full h-auto rounded-xl max-w-md"
             />

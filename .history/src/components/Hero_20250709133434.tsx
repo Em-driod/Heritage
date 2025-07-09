@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, } from 'framer-motion'; // Removed Variants from here
 
 interface Asset {
   src: string;
@@ -13,20 +13,19 @@ const Hero: React.FC = () => {
   const [showAmalaSpecificLoading, setShowAmalaSpecificLoading] = useState<boolean>(false);
 
   // Animation variants for different elements
-  // Keeping these as objects because the error seemed to be specifically related
-  // to the 'Variants' type import/usage, not the concept of variants themselves.
-  const containerVariants = {
+  // No explicit type annotation needed here, TypeScript will infer from usage
+  const containerVariants = { // Type inference will work without explicitly ": Variants"
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
+        delayChildren: 0.3, // Delay the children animations slightly
+        staggerChildren: 0.2, // Stagger appearance of immediate children
       },
     },
   };
 
-  const itemVariants = {
+  const itemVariants = { // Type inference will work
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -35,17 +34,21 @@ const Hero: React.FC = () => {
     },
   };
 
-  const cardVariants = {
+  const cardVariants = { // Type inference will work
     hidden: { scale: 0.9, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
-      transition: { type: 'spring', stiffness: 80, damping: 10, delay: 0.6 },
+      transition: { type: 'spring', stiffness: 80, damping: 10, delay: 0.6 }, // Delay card appearance
     },
   };
 
-  // Removed assetItemVariants object. We will apply initial/animate/exit directly.
-  // The staggering from containerVariants will still work for 'visible'.
+  // Adjusted assetItemVariants for use with AnimatePresence
+  const assetItemVariants = { // Type inference will work
+    hidden: { x: -20, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { type: 'spring', stiffness: 100, damping: 10 } },
+    exit: { x: 20, opacity: 0, transition: { duration: 0.3 } }, // Slide out to the right when exiting
+  };
 
   // --- Data Fetching Logic (Unchanged) ---
   const fetchGeneratedAssets = (cultureParam: string) => {
@@ -62,15 +65,15 @@ const Hero: React.FC = () => {
         ];
       } else if (cultureParam === 'Igbo') {
         assetsData = [
-          { src: "/igbo-asset1.jpg", label: "Odinani" },
-          { src: "/igbo-asset2.jpg", label: "Agbogho Mmuo" },
-          { src: "/igbo-asset3.jpg", label: "Igbo Ukwu" },
+          { src: "/igbo-asset1.jpg", label: "Odinani" }, // Updated path for demonstration
+          { src: "/igbo-asset2.jpg", label: "Agbogho Mmuo" }, // Updated path
+          { src: "/igbo-asset3.jpg", label: "Igbo Ukwu" }, // Updated path
         ];
       } else if (cultureParam === 'Japan') {
         assetsData = [
-          { src: "/japanese-asset1.jpg", label: "Geisha" },
-          { src: "/japanese-asset2.jpg", label: "Samurai" },
-          { src: "/japanese-asset3.jpg", label: "Sakura" },
+          { src: "/japanese-asset1.jpg", label: "Geisha" }, // Updated path
+          { src: "/japanese-asset2.jpg", label: "Samurai" }, // Updated path
+          { src: "/japanese-asset3.jpg", label: "Sakura" }, // Updated path
         ];
       }
       setGeneratedAssets(assetsData);
@@ -113,7 +116,7 @@ const Hero: React.FC = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
+      exit={{ opacity: 0, y: 20 }} // For smooth exit if it were unmounted
       transition={{ duration: 0.5 }}
       className="flex flex-col justify-center bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm text-gray-800 space-y-4"
     >
@@ -225,7 +228,6 @@ const Hero: React.FC = () => {
                     <SkeletonLoader />
                   </motion.div>
                 ) : (
-                  // The parent div still uses containerVariants for stagger, which is fine
                   <motion.div
                     key="assets-container"
                     variants={containerVariants}
@@ -234,13 +236,9 @@ const Hero: React.FC = () => {
                     className="space-y-4 mb-8"
                   >
                     {generatedAssets.map((asset) => (
-                      // Apply initial, animate, exit, and transition directly here
                       <motion.div
                         key={asset.label}
-                        initial={{ x: -20, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        exit={{ x: 20, opacity: 0 }}
-                        transition={{ duration: 0.3, type: 'spring', stiffness: 100, damping: 10 }}
+                        variants={assetItemVariants}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-3">
@@ -274,6 +272,7 @@ const Hero: React.FC = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
+
 
               <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Color Palette</h2>
               <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
