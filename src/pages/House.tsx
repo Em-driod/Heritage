@@ -3,6 +3,7 @@ import Landsecont from "../components/landsecont"
 import Landthird from "../components/landthird"
 import Landfourth from "../components/landfourth"
 import Landfifth from "../components/landfifth"
+import Landsix from "../components/landsix"
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Landthird />
      <Landfourth />
      <Landfifth />
+     <Landsix />
     </div>
   )
 }

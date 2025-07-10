@@ -10,11 +10,10 @@ const Hero: React.FC = () => {
   const [selectedCulture, setSelectedCulture] = useState<string>('Yoruba');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [generatedAssets, setGeneratedAssets] = useState<Asset[]>([]);
-  const [showAmalaSpecificLoading, setShowAmalaSpecificLoading] = useState<boolean>(false);
+  const [hoveredAsset, setHoveredAsset] = useState<string | null>(null);
 
   const fetchGeneratedAssets = (cultureParam: string) => {
     setIsLoading(true);
-    setShowAmalaSpecificLoading(false);
 
     setTimeout(() => {
       let assetsData: Asset[] = [];
@@ -39,11 +38,6 @@ const Hero: React.FC = () => {
       }
       setGeneratedAssets(assetsData);
       setIsLoading(false);
-
-      if (cultureParam === 'Yoruba') {
-        setShowAmalaSpecificLoading(true);
-        setTimeout(() => setShowAmalaSpecificLoading(false), 5000);
-      }
     }, 1500);
   };
 
@@ -53,9 +47,77 @@ const Hero: React.FC = () => {
 
   const handleCultureSelect = (cultureName: string) => {
     setSelectedCulture(cultureName);
+    setHoveredAsset(null);
   };
 
-  const SkeletonLoader: React.FC = () => (
+  const AssetDropdown = ({ assetLabel }: { assetLabel: string }) => {
+    switch (assetLabel) {
+      case 'Obatala':
+        return (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="mt-2 bg-pink-100 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+          >
+            <div className="flex items-start space-x-3">
+              <div className="flex-1 text-start min-w-0">
+                <p className="font-medium text-purple-600 mb-2 text-start">Creator Deity</p>
+                <p className="mb-1">• Supreme creator of human bodies</p>
+                <p className="mb-1">• Associated with purity and wisdom</p>
+                <p className="mb-1">• Patron of those with disabilities</p>
+                <p className="text-xs italic text-gray-500 mt-2">"King of the White Cloth" in Yoruba mythology</p>
+              </div>
+            </div>
+          </motion.div>
+        );
+      case 'Amala':
+        return (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="mt-2 bg-pink-100 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+          >
+            <div className="flex items-start space-x-3">
+              <div className="flex-1 min-w-0 text-start">
+                <p className="font-medium text-red-600 mb-2">Traditional Dish</p>
+                <p className="mb-1">• Made from yam flour (elubo)</p>
+                <p className="mb-1">• Typically served with ewedu and gbegiri soup</p>
+                <p className="mb-1">• Staple food in Western Nigeria</p>
+                <p className="text-xs italic text-gray-500 mt-2">A symbol of Yoruba culinary heritage</p>
+              </div>
+            </div>
+          </motion.div>
+        );
+      case 'Oshun':
+        return (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="mt-2 bg-pink-100 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+          >
+            <div className="flex items-start space-x-3 text-start">
+              <div className="flex-1 min-w-0">
+                <p className="font-medium text-yellow-600 mb-2 text-start">Goddess of Love</p>
+                <p className="mb-1">• Orisha of rivers, love, and fertility</p>
+                <p className="mb-1">• Associated with fresh water and honey</p>
+                <p className="mb-1">• Patron of the Osun River</p>
+                <p className="text-xs italic text-gray-500 mt-2">Celebrated annually at the Osun-Osogbo festival</p>
+              </div>
+            </div>
+          </motion.div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  const SkeletonLoader = () => (
     <div className="space-y-4">
       {[1, 2, 3].map((_, index) => (
         <motion.div 
@@ -66,304 +128,269 @@ const Hero: React.FC = () => {
           transition={{ delay: index * 0.1 }}
         >
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-lg bg-gray-200 animate-pulse"></div>
-            <div className="h-4 bg-gray-200 rounded w-24 animate-pulse"></div>
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gray-200 animate-pulse"></div>
+            <div className="h-3 sm:h-4 bg-gray-200 rounded w-16 sm:w-24 animate-pulse"></div>
           </div>
-          <div className="flex space-x-2">
-            <div className="h-8 bg-gray-200 rounded w-16 animate-pulse"></div>
-            <div className="h-8 bg-gray-200 rounded w-16 animate-pulse"></div>
+          <div className="flex space-x-1 sm:space-x-2">
+            <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
+            <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
           </div>
         </motion.div>
       ))}
     </div>
   );
 
-  const AmalaSpecificLoader: React.FC = () => (
-    <motion.div 
-      className="flex flex-col justify-center bg-gray-50 p-4 rounded-lg border border-gray-200 text-sm text-gray-800 space-y-4"
-      initial={{ opacity: 0, height: 0 }}
-      animate={{ opacity: 1, height: 'auto' }}
-      exit={{ opacity: 0, height: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      <p><span className="font-semibold text-red-500">Symbol:</span> Symbolic of earthiness, heritage, and resilience.</p>
-      <p><span className="font-semibold text-red-500">Color:</span> Dark Brown/Charcoal</p>
-      <p><span className="font-semibold text-red-500">Made From:</span> Elubo (yam flour), sometimes cassava flour or plantain.</p>
-      <p><span className="font-semibold text-red-500">Regions Known For It:</span> Deeply rooted in Oyo, Osun, Ibadan.</p>
-      <p><span className="font-semibold text-red-500">Enjoyed With:</span> Ewedu, gbegiri, and obe ata.</p>
-      <p className="italic text-gray-600">Sometimes called the "Yoruba national combo."</p>
-    </motion.div>
+  // New Skeleton for Color Palette
+  const ColorPaletteSkeletonLoader = () => (
+    <div className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0">
+      <div className="flex space-x-1 sm:space-x-2">
+        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-200 animate-pulse"></div>
+        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-200 animate-pulse"></div>
+        <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-200 animate-pulse"></div> {/* Third color */}
+      </div>
+      <div className="flex space-x-1 sm:space-x-2">
+        <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
+        <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
+      </div>
+    </div>
   );
 
-  const cultureVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.5
-      }
-    })
-  };
-
-  const assetVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.3
-      }
-    }
-  };
-
   return (
-    <div className="py-4 sm:py-8 md:py-12 lg:py-24">
-      <div
-        className="relative flex justify-center items-center min-h-screen text-center"
+    <motion.div 
+      className="py-4 sm:py-8 md:py-12 lg:py-24"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="relative flex justify-center items-center min-h-screen text-center px-4 sm:px-0"
         style={{
           backgroundImage: "url('/cfd.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80 z-0" />
         
-        <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-8 lg:gap-12 max-w-7xl">
+        <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-6 sm:gap-8 lg:gap-12 max-w-7xl">
           {/* Left Section */}
           <motion.div 
-            className="flex flex-col items-center mt-6 lg:items-start text-center lg:text-left max-w-full lg:max-w-xl px-4 sm:px-0"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            className="flex flex-col items-center mt-4 sm:mt-6 lg:items-start text-center lg:text-left max-w-full lg:max-w-xl px-4 sm:px-0"
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <motion.h1 
-              className="text-4xl md:text-4xl lg:text-5xl font-medium leading-tight text-gray-900 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
+            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-medium leading-tight text-gray-900 mb-6 sm:mb-8">
               Ancient Stories.<br />Modern Design.
-            </motion.h1>
+            </h1>
             <motion.p 
-              className="text-4xl md:text-4xl lg:text-5xl font-serif italic text-gray-900 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
+              className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-serif italic text-gray-900 mb-6 sm:mb-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
             >
               Instantly.
             </motion.p>
             <motion.p 
-              className="text-base sm:text-lg text-gray-700 mb-10 max-w-md"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              className="text-sm sm:text-base md:text-lg text-gray-700 mb-8 sm:mb-10 max-w-md"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
             >
               Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
             </motion.p>
             <motion.button 
-              className="flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              className="flex items-center px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition duration-300 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
             >
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
               </svg>
               Try Beta Free
             </motion.button>
           </motion.div>
 
-          {/* Right Section Card + Aura */}
+          {/* Right Section Card */}
           <motion.div 
-            className="relative w-full max-w-md lg:max-w-lg lg:mt-0"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg lg:mt-0"
+            initial={{ x: 20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {/* Glow effects behind the card */}
+            {/* Colored shadow effects */}
+            <div className="absolute -inset-2 sm:-inset-3 z-0 opacity-70 pointer-events-none">
+              {/* Purple shadow (right) - most prominent */}
+              <motion.div 
+                className="absolute inset-y-0 right-0 w-full bg-purple-400 rounded-xl blur-xl shadow-lg"
+                style={{ width: '100px', marginLeft:'500px', right: '-45px' }}
+                animate={{ opacity: [0.5, 0.7, 0.5] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              />
+              
+              {/* Light green shadow (top) */}
+              <motion.div 
+                className="absolute inset-x-0 top-0 h-full bg-green-100 rounded-xl blur-xl" 
+                style={{ height: '30px', top: '-10px' }}
+                animate={{ opacity: [0.3, 0.5, 0.3] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              />
+              
+              {/* Light yellow shadow (left) */}
+              <motion.div 
+                className="absolute inset-y-0 left-0 w-full bg-yellow-200 rounded-xl blur-xl" 
+                style={{ width: '30px', left: '-10px' }}
+                animate={{ opacity: [0.3, 0.5, 0.3] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+              />
+            </div>
+            
             <motion.div 
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-60 h-60 bg-purple-800 opacity-10 blur-2xl rounded-full z-[-1]"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.1, 0.15, 0.1]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <motion.div 
-              className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-green-400 opacity-30 blur-xl rounded-full z-[-1]"
-              animate={{
-                scale: [1, 1.05, 1],
-                opacity: [0.3, 0.4, 0.3]
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-            />
-            <motion.div 
-              className="absolute left-0 bottom-20 w-40 h-40 bg-yellow-400 opacity-40 blur-xl rounded-full z-[-1]"
-              animate={{
-                scale: [1, 1.08, 1],
-                opacity: [0.4, 0.5, 0.4]
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 2
-              }}
-            />
-
-            {/* Actual Card */}
-            <motion.div 
-              className="bg-white rounded-xl shadow-2xl p-0 sm:p-8"
+              className="relative bg-white rounded-xl shadow-xl sm:shadow-2xl p-4 sm:p-6 md:p-8 z-10"
               whileHover={{ y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-6">Select Culture</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-                {/* Culture Buttons */}
-                {['Yoruba', 'Igbo', 'Japan'].map((culture, i) => (
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-4 sm:mb-6">Select Culture</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-6 sm:mb-8">
+                {['Yoruba', 'Igbo', 'Japan'].map((culture) => (
                   <motion.button
                     key={culture}
-                    className={`relative flex items-center justify-center p-3 rounded-md text-sm font-medium text-white h-20 overflow-hidden ${selectedCulture === culture ? 'ring-2 ring-purple-500 ring-offset-2' : ''}`}
+                    className={`relative flex items-center justify-center p-2 sm:p-3 rounded-md text-xs sm:text-sm font-medium text-white h-16 sm:h-20 overflow-hidden transition-all duration-200 
+                      ${selectedCulture === culture ? 'ring-2 ring-purple-500 ring-offset-1 sm:ring-offset-2 scale-[1.02]' : 'hover:scale-[1.02]'}
+                      ${culture === 'Japan' ? 'col-span-2 mx-auto w-32 sm:col-span-1 sm:mx-0' : ''} ` /* Added class for Japan centering */}
                     onClick={() => handleCultureSelect(culture)}
-                    custom={i}
-                    initial="hidden"
-                    animate="visible"
-                    variants={cultureVariants}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
                     <img src={`/${culture.toLowerCase()}.png`} alt={`${culture} Culture`} className="absolute inset-0 w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center"></div>
+                    <div className="absolute inset-0 bg-opacity-30 flex items-center justify-center"></div>
+                    <span className="relative z-10 text-shadow"></span>
                   </motion.button>
                 ))}
               </div>
 
               <motion.div 
-                className="flex flex-col items-center mb-6"
-                animate={{ 
-                  y: [0, 5, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+                className="flex flex-col items-center mb-4 sm:mb-6"
+                animate={{ y: [0, 5, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
               >
-                <svg className="w-6 h-6 text-purple-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 mb-1 sm:mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </motion.div>
 
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Generated Assets</h2>
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Generated Assets</h2>
               {isLoading ? (
                 <SkeletonLoader />
               ) : (
-                <div className="space-y-4 mb-8">
-                  <AnimatePresence>
-                    {generatedAssets.map((asset) => (
-                      <motion.div
-                        key={asset.label}
-                        variants={assetVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
-                        layout
+                <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                  {generatedAssets.map((asset) => (
+                    <div key={asset.label} className="group">
+                      <motion.div 
+                        className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
+                        onMouseEnter={() => setHoveredAsset(asset.label)}
+                        onMouseLeave={() => setHoveredAsset(null)}
+                        whileHover={{ x: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
                       >
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-3">
-                            <motion.img 
+                        <div className="flex items-center space-x-2 sm:space-x-3">
+                          <motion.div 
+                            className="relative"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            <img 
                               src={asset.src} 
                               alt={asset.label} 
-                              className="w-12 h-12 rounded-lg object-cover"
-                              whileHover={{ scale: 1.1 }}
+                              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover border border-gray-200"
                             />
-                            <span className="text-gray-800 font-medium">{asset.label}</span>
-                          </div>
-                          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 text-sm">
-                            <motion.button 
-                              className="px-3 py-1 border border-pink-200 text-pink-600 rounded-md hover:bg-pink-50"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              Export
-                            </motion.button>
-                            <motion.button 
-                              className="px-3 py-1 border border-pink-200 text-pink-600 rounded-md hover:bg-pink-50"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              Share
-                            </motion.button>
-                          </div>
+                            <div className={`absolute inset-0 rounded-lg border-2 ${asset.label === 'Obatala' ? 'border-purple-300' : asset.label === 'Amala' ? 'border-red-300' : 'border-yellow-300'} opacity-0 group-hover:opacity-100 transition-opacity duration-200`}></div>
+                          </motion.div>
+                          <span className="text-sm sm:text-base text-gray-800 font-medium">{asset.label}</span>
                         </div>
-                        <AnimatePresence>
-                          {asset.label === 'Amala' && selectedCulture === 'Yoruba' && showAmalaSpecificLoading && (
-                            <AmalaSpecificLoader />
-                          )}
-                        </AnimatePresence>
+                        <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2 text-xs sm:text-sm">
+                          <motion.button 
+                            className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            Export
+                          </motion.button>
+                          <motion.button 
+                            className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            Share
+                          </motion.button>
+                        </div>
                       </motion.div>
-                    ))}
-                  </AnimatePresence>
+                      <AnimatePresence>
+                        {hoveredAsset === asset.label && <AssetDropdown assetLabel={asset.label} />}
+                      </AnimatePresence>
+                    </div>
+                  ))}
                 </div>
               )}
 
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4">Color Palette</h2>
-              <motion.div 
-                className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-              >
-                <div className="flex space-x-2">
-                  <motion.button 
-                    className="w-8 h-8 rounded-full border border-gray-300 bg-cover bg-center"
-                    style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                  />
-                  <motion.button 
-                    className="w-8 h-8 rounded-full border border-gray-300 bg-cover bg-center"
-                    style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                  />
-                </div>
-                <div className="flex space-x-2 text-sm">
-                  <motion.button 
-                    className="px-3 py-1 border border-pink-200 text-pink-600 rounded-md hover:bg-pink-50"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Export
-                  </motion.button>
-                  <motion.button 
-                    className="px-3 py-1 border border-pink-200 text-pink-600 rounded-md hover:bg-pink-50"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Share
-                  </motion.button>
-                </div>
-              </motion.div>
+              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Color Palette</h2>
+              {isLoading ? ( // Apply skeleton loader here
+                <ColorPaletteSkeletonLoader />
+              ) : (
+                <motion.div 
+                  className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0"
+                  whileHover={{ scale: 1.01 }}
+                >
+                  <div className="flex space-x-1 sm:space-x-2">
+                    <motion.div 
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
+                      style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
+                      whileHover={{ scale: 1.2 }}
+                    />
+                    <motion.div 
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
+                      style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
+                      whileHover={{ scale: 1.2 }}
+                    />
+                    {/* Added third color palette */}
+                    <motion.div 
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
+                      style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
+                      whileHover={{ scale: 1.2 }}
+                    />
+                  </div>
+                  <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
+                    <motion.button 
+                      className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                      whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Export
+                    </motion.button>
+                    <motion.button 
+                      className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                      whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Share
+                    </motion.button>
+                  </div>
+                </motion.div>
+              )}
             </motion.div>
           </motion.div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
