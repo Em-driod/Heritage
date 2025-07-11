@@ -65,9 +65,9 @@ const Hero: React.FC = () => {
               <div className="flex-1 text-start min-w-0">
             
                 <p className="mb-4"><span className='text-pink-400'>Symbol</span> obatala, tke Orisha of purity,  <br />wisdom, and peace.</p>
-                <p className="mb-1"><span className='text-pink-400'>Color:</span>  Pure white </p>
-                <p className="mb-1"> <span className='text-pink-400'>Why:</span> Whte symbolizes purity, clarity,and <br />divine intelligence.Obatala devotees wear <br />white head to toe</p>
-                 <p className="mb-1"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and  <br />ceremonial food offerings (always white )</p>
+                <p className="mb-4"><span className='text-pink-400'>Color:</span>  Pure white </p>
+                <p className="mb-4"> <span className='text-pink-400'>Why:</span> Whte symbolizes purity, clarity,and <br />divine intelligence.Obatala devotees wear <br />white head to toe</p>
+                 <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and  <br />ceremonial food offerings (always white )</p>
              
 
                
@@ -87,11 +87,11 @@ const Hero: React.FC = () => {
                 <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
             
-                <p className="mb-1"><span className='text-pink-400'>Symbol</span>  Symbolic of earthiness heritage, <br />and resiliance</p>
-                <p className="mb-1"><span className='text-pink-400'>Color:</span>  Dark brown/Charcoal. </p>
-                <p className="mb-1"> <span className='text-pink-400'>Made From:</span> Elubo(yam flour)sometimes <br />chocolate flour or plaintain flour.</p>
-                 <p className="mb-1"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
-                 <p className='mb-6'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
+                <p className="mb-4"><span className='text-pink-400'>Symbol</span>  Symbolic of earthiness heritage, <br />and resiliance</p>
+                <p className="mb-4"><span className='text-pink-400'>Color:</span>  Dark brown/Charcoal. </p>
+                <p className="mb-4"> <span className='text-pink-400'>Made From:</span> Elubo(yam flour)sometimes <br />chocolate flour or plaintain flour.</p>
+                 <p className="mb-4"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
+                 <p className='mb-4'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
 
                  <p>sometimes called the "yoruba national combo."</p>
               </div>
@@ -111,9 +111,9 @@ const Hero: React.FC = () => {
               <div className="flex-1 text-start min-w-0">
             
                 <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility   <br />rivers and femininity.</p>
-                <p className="mb-1"><span className='text-pink-400'>Color:</span>  Gold </p>
-                <p className="mb-1"> <span className='text-pink-400'>Why:</span>Gold symbolizes wealth, feminity,<br />radiance, and sacred rivers</p>
-                 <p className="mb-1"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival  <br />gaments,river offerings.</p>
+                <p className="mb-4"><span className='text-pink-400'>Color:</span>  Gold </p>
+                <p className="mb-4"> <span className='text-pink-400'>Why:</span>Gold symbolizes wealth, feminity,<br />radiance, and sacred rivers</p>
+                 <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival  <br />gaments,river offerings.</p>
              
 
                
