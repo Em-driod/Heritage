@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
     switch (assetLabel) {
       case 'Obatala':
         return (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -63,60 +63,50 @@ const Hero: React.FC = () => {
           >
             <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
-            
-                <p className="mb-4"><span className='text-pink-400'>Symbol</span> obatala, tke Orisha of purity,  <br />wisdom, and peace.</p>
-                <p className="mb-4"><span className='text-pink-400'>Color:</span>  Pure white </p>
+                <p className="mb-4"><span className='text-pink-400'>Symbol</span> obatala, tke Orisha of purity,   <br />wisdom, and peace.</p>
+                <p className="mb-4"><span className='text-pink-400'>Color:</span>   Pure white </p>
                 <p className="mb-4"> <span className='text-pink-400'>Why:</span> Whte symbolizes purity, clarity,and <br />divine intelligence.Obatala devotees wear <br />white head to toe</p>
-                 <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and  <br />ceremonial food offerings (always white )</p>
-             
-
-               
+                <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and   <br />ceremonial food offerings (always white )</p>
               </div>
             </div>
           </motion.div>
         );
       case 'Amala':
         return (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="mt-2 bg-white w-74 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
-                <div className="flex items-start space-x-3">
+            <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
-            
-                <p className="mb-4"><span className='text-pink-400'>Symbol</span>  Symbolic of earthiness heritage, <br />and resiliance</p>
-                <p className="mb-4"><span className='text-pink-400'>Color:</span>  Dark brown/Charcoal. </p>
+                <p className="mb-4"><span className='text-pink-400'>Symbol</span>   Symbolic of earthiness heritage, <br />and resiliance</p>
+                <p className="mb-4"><span className='text-pink-400'>Color:</span>   Dark brown/Charcoal. </p>
                 <p className="mb-4"> <span className='text-pink-400'>Made From:</span> Elubo(yam flour)sometimes <br />chocolate flour or plaintain flour.</p>
-                 <p className="mb-4"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
-                 <p className='mb-4'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
-
-                 <p>sometimes called the "yoruba national combo."</p>
+                <p className="mb-4"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
+                <p className='mb-4'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
+                <p>sometimes called the "yoruba national combo."</p>
               </div>
             </div>
           </motion.div>
         );
       case 'Oshun':
         return (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white w-74 py-4 px-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white w-76 py-4 px-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
-           <div className="flex items-start space-x-3">
+            <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
-            
-                <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility   <br />rivers and femininity.</p>
-                <p className="mb-4"><span className='text-pink-400'>Color:</span>  Gold </p>
+                <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility   <br />rivers and femininity.</p>
+                <p className="mb-4"><span className='text-pink-400'>Color:</span>   Gold </p>
                 <p className="mb-4"> <span className='text-pink-400'>Why:</span>Gold symbolizes wealth, feminity,<br />radiance, and sacred rivers</p>
-                 <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival  <br />gaments,river offerings.</p>
-             
-
-               
+                <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival   <br />gaments,river offerings.</p>
               </div>
             </div>
           </motion.div>
@@ -129,8 +119,8 @@ const Hero: React.FC = () => {
   const SkeletonLoader = () => (
     <div className="space-y-4">
       {[1, 2, 3].map((_, index) => (
-        <motion.div 
-          key={index} 
+        <motion.div
+          key={index}
           className="flex items-center justify-between"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -165,14 +155,14 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <motion.div 
-      className="py-4 sm:py-8 md:py-12 lg:py-24"
+    <motion.div
+      className="py-4 sm:py-8 gap-7 md:py-12 lg:py-24"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="relative flex justify-center items-center min-h-screen text-center px-4 sm:px-0"
+        className="relative flex justify-center items-center min-h-screen text-center sm:px-0"
         style={{
           backgroundImage: "url('/cfd.png')",
           backgroundSize: "cover",
@@ -184,27 +174,28 @@ const Hero: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80 z-0" />
-        
-        <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-6 sm:gap-8 lg:gap-12 max-w-7xl">
+
+        {/* Updated Container Div */}
+        <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:justify-start gap-6 sm:gap-8 lg:gap-24 max-w-7xl lg:pl-10 lg:pr-10"> {/* Adjusted gap and added right padding */}
           {/* Left Section */}
-          <motion.div 
+          <motion.div
             className="flex flex-col items-center mt-4 sm:mt-6 lg:items-start text-center lg:text-left max-w-full lg:max-w-xl px-4 sm:px-0"
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-medium leading-tight text-gray-900 mb-6 sm:mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-manrope font-bold text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8">
               Ancient Stories.<br />Modern Design.
             </h1>
-            <motion.p 
-              className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-serif italic text-gray-900 mb-6 sm:mb-8"
+            <motion.p
+              className="text-3xl sm:text-4xl md:text-4xl italic           font-poppins font-normal text-[70px] leading-[1] tracking-[-0.03em]           text-gray-900 mb-6 sm:mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
               Instantly.
             </motion.p>
-            <motion.p 
+            <motion.p
               className="text-sm sm:text-base md:text-lg text-gray-700 mb-8 sm:mb-10 max-w-md"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -212,7 +203,7 @@ const Hero: React.FC = () => {
             >
               Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
             </motion.p>
-            <motion.button 
+            <motion.button
               className="flex items-center px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition duration-300 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
@@ -228,8 +219,8 @@ const Hero: React.FC = () => {
           </motion.div>
 
           {/* Right Section Card */}
-          <motion.div 
-            className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg lg:mt-0"
+          <motion.div
+            className="relative w-full max-w-sm sm:max-w-md lg:max-w-xl lg:mt-0 flex-grow" // Reduced max-w-2xl to max-w-xl
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -237,32 +228,32 @@ const Hero: React.FC = () => {
             {/* Colored shadow effects */}
             <div className="absolute -inset-2 sm:-inset-3 z-0 opacity-70 pointer-events-none">
               {/* Purple shadow (right) - most prominent */}
-              <motion.div 
+              <motion.div
                 className="absolute inset-y-0 right-0 w-full bg-purple-400 rounded-xl blur-xl shadow-lg"
                 style={{ width: '100px', marginLeft:'500px', right: '-45px' }}
                 animate={{ opacity: [0.5, 0.7, 0.5] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
-              
+
               {/* Light green shadow (top) */}
-              <motion.div 
-                className="absolute inset-x-0 top-0 h-full bg-green-100 rounded-xl blur-xl" 
+              <motion.div
+                className="absolute inset-x-0 top-0 h-full bg-green-100 rounded-xl blur-xl"
                 style={{ height: '30px', top: '-10px' }}
                 animate={{ opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               />
-              
+
               {/* Light yellow shadow (left) */}
-              <motion.div 
-                className="absolute inset-y-0 left-0 w-full bg-yellow-200 rounded-xl blur-xl" 
+              <motion.div
+                className="absolute inset-y-0 left-0 w-full bg-yellow-200 rounded-xl blur-xl"
                 style={{ width: '30px', left: '-10px' }}
                 animate={{ opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
               />
             </div>
-            
-            <motion.div 
-              className="relative bg-white rounded-xl shadow-xl sm:shadow-2xl p-4 sm:p-6 md:p-8 z-10"
+
+            <motion.div
+              className="relative bg-white rounded-xl shadow-xl sm:shadow-2xl p-4 sm:p-6 md:p-8 z-10 h-full" // Added h-full
               whileHover={{ y: -5 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
@@ -271,7 +262,7 @@ const Hero: React.FC = () => {
                 {['Yoruba', 'Igbo', 'Japan'].map((culture) => (
                   <motion.button
                     key={culture}
-                    className={`relative flex items-center justify-center p-2 sm:p-3 rounded-md text-xs sm:text-sm font-medium text-white h-16 sm:h-20 overflow-hidden transition-all duration-200 
+                    className={`relative flex items-center justify-center p-2 sm:p-3 rounded-md text-xs sm:text-sm font-medium text-white h-16 sm:h-20 overflow-hidden transition-all duration-200
                       ${selectedCulture === culture ? 'ring-2 ring-purple-500 ring-offset-1 sm:ring-offset-2 scale-[1.02]' : 'hover:scale-[1.02]'}
                       ${culture === 'Japan' ? 'col-span-2 mx-auto w-32 sm:col-span-1 sm:mx-0' : ''} ` /* Added class for Japan centering */}
                     onClick={() => handleCultureSelect(culture)}
@@ -288,7 +279,7 @@ const Hero: React.FC = () => {
                 ))}
               </div>
 
-              <motion.div 
+              <motion.div
                 className="flex flex-col items-center mb-4 sm:mb-6"
                 animate={{ y: [0, 5, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
@@ -305,7 +296,7 @@ const Hero: React.FC = () => {
                 <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                   {generatedAssets.map((asset) => (
                     <div key={asset.label} className="group">
-                      <motion.div 
+                      <motion.div
                         className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
                         onMouseEnter={() => setHoveredAsset(asset.label)}
                         onMouseLeave={() => setHoveredAsset(null)}
@@ -313,13 +304,13 @@ const Hero: React.FC = () => {
                         transition={{ type: "spring", stiffness: 300 }}
                       >
                         <div className="flex items-center space-x-2 sm:space-x-3">
-                          <motion.div 
+                          <motion.div
                             className="relative"
-                            whileHover={{ scale: 1.05 }}
+                            // Removed whileHover={{ scale: 1.05 }} from here
                           >
-                            <img 
-                              src={asset.src} 
-                              alt={asset.label} 
+                            <img
+                              src={asset.src}
+                              alt={asset.label}
                               className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover border border-gray-200"
                             />
                             <div className={`absolute inset-0 rounded-lg border-2 ${asset.label === 'Obatala' ? 'border-purple-300' : asset.label === 'Amala' ? 'border-red-300' : 'border-yellow-300'} opacity-0 group-hover:opacity-100 transition-opacity duration-200`}></div>
@@ -327,14 +318,14 @@ const Hero: React.FC = () => {
                           <span className="text-sm sm:text-base text-gray-800 font-medium">{asset.label}</span>
                         </div>
                         <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2 text-xs sm:text-sm">
-                          <motion.button 
+                          <motion.button
                             className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                             whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                             whileTap={{ scale: 0.95 }}
                           >
                             Export
                           </motion.button>
-                          <motion.button 
+                          <motion.button
                             className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                             whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                             whileTap={{ scale: 0.95 }}
@@ -355,37 +346,37 @@ const Hero: React.FC = () => {
               {isLoading ? ( // Apply skeleton loader here
                 <ColorPaletteSkeletonLoader />
               ) : (
-                <motion.div 
+                <motion.div
                   className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0"
                   whileHover={{ scale: 1.01 }}
                 >
                   <div className="flex space-x-1 sm:space-x-2">
-                    <motion.div 
+                    <motion.div
                       className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
                       style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
                     />
-                    <motion.div 
+                    <motion.div
                       className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border bg-[#4B3621] bg-cover bg-center"
                       style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
                     />
                     {/* Added third color palette */}
-                    <motion.div 
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full  bg-[#FFD700] bg-cover bg-center"
+                    <motion.div
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full   bg-[#FFD700] bg-cover bg-center"
                       style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
                     />
                   </div>
                   <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
-                    <motion.button 
+                    <motion.button
                       className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                       whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                       whileTap={{ scale: 0.95 }}
                     >
                       Export
                     </motion.button>
-                    <motion.button 
+                    <motion.button
                       className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                       whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                       whileTap={{ scale: 0.95 }}
