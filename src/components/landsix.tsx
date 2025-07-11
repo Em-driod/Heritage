@@ -1,5 +1,4 @@
-
-import { FaGlobe, FaPalette,  FaMobileAlt, FaUniversity } from "react-icons/fa";
+import { FaGlobe, FaPalette, FaMobileAlt, FaUniversity } from "react-icons/fa";
 
 const cards = [
   {
@@ -8,8 +7,8 @@ const cards = [
     description: "Create stunning digital experiences with our comprehensive design toolkit and collaboration features.",
     points: ["Design Systems", "Prototyping Tools", "Client Collaboration"],
     bg: "bg-gradient-to-r from-blue-100 to-blue-200",
-    iconBg: "bg-blue-500",
-    img: "/globe.png", // Replace with real image path
+    iconBg: "bg-blue-500", // Checkmark will be blue
+    img: "/6b.png", // Replace with real image path
     size: "large",
   },
   {
@@ -18,8 +17,8 @@ const cards = [
     description: "Build powerful brand identities with our suite of branding and visual identity tools.",
     points: ["Brand Guidelines", "Logo Creation", "Asset Management"],
     bg: "bg-gradient-to-r from-yellow-100 to-yellow-200",
-    iconBg: "bg-yellow-500",
-    img: "/palette.png", // Replace with real image path
+    iconBg: "bg-yellow-500", // Checkmark will be yellow
+    img: "/6a.png", // Replace with real image path
     size: "large",
   },
   {
@@ -28,7 +27,7 @@ const cards = [
     description: "Design and showcase fashion collections with specialized tools for textile and apparel creators.",
     points: ["Pattern Design", "Color Matching", "Collection Planning"],
     bg: "bg-gradient-to-r from-pink-100 to-pink-200",
-    iconBg: "bg-pink-500",
+    iconBg: "bg-pink-500", // Checkmark will be pink
     size: "small",
   },
   {
@@ -37,7 +36,7 @@ const cards = [
     description: "Develop engaging mobile and gaming experiences with our interactive design platform.",
     points: ["Interactive Prototypes", "User Testing", "Asset Libraries"],
     bg: "bg-gradient-to-r from-purple-100 to-purple-200",
-    iconBg: "bg-purple-500",
+    iconBg: "bg-purple-500", // Checkmark will be purple
     size: "small",
   },
   {
@@ -46,7 +45,7 @@ const cards = [
     description: "Preserve and present cultural heritage through digital storytelling and interactive exhibitions.",
     points: ["Digital Archives", "Virtual Tours", "Educational Content"],
     bg: "bg-gradient-to-r from-green-100 to-green-200",
-    iconBg: "bg-green-500",
+    iconBg: "bg-green-500", // Checkmark will be green
     size: "small",
   },
 ];
@@ -54,46 +53,64 @@ const cards = [
 const Landsix = () => {
   return (
     <section className="py-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
-      <div className="text-center mb-12">
-        <div className="inline-block px-4 py-1 border rounded-full border-pink-300 text-pink-500 text-sm mb-4">
-          🌐 Use it your way
-        </div>
-        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900">
-          Built for <span className="text-purple-600">Creators</span>,{" "}
-          <span className="text-orange-500">Makers</span>, and{" "}
-          <span className="text-green-600">Curators</span>
-        </h2>
-      </div>
+   <div className="flex items-center justify-center p-4 bg-white">
+  <div className="flex items-center space-x-8">
+    <div className="flex items-center px-4 py-2 border border-red-300 rounded-full text-red-500">
+      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+      </svg>
+      <span>Use it your way</span>
+    </div>
+    <div className="text-5xl font-sans font-bold leading-tight">
+      Built for <span className="text-blue-700">Creators,</span> <br/> <span className="text-yellow-600">Makers,</span> and <span className="text-green-600">Curators</span>
+    </div>
+  </div>
+</div>
 
       {/* First row: 2 big cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        {cards
-          .filter((card) => card.size === "large")
-          .map((card, idx) => (
-            <div
-              key={idx}
-              className={`rounded-xl p-8 md:p-10 ${card.bg} shadow-lg h-full`}
-            >
-              <div className="flex items-start justify-between">
-                <div className={`w-12 h-12 flex items-center justify-center rounded-full ${card.iconBg}`}>
-                  {card.icon}
-                </div>
-                {card.img && (
-                  <img src={card.img} alt="icon" className="w-20 h-20 object-contain" />
-                )}
-              </div>
-              <h3 className="mt-5 text-xl font-semibold text-gray-800">{card.title}</h3>
-              <p className="text-base text-gray-700 mt-3">{card.description}</p>
-              <ul className="mt-5 space-y-2 text-sm text-gray-700">
-                {card.points.map((point, i) => (
-                  <li key={i} className="flex items-center">
-                    <span className="text-blue-500 font-bold mr-2">✓</span> {point}
-                  </li>
-                ))}
-              </ul>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+   
+  {cards
+    .filter((card) => card.size === "large")
+    .map((card, idx) => (
+      <div
+        key={idx}
+        className={`rounded-xl p-8 md:p-10 ${card.bg} shadow-lg h-full flex flex-col`}
+      >
+        {/* Main flex container for the card's top section */}
+        <div className="flex items-start justify-between flex-grow">
+          {/* Div for icon, title, description, and points */}
+          <div className="w-3/5 pr-4 flex flex-col"> {/* Added flex flex-col here for internal stacking */}
+            <div className={`w-12 h-12 flex items-center justify-center rounded-full ${card.iconBg}`}>
+              {card.icon}
             </div>
-          ))}
+            <h3 className="mt-5 text-xl font-semibold text-gray-800">{card.title}</h3>
+            <p className="text-base text-gray-700 mt-3">{card.description}</p>
+
+            {/* Points list is now inside this div to be grouped with text content */}
+            <ul className="mt-4 space-y-2 text-sm text-gray-700">
+              {card.points.map((point, i) => (
+                <li key={i} className="flex items-center">
+                  <span className={`${card.iconBg.replace('bg-', 'text-')} font-bold mr-2`}>✓</span> {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Separate Div for the image */}
+          {card.img && (
+            <div className="ml-10 mt-25"> {/* Added ml-10 for horizontal spacing and mt-6 to bring it down */}
+              <img
+                src={card.img}
+                alt="icon"
+                className="w-45 h-40 object-contain"
+              />
+            </div>
+          )}
+        </div>
       </div>
+    ))}
+</div>
 
       {/* Second row: 3 small cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -102,19 +119,23 @@ const Landsix = () => {
           .map((card, idx) => (
             <div
               key={idx}
-              className={`rounded-xl p-6 ${card.bg} shadow-md h-full`}
+              className={`rounded-xl p-6 ${card.bg} shadow-md h-full flex flex-col`}
             >
-              <div className="flex items-start justify-between">
-                <div className={`w-10 h-10 flex items-center justify-center rounded-full ${card.iconBg}`}>
-                  {card.icon}
+              <div className="flex items-start justify-between flex-grow">
+                <div className="w-4/4 pr-4">
+                  <div className={`w-10 h-10 flex items-center justify-center rounded-full ${card.iconBg}`}>
+                    {card.icon}
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-gray-800">{card.title}</h3>
+                  <p className="text-sm text-gray-700 mt-2">{card.description}</p>
                 </div>
+             
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-800">{card.title}</h3>
-              <p className="text-sm text-gray-700 mt-2">{card.description}</p>
               <ul className="mt-4 space-y-1 text-sm text-gray-700">
                 {card.points.map((point, i) => (
                   <li key={i} className="flex items-center">
-                    <span className="text-blue-500 font-bold mr-2">✓</span> {point}
+                    {/* Dynamic checkmark color */}
+                    <span className={`${card.iconBg.replace('bg-', 'text-')} font-bold mr-2`}>✓</span> {point}
                   </li>
                 ))}
               </ul>

@@ -42,7 +42,7 @@ const Landsecont: React.FC = () => {
               transition={{ repeat: Infinity, duration: 2 }}
               className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:-top-8"
             >
-              <span className="text-3xl sm:text-4xl" role="img" aria-label="sleepy face">😔</span>
+              <span className="text-5xl sm:text-4xl" role="img" aria-label="sleepy face">😔</span>
             </motion.div>
             <div className="sm:mt-8 text-center mb-3 sm:mb-4">
               <h3 className="text-sm font-medium text-gray-500 sm:text-base">
@@ -73,7 +73,7 @@ const Landsecont: React.FC = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 2.2 }}
-              className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-1 rounded-full border border-gray-200 shadow-sm sm:-top-8"
+              className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2    sm:-top-8"
             >
               <span className="text-3xl sm:text-4xl" role="img" aria-label="party popper">🎉</span>
             </motion.div>
