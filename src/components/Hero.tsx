@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white p-2 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white w-80 p-2 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
             <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white w-80 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
                 <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white w-80 py-4 px-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
            <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
@@ -366,13 +366,13 @@ const Hero: React.FC = () => {
                       whileHover={{ scale: 1.2 }}
                     />
                     <motion.div 
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border bg-[#4B3621] bg-cover bg-center"
                       style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
                     />
                     {/* Added third color palette */}
                     <motion.div 
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
+                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full  bg-[#FFD700] bg-cover bg-center"
                       style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
                     />
