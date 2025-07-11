@@ -59,15 +59,18 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-pink-100 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white p-2 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
             <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
-                <p className="font-medium text-purple-600 mb-2 text-start">Creator Deity</p>
-                <p className="mb-1">• Supreme creator of human bodies</p>
-                <p className="mb-1">• Associated with purity and wisdom</p>
-                <p className="mb-1">• Patron of those with disabilities</p>
-                <p className="text-xs italic text-gray-500 mt-2">"King of the White Cloth" in Yoruba mythology</p>
+            
+                <p className="mb-4"><span className='text-pink-400'>Symbol</span> obatala, tke Orisha of purity,  <br />wisdom, and peace.</p>
+                <p className="mb-1"><span className='text-pink-400'>Color:</span>  Pure white </p>
+                <p className="mb-1"> <span className='text-pink-400'>Why:</span> Whte symbolizes purity, clarity,and <br />divine intelligence.Obatala devotees wear <br />white head to toe</p>
+                 <p className="mb-1"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and  <br />ceremonial food offerings (always white )</p>
+             
+
+               
               </div>
             </div>
           </motion.div>
@@ -79,15 +82,18 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-pink-100 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
-            <div className="flex items-start space-x-3">
-              <div className="flex-1 min-w-0 text-start">
-                <p className="font-medium text-red-600 mb-2">Traditional Dish</p>
-                <p className="mb-1">• Made from yam flour (elubo)</p>
-                <p className="mb-1">• Typically served with ewedu and gbegiri soup</p>
-                <p className="mb-1">• Staple food in Western Nigeria</p>
-                <p className="text-xs italic text-gray-500 mt-2">A symbol of Yoruba culinary heritage</p>
+                <div className="flex items-start space-x-3">
+              <div className="flex-1 text-start min-w-0">
+            
+                <p className="mb-1"><span className='text-pink-400'>Symbol</span>  Symbolic of earthiness heritage, <br />and resiliance</p>
+                <p className="mb-1"><span className='text-pink-400'>Color:</span>  Dark brown/Charcoal. </p>
+                <p className="mb-1"> <span className='text-pink-400'>Made From:</span> Elubo(yam flour)sometimes <br />chocolate flour or plaintain flour.</p>
+                 <p className="mb-1"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
+                 <p className='mb-6'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
+
+                 <p>sometimes called the "yoruba national combo."</p>
               </div>
             </div>
           </motion.div>
@@ -99,15 +105,18 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-pink-100 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
-            <div className="flex items-start space-x-3 text-start">
-              <div className="flex-1 min-w-0">
-                <p className="font-medium text-yellow-600 mb-2 text-start">Goddess of Love</p>
-                <p className="mb-1">• Orisha of rivers, love, and fertility</p>
-                <p className="mb-1">• Associated with fresh water and honey</p>
-                <p className="mb-1">• Patron of the Osun River</p>
-                <p className="text-xs italic text-gray-500 mt-2">Celebrated annually at the Osun-Osogbo festival</p>
+           <div className="flex items-start space-x-3">
+              <div className="flex-1 text-start min-w-0">
+            
+                <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility   <br />rivers and femininity.</p>
+                <p className="mb-1"><span className='text-pink-400'>Color:</span>  Gold </p>
+                <p className="mb-1"> <span className='text-pink-400'>Why:</span>Gold symbolizes wealth, feminity,<br />radiance, and sacred rivers</p>
+                 <p className="mb-1"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival  <br />gaments,river offerings.</p>
+             
+
+               
               </div>
             </div>
           </motion.div>
