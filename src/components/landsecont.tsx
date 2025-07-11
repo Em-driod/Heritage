@@ -11,17 +11,17 @@ const Landsecont: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-40 sm:mb-12 max-w-3xl mx-auto px-2"
       >
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl leading-tight sm:leading-tighter">
+        <h1 className="text-3xl font-normal text-gray-900 sm:text-4xl lg:text-5xl leading-tight sm:leading-tighter">
           Design shouldn't feel
           <br className="hidden sm:block" />
-          like guesswork.
+          like <span className='italic'>guesswork.</span> 
         </h1>
         <p className="mt-4 text-sm text-gray-600 sm:text-base sm:mt-6 sm:text-gray-700 max-w-md sm:max-w-xl mx-auto leading-relaxed">
-          Let's be honest, typing "tribal pattern" into Google isn't design research.{" "}
+          Let's be honest, typing "tribal pattern" into Google <br /> isn't design research.{" "}
           <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">
             Hard
           </span>{" "}
-          again? HeritageAI helps you skip the confusion and design with real meaning.
+          again? HeritageAI helps you skip the <br /> confusion and design with real meaning.
         </p>
       </motion.div>
 
