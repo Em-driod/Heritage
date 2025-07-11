@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white w-80 p-2 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white w-74 p-2 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
             <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white w-80 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white w-74 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
                 <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white w-80 py-4 px-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
+            className="mt-2 bg-white w-74 py-4 px-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
           >
            <div className="flex items-start space-x-3">
               <div className="flex-1 text-start min-w-0">
