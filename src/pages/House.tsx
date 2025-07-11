@@ -4,6 +4,7 @@ import Landthird from "../components/landthird"
 import Landfourth from "../components/landfourth"
 import Landfifth from "../components/landfifth"
 import Landsix from "../components/landsix"
+import Landseven from "../components/landseven"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
      <Landfourth />
      <Landfifth />
      <Landsix />
+     <Landseven />
     </div>
   )
 }

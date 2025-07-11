@@ -56,9 +56,7 @@ const Landsix = () => {
    <div className="flex items-center justify-center p-4 bg-white">
   <div className="flex items-center space-x-8">
     <div className="flex items-center px-4 py-2 border border-red-300 rounded-full text-red-500">
-      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-      </svg>
+      <img className="gap-4" src="/Group.png" alt="" />
       <span>Use it your way</span>
     </div>
     <div className="text-5xl font-sans font-bold leading-tight">
