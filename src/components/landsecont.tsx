@@ -16,12 +16,11 @@ const Landsecont: React.FC = () => {
           <br className="hidden sm:block" />
           like <span className='italic'>guesswork.</span> 
         </h1>
-        <p className="mt-4 text-sm text-gray-600 sm:text-base sm:mt-6 sm:text-gray-700 max-w-md sm:max-w-xl mx-auto leading-relaxed">
+        <p className="mt-4 text-sm text-gray-400 sm:text-base sm:mt-6 sm:text-gray-400 max-w-md sm:max-w-xl mx-auto leading-relaxed">
           Let's be honest, typing "tribal pattern" into Google <br /> isn't design research.{" "}
-          <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text">
-            Hard
-          </span>{" "}
-          again? HeritageAI helps you skip the <br /> confusion and design with real meaning.
+          
+            HeritengineAI helps you skip the <br />confusion and design with real meaning.
+          
         </p>
       </motion.div>
 
@@ -34,7 +33,7 @@ const Landsecont: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative flex-1 bg-white p-4 rounded-xl shadow-sm border border-gray-100 transform transition-all hover:shadow-md"
+            className="relative flex-1 transform transition-all hover:shadow-md"
           >
             {/* Animated Emoji */}
             <motion.div
@@ -42,14 +41,10 @@ const Landsecont: React.FC = () => {
               transition={{ repeat: Infinity, duration: 2 }}
               className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:-top-8"
             >
-              <span className="text-5xl sm:text-4xl" role="img" aria-label="sleepy face">😔</span>
+              <span className="text-5xl sm:text-4xl" role="img" aria-label="sleepy face"> <img src="/sleep.png" alt="" /></span>
             </motion.div>
-            <div className="sm:mt-8 text-center mb-3 sm:mb-4">
-              <h3 className="text-sm font-medium text-gray-500 sm:text-base">
-                Before: <span className="text-gray-700">Google Search</span>
-              </h3>
-            </div>
-            <div className="overflow-hidden rounded-lg border border-gray-200">
+            
+            <div className="overflow-hidden mt-4 ">
               <motion.img
                 src="/afre.png"
                 alt="Google Search Screenshot"
@@ -67,7 +62,7 @@ const Landsecont: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative flex-1 bg-white p-4 rounded-xl shadow-sm border border-gray-100 transform transition-all hover:shadow-md mt-12 sm:mt-0"
+            className="relative flex-1   transform transition-all hover:shadow-md mt-12 sm:mt-0"
           >
             {/* Animated Emoji */}
             <motion.div
@@ -75,14 +70,10 @@ const Landsecont: React.FC = () => {
               transition={{ repeat: Infinity, duration: 2.2 }}
               className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2    sm:-top-8"
             >
-              <span className="text-3xl sm:text-4xl" role="img" aria-label="party popper">🎉</span>
+              <span className="text-3xl sm:text-4xl" role="img" aria-label="party popper"> <img src="/victory.png" alt="" /></span>
             </motion.div>
-            <div className="mt-4 sm:mt-8 text-center mb-3 sm:mb-4">
-              <h3 className="text-sm font-medium text-gray-500 sm:text-base">
-                After: <span className="text-gray-700">HeritageAI</span>
-              </h3>
-            </div>
-            <div className="overflow-hidden rounded-lg border border-gray-200">
+          
+            <div className="overflow-hidden mt-4">
               <motion.img
                 src="/reaf.png"
                 alt="HeritageAI Screenshot"

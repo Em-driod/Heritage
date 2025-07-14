@@ -18,11 +18,11 @@ const Navbar: React.FC = () => {
           <div className="flex items-center text-gray-800 font-bold text-2xl mr-8 relative">
             {/* The purple/yellow icon simulated with Tailwind */}
             <span className="w-6 h-6 bg-gradient-to-r from-purple-700 to-yellow-500 rounded mr-2 flex-shrink-0"></span>
-            HeritageAI
+            HeritengineAI
           </div>
 
-          {/* Desktop Navigation Links */}
-          <ul className="hidden md:flex space-x-8">
+          {/* Desktop Navigation Links + Search Bar */}
+          <ul className="hidden md:flex items-center space-x-8">
             <li className="relative group">
               <a href="#culture" className="text-gray-600 hover:text-gray-900 text-lg flex items-center">
                 Culture
@@ -43,22 +43,22 @@ const Navbar: React.FC = () => {
                 About
               </a>
             </li>
+            {/* Desktop Search Bar placed after About */}
+            <li className="flex items-center">
+              <div className="hidden md:flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 max-w-sm w-80 focus-within:ring-2 focus-within:ring-blue-300 ml-2">
+                <CiSearch />
+                <input
+                  type="text"
+                  placeholder="Yoruba culture"
+                  className="outline-none bg-transparent text-gray-700 placeholder-gray-400 w-full"
+                />
+              </div>
+            </li>
           </ul>
         </div>
 
-        {/* Right Section: Search Bar & Mobile Menu Button */}
+        {/* Right Section: Mobile Menu Button */}
         <div className="flex items-center">
-          {/* Desktop Search Bar */}
-          <div className="hidden md:flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 max-w-sm w-80 focus-within:ring-2 focus-within:ring-blue-300">
-            
-          <CiSearch />
-            <input
-              type="text"
-              placeholder="Yoruba culture"
-              className="outline-none bg-transparent text-gray-700 placeholder-gray-400 w-full"
-            />
-          </div>
-
           {/* Mobile Menu Button */}
           <div className="md:hidden ml-4">
             <button

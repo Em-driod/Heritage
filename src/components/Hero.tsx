@@ -50,70 +50,63 @@ const Hero: React.FC = () => {
     setHoveredAsset(null);
   };
 
+  // AssetDropdown as a floating popup
   const AssetDropdown = ({ assetLabel }: { assetLabel: string }) => {
+    let content = null;
     switch (assetLabel) {
       case 'Obatala':
-        return (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white w-74 p-2 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
-          >
-            <div className="flex items-start space-x-3">
-              <div className="flex-1 text-start min-w-0">
-                <p className="mb-4"><span className='text-pink-400'>Symbol</span> obatala, tke Orisha of purity,   <br />wisdom, and peace.</p>
-                <p className="mb-4"><span className='text-pink-400'>Color:</span>   Pure white </p>
-                <p className="mb-4"> <span className='text-pink-400'>Why:</span> Whte symbolizes purity, clarity,and <br />divine intelligence.Obatala devotees wear <br />white head to toe</p>
-                <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and   <br />ceremonial food offerings (always white )</p>
-              </div>
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4"><span className='text-pink-400'>Symbol</span> obatala, tke Orisha of purity,   <br />wisdom, and peace.</p>
+              <p className="mb-4"><span className='text-pink-400'>Color:</span>   Pure white </p>
+              <p className="mb-4"> <span className='text-pink-400'>Why:</span> Whte symbolizes purity, clarity,and <br />divine intelligence.Obatala devotees wear <br />white head to toe</p>
+              <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and   <br />ceremonial food offerings (always white )</p>
             </div>
-          </motion.div>
+          </div>
         );
+        break;
       case 'Amala':
-        return (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white w-74 p-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
-          >
-            <div className="flex items-start space-x-3">
-              <div className="flex-1 text-start min-w-0">
-                <p className="mb-4"><span className='text-pink-400'>Symbol</span>   Symbolic of earthiness heritage, <br />and resiliance</p>
-                <p className="mb-4"><span className='text-pink-400'>Color:</span>   Dark brown/Charcoal. </p>
-                <p className="mb-4"> <span className='text-pink-400'>Made From:</span> Elubo(yam flour)sometimes <br />chocolate flour or plaintain flour.</p>
-                <p className="mb-4"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
-                <p className='mb-4'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
-                <p>sometimes called the "yoruba national combo."</p>
-              </div>
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4"><span className='text-pink-400'>Symbol</span>   Symbolic of earthiness heritage, <br />and resiliance</p>
+              <p className="mb-4"><span className='text-pink-400'>Color:</span>   Dark brown/Charcoal. </p>
+              <p className="mb-4"> <span className='text-pink-400'>Made From:</span> Elubo(yam flour)sometimes <br />chocolate flour or plaintain flour.</p>
+              <p className="mb-4"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
+              <p className='mb-4'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
+              <p>sometimes called the "yoruba national combo."</p>
             </div>
-          </motion.div>
+          </div>
         );
+        break;
       case 'Oshun':
-        return (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="mt-2 bg-white w-76 py-4 px-4 rounded-lg border border-gray-200 shadow-sm text-sm text-gray-800 overflow-hidden"
-          >
-            <div className="flex items-start space-x-3">
-              <div className="flex-1 text-start min-w-0">
-                <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility   <br />rivers and femininity.</p>
-                <p className="mb-4"><span className='text-pink-400'>Color:</span>   Gold </p>
-                <p className="mb-4"> <span className='text-pink-400'>Why:</span>Gold symbolizes wealth, feminity,<br />radiance, and sacred rivers</p>
-                <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival   <br />gaments,river offerings.</p>
-              </div>
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility   <br />rivers and femininity.</p>
+              <p className="mb-4"><span className='text-pink-400'>Color:</span>   Gold </p>
+              <p className="mb-4"> <span className='text-pink-400'>Why:</span>Gold symbolizes wealth, feminity,<br />radiance, and sacred rivers</p>
+              <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival   <br />gaments,river offerings.</p>
             </div>
-          </motion.div>
+          </div>
         );
+        break;
       default:
         return null;
     }
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 10 }}
+        transition={{ duration: 0.25, ease: 'easeInOut' }}
+        className="absolute left-1/2 z-30 -translate-x-1/2 top-[-10px] sm:top-[-20px] bg-white w-80 p-4 rounded-lg border border-gray-200 shadow-xl text-sm text-gray-800"
+        style={{ pointerEvents: 'auto' }}
+      >
+        {content}
+      </motion.div>
+    );
   };
 
   const SkeletonLoader = () => (
@@ -184,11 +177,15 @@ const Hero: React.FC = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-manrope font-bold text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8">
-              Ancient Stories.<br />Modern Design.
+            <h1
+              className="text-3xl flex flex-col sm:text-4xl md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8"
+              style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700 }}
+            >
+              Ancient Stories.<br /> <span className='mt-4'>Modern Design.</span>
             </h1>
             <motion.p
-              className="text-3xl sm:text-4xl md:text-4xl italic           font-poppins font-normal text-[70px] leading-[1] tracking-[-0.03em]           text-gray-900 mb-6 sm:mb-8"
+              className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8"
+              style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 500 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -196,7 +193,7 @@ const Hero: React.FC = () => {
               Instantly.
             </motion.p>
             <motion.p
-              className="text-sm sm:text-base md:text-lg text-gray-700 mb-8 sm:mb-10 max-w-md"
+              className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-10 max-w-md font-inter"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
@@ -204,16 +201,14 @@ const Hero: React.FC = () => {
               Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
             </motion.p>
             <motion.button
-              className="flex items-center px-5 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition duration-300 text-sm sm:text-base"
+              className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition duration-300 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-              </svg>
+              <img className='w-4 h-4 ' src="/flower.png" alt="" />
               Try Beta Free
             </motion.button>
           </motion.div>
@@ -295,7 +290,7 @@ const Hero: React.FC = () => {
               ) : (
                 <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                   {generatedAssets.map((asset) => (
-                    <div key={asset.label} className="group">
+                    <div key={asset.label} className="group relative">
                       <motion.div
                         className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
                         onMouseEnter={() => setHoveredAsset(asset.label)}
@@ -304,10 +299,7 @@ const Hero: React.FC = () => {
                         transition={{ type: "spring", stiffness: 300 }}
                       >
                         <div className="flex items-center space-x-2 sm:space-x-3">
-                          <motion.div
-                            className="relative"
-                            // Removed whileHover={{ scale: 1.05 }} from here
-                          >
+                          <motion.div className="relative">
                             <img
                               src={asset.src}
                               alt={asset.label}
@@ -319,18 +311,18 @@ const Hero: React.FC = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2 text-xs sm:text-sm">
                           <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                            className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                             whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            Export
+                            <img src="/export.png" alt="Export" />
                           </motion.button>
                           <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                            className="px-2 py-1 sm:px-3 sm:py-1   text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                             whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                             whileTap={{ scale: 0.95 }}
                           >
-                            Share
+                            <img src="/import.png" alt="Share" />
                           </motion.button>
                         </div>
                       </motion.div>
