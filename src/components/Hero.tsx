@@ -149,7 +149,7 @@ const Hero: React.FC = () => {
 
   return (
     <motion.div
-      className="py-4 sm:py-8 gap-7 md:py-12 lg:py-24"
+      className="py-4 sm:py-8 gap-7 md:py-12 lg:py-24 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -259,15 +259,22 @@ const Hero: React.FC = () => {
                     key={culture}
                     className={`relative flex items-center justify-center p-2 sm:p-3 rounded-md text-xs sm:text-sm font-medium text-white h-16 sm:h-20 overflow-hidden transition-all duration-200
                       ${selectedCulture === culture ? 'ring-2 ring-purple-500 ring-offset-1 sm:ring-offset-2 scale-[1.02]' : 'hover:scale-[1.02]'}
-                      ${culture === 'Japan' ? 'col-span-2 mx-auto w-32 sm:col-span-1 sm:mx-0' : ''} ` /* Added class for Japan centering */}
+                      ${culture === 'Japan' ? 'col-span-2 mx-auto w-32 sm:col-span-1 sm:mx-0' : ''} `}
                     onClick={() => handleCultureSelect(culture)}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.98 }}
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ type: "spring", stiffness: 300 }}
+                    onMouseEnter={() => culture === 'Yoruba' && setHoveredAsset('YorubaHover')}
+                    onMouseLeave={() => culture === 'Yoruba' && setHoveredAsset(null)}
                   >
-                    <img src={`/${culture.toLowerCase()}.png`} alt={`${culture} Culture`} className="absolute inset-0 w-full h-full object-cover" />
+                    {/* Show alternate image on hover for Yoruba */}
+                    {culture === 'Yoruba' && hoveredAsset === 'YorubaHover' ? (
+                      <img src="/Hover state.png" alt="Yoruba Culture Hover" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
+                    ) : (
+                      <img src={`/${culture.toLowerCase()}.png`} alt={`${culture} Culture`} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
+                    )}
                     <div className="absolute inset-0 bg-opacity-30 flex items-center justify-center"></div>
                     <span className="relative z-10 text-shadow"></span>
                   </motion.button>

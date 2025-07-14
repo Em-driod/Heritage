@@ -77,7 +77,8 @@ const Landfifth = () => {
           />
         </div>
         <motion.h1
-          className="text-[48px] sm:text-[56px] font-normal text-[#333333] leading-tight mb-2"
+          className="text-[48px] sm:text-[56px]  text-[#333333] leading-tight mb-2"
+          style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600 }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -85,7 +86,8 @@ const Landfifth = () => {
         >
           From culture
           <br />
-          To <span className="font-thin italic"> creation</span>
+          To <span className="font-thin italic" style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 100 }}> creation</span>
+          <br /> <span className='text-gray-400 text-xs font-light'>in seconds</span>
         </motion.h1>
       </motion.div>
 
@@ -121,8 +123,8 @@ const Landfifth = () => {
               whileHover={{ x: 5 }}
             >
               Choose from hundreds of rich cultural traditions like Yoruba,
-              Maori, Edo, and many more. Each culture brings its unique
-              <span className="bg-[#fff0c8] px-1 rounded-sm">heritage</span> and
+              Maori, Edo, and many more. Each culture brings its <br /> unique
+              <span className="text-orange-600 px-1 rounded-sm">heritengine</span> and
               visual identity.
             </motion.p>
             <div className="flex flex-wrap gap-x-[10px] gap-y-2">

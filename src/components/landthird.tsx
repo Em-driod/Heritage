@@ -37,7 +37,7 @@ const Landthird = () => {
             discoveries
           </p>
           <p className="text-sm text-gray-600">
-            with <span className="bg-yellow-300 px-1 rounded-md">HeritageAI</span>
+            with <span className="text-orange-400 px-1 rounded-md">HeritengineAI</span>
           </p>
         </div>
 
