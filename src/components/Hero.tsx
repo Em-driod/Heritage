@@ -362,18 +362,18 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
                     <motion.button
-                      className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                      className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                       whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      Export
+                      <img src="/export.png" alt="" />
                     </motion.button>
                     <motion.button
-                      className="px-2 py-1 sm:px-3 sm:py-1 border border-gray-200 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                      className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                       whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      Share
+                      <img src="/import.png" alt="" />
                     </motion.button>
                   </div>
                 </motion.div>
