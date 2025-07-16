@@ -7,5 +7,9 @@ body {
 }
 
 .font-poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins',   sans-serif;
+}
+/* Your existing CSS */
+.font-instrument {
+  font-family: 'Instrument Serif', serif;
 }

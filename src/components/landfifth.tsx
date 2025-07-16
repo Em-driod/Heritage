@@ -67,7 +67,7 @@ const Landfifth = () => {
         className="text-center mb-[80px] max-w-2xl mx-auto"
         variants={itemVariants}
       >
-        <div className="flex flex-col items-center justify-center mb-4">
+        <div className="flex flex-col items-center justify-center mb-0">
           <motion.img
             src="/culture.png"
             alt="What HeritageAI Gives You Icon"
@@ -77,7 +77,7 @@ const Landfifth = () => {
           />
         </div>
         <motion.h1
-          className="text-[48px] sm:text-[56px]  text-[#333333] leading-tight mb-2"
+          className="text-[48px] sm:text-[56px]  text-[#333333] leading-tight mb-0"
           style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600 }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +87,7 @@ const Landfifth = () => {
           From culture
           <br />
           To <span className="font-thin italic" style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 100 }}> creation</span>
-          <br /> <span className='text-gray-400 text-xs font-light'>in seconds</span>
+          <div className='-mt-5'><span className='text-gray-500  text-sm font-light'>in Seconds</span></div>
         </motion.h1>
       </motion.div>
 
@@ -128,20 +128,39 @@ const Landfifth = () => {
               visual identity.
             </motion.p>
             <div className="flex flex-wrap gap-x-[10px] gap-y-2">
-              {['Yoruba', 'Maori', 'Edo', '+500 more'].map((item, index) => (
-                <motion.button
-                  key={index}
-                  className={`px-[18px] py-[8px] rounded-full text-base font-medium transition-colors duration-200 ${
-                    index === 3
-                      ? 'bg-[#f0e0ff] text-[#9333ea] hover:bg-[#e0d0ef]'
-                      : 'bg-[#e0e9ff] text-[#5c6dfd] hover:bg-[#d0d9ef]'
-                  }`}
-                  whileHover={{ y: -3, scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {item}
-                </motion.button>
-              ))}
+              {['Yoruba', 'Maori', 'Edo', '+500 more'].map((item, index) => {
+                // Assign unique background and text color for each
+                let bg = '';
+                let text = '';
+                let hover = '';
+                if (item === 'Yoruba') {
+                  bg = 'bg-[#e0ffe6]';'bg-[#e0f0ff]';
+                  text = 'text-[#4169E1]';
+                  hover = 'hover:bg-[#ffe7b3]';
+                } else if (item === 'Maori') {
+                  bg = 'bg-[#fff6e0]';
+                  text = 'text-[#b77a75]';
+                  hover = 'hover:bg-[#b3ffd1]';
+                } else if (item === 'Edo') {
+                  bg = 'bg-[#e0f0ff]';
+                  text = 'text-[#00b87f]';
+                  hover = 'hover:bg-[#b3e0ff]';
+                } else {
+                  bg = 'bg-[#f0e0ff]';
+                  text = 'text-[#9333ea]';
+                  hover = 'hover:bg-[#e0d0ef]';
+                }
+                return (
+                  <motion.button
+                    key={index}
+                    className={`px-[18px] py-[8px] rounded-full text-base font-medium transition-colors duration-200 ${bg} ${text} ${hover}`}
+                    whileHover={{ y: -3, scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {item}
+                  </motion.button>
+                );
+              })}
             </div>
           </div>
 

@@ -2,23 +2,24 @@ import { FaBookOpen } from "react-icons/fa";
 import { PiFlowerTulipBold } from "react-icons/pi";
 const Landfourth = () => {
   return (
-    <div className="min-h-screen bg-[#fcf8f6] py-[80px] px-4 flex flex-col items-center font-sans overflow-hidden">
+    <div className="min-h-screen bg-[#FFEBE0]
+ py-[80px] px-4 flex flex-col items-center font-sans overflow-hidden">
       {/* Top Section: What HeritageAI Gives You */}
       <div className="text-center mb-[70px]">
-        <div className="inline-flex items-center bg-[#f7e6df] rounded-full py-[8px] px-[15px] shadow-[0_2px_4px_rgba(0,0,0,0.05)] mb-[45px]">
+        <div className="inline-flex items-center bg-white rounded-full py-[8px] px-[15px] shadow-[0_2px_4px_rgba(0,0,0,0.05)] mb-[45px]">
           <img
             src="/Box.png"
             alt="HeritageAI Icon"
             className="w-6 h-6 mr-2"
           />
-          <span className="text-sm font-semibold text-[#6a4f41]">What HeritengineAI Gives You</span>
+          <span className="text-sm font-semibold p-2  text-[#EF4444]">What <span className="bg-amber-400 rounded-sm text-black p-1">Heri</span>tengineAI Gives You</span>
         </div>
-        <h1
-          className="text-center text-[50px] font-manrope font-medium text-[#333333] leading-[1.0] tracking-[-0.01em] m-0"
+        <h5
+          className="text-center  text-[50px] font-medium text-[#333333] leading-[1.0] tracking-[-0.01em] m-0"
           style={{
-            fontFamily: 'Manrope, sans-serif',
-            fontWeight: 500,
-            fontStyle: 'normal',
+            fontFamily: '',
+            fontWeight: 600,
+            fontStyle: 'black',
             lineHeight: '100%',
             letterSpacing: '-1%',
             textAlign: 'center',
@@ -26,8 +27,16 @@ const Landfourth = () => {
         >
           One click.
           <br />
-          Infinite <span  style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 100 }}>heritage.</span> 
-        </h1>
+         <h1 className="italic"   style={{
+            fontFamily: 'instrument, sans-serif',
+            fontWeight: 300,
+            fontStyle: 'thin',
+            lineHeight: '100%',
+            letterSpacing: '-1%',
+            textAlign: 'center',
+          }}>
+           Infinite <span  style={{ fontFamily: 'Manrope, sans-serif', fontStyle: 'thin', fontWeight: 400 }}>heritage.</span></h1>
+        </h5>
       </div>
 
       {/* Cards Section */}
@@ -47,7 +56,7 @@ const Landfourth = () => {
             textures
           </p>
           {/* Horizontal line */}
-          <div className="bg-[#eeeeee] h-[1px] w-[150px] my-[15px]"></div> {/* Horizontal line added here */}
+          <div className="bg-[#eeeeee] h-[1px] w-[200px] my-[15px]"></div> {/* Horizontal line added here */}
           {/* Content below the line */}
           <div className="mt-auto">
             <img src="/det.png" alt="Figma icon" className="w-[80px] h-[35px] rounded-[8px] object-contain" />
@@ -68,9 +77,9 @@ const Landfourth = () => {
             short or symbol meaning
           </p>
           {/* Horizontal line */}
-          <div className="bg-[#eeeeee] h-[1px] w-[150px] my-[15px]"></div> {/* Horizontal line added here */}
+          <div className="bg-[#eeeeee] h-[1px] w-[200px] my-[15px]"></div> {/* Horizontal line added here */}
           {/* Content below the line */}
-          <div className="inline-flex items-center bg-[#f0f0f0] rounded-full py-[6px] px-[12px] text-gray-700 font-medium text-sm mt-auto">
+          <div className="inline-flex items-center  rounded-full py-[6px] px-[12px] text-gray-700 font-medium text-sm mt-auto">
             <FaBookOpen />
             <span className="ml-1">Rich storytelling</span>
           </div>
@@ -90,10 +99,10 @@ const Landfourth = () => {
             or even download
           </p>
           {/* Horizontal line */}
-          <div className="bg-[#eeeeee] h-[1px] w-[150px] my-[15px]"></div> {/* Horizontal line added here */}
+          <div className="bg-[#eeeeee] h-[1px] w-[200px] my-[15px]"></div> {/* Horizontal line added here */}
           {/* Content below the line */}
           <div className="flex mt-auto">
-            <img src="/C2.png" alt="Figma icon" className="w-[170px] h-[20px]" />
+            <img src="/C2.png" alt="Figma icon" className="w-[300px] h-[30px]" />
           </div>
         </div>
 
@@ -111,9 +120,9 @@ const Landfourth = () => {
             something real.
           </p>
           {/* Horizontal line */}
-          <div className="bg-[#eeeeee] h-[1px] w-[150px] my-[15px]"></div> {/* Horizontal line added here */}
+          <div className="bg-[#eeeeee] h-[1px] w-[200px] my-[15px]"></div> {/* Horizontal line added here */}
           {/* Content below the line */}
-          <div className="inline-flex items-center bg-[#f0f0f0] rounded-full py-[6px] px-[12px] text-gray-700 font-medium text-sm mt-auto">
+          <div className="inline-flex items-center  rounded-full py-[6px] px-[12px] text-gray-700 font-medium text-sm mt-auto">
             <PiFlowerTulipBold />
             <span>Authentic foundations</span>
           </div>

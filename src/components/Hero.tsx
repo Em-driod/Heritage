@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { FaShare } from "react-icons/fa";
+
 interface Asset {
   src: string;
   label: string;
@@ -11,6 +13,7 @@ const Hero: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [generatedAssets, setGeneratedAssets] = useState<Asset[]>([]);
   const [hoveredAsset, setHoveredAsset] = useState<string | null>(null);
+  const [isYorubaHovered, setIsYorubaHovered] = useState<boolean>(false); // New state for Yoruba button hover
 
   const fetchGeneratedAssets = (cultureParam: string) => {
     setIsLoading(true);
@@ -58,10 +61,10 @@ const Hero: React.FC = () => {
         content = (
           <div className="flex items-start space-x-3">
             <div className="flex-1 text-start min-w-0">
-              <p className="mb-4"><span className='text-pink-400'>Symbol</span> obatala, tke Orisha of purity,   <br />wisdom, and peace.</p>
-              <p className="mb-4"><span className='text-pink-400'>Color:</span>   Pure white </p>
-              <p className="mb-4"> <span className='text-pink-400'>Why:</span> Whte symbolizes purity, clarity,and <br />divine intelligence.Obatala devotees wear <br />white head to toe</p>
-              <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Robes,beads,shrine cloth, and   <br />ceremonial food offerings (always white )</p>
+              <p className="mb-4"><span className='text-pink-400'>Symbol</span> Obatala, the Orisha of purity, <br />wisdom, and peace.</p>
+              <p className="mb-4"><span className='text-pink-400'>Color:</span> Pure white </p>
+              <p className="mb-4"> <span className='text-pink-400'>Why:</span> White symbolizes purity, clarity, and <br />divine intelligence. Obatala devotees wear <br />white head to toe</p>
+              <p className="mb-4"> <span className='text-pink-400'>Seen:</span> Robes, beads, shrine cloth, and <br />ceremonial food offerings (always white )</p>
             </div>
           </div>
         );
@@ -70,11 +73,11 @@ const Hero: React.FC = () => {
         content = (
           <div className="flex items-start space-x-3">
             <div className="flex-1 text-start min-w-0">
-              <p className="mb-4"><span className='text-pink-400'>Symbol</span>   Symbolic of earthiness heritage, <br />and resiliance</p>
-              <p className="mb-4"><span className='text-pink-400'>Color:</span>   Dark brown/Charcoal. </p>
-              <p className="mb-4"> <span className='text-pink-400'>Made From:</span> Elubo(yam flour)sometimes <br />chocolate flour or plaintain flour.</p>
-              <p className="mb-4"> <span className='text-pink-400'>Regions Known For it:</span>Deeply rooted in <br />Oyo, osun, Ibadan Especially beloved in <br /> Ibadan, where people</p>
-              <p className='mb-4'><span className='text-pink-400'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
+              <p className="mb-4"><span className='text-pink-700'>Symbol</span> Symbolic of earthiness heritage, <br />and resilience</p>
+              <p className="mb-4"><span className='text-pink-700'>Color:</span> Dark brown/Charcoal. </p>
+              <p className="mb-4"> <span className='text-pink-700'>Made From:</span> Elubo (yam flour), sometimes <br />chocolate flour or plaintain flour.</p>
+              <p className="mb-4"> <span className='text-pink-700'>Regions Known For it:</span> Deeply rooted in <br />Oyo, Osun, Ibadan. Especially beloved in <br /> Ibadan, where people</p>
+              <p className='mb-4'><span className='text-pink-700'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
               <p>sometimes called the "yoruba national combo."</p>
             </div>
           </div>
@@ -84,10 +87,10 @@ const Hero: React.FC = () => {
         content = (
           <div className="flex items-start space-x-3">
             <div className="flex-1 text-start min-w-0">
-              <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility   <br />rivers and femininity.</p>
-              <p className="mb-4"><span className='text-pink-400'>Color:</span>   Gold </p>
-              <p className="mb-4"> <span className='text-pink-400'>Why:</span>Gold symbolizes wealth, feminity,<br />radiance, and sacred rivers</p>
-              <p className="mb-4"> <span className='text-pink-400'>Seen:</span>Beads,gele(headwrap),festival   <br />gaments,river offerings.</p>
+              <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility, <br />rivers and femininity.</p>
+              <p className="mb-4"><span className='text-pink-400'>Color:</span> Gold </p>
+              <p className="mb-4"> <span className='text-pink-400'>Why:</span> Gold symbolizes wealth, femininity,<br />radiance, and sacred rivers</p>
+              <p className="mb-4"> <span className='text-pink-400'>Seen:</span> Beads, gele (headwrap), festival <br />garments, river offerings.</p>
             </div>
           </div>
         );
@@ -149,54 +152,85 @@ const Hero: React.FC = () => {
 
   return (
     <motion.div
-      className="py-4 sm:py-8 gap-7 md:py-12 lg:py-24 overflow-hidden"
+      className="py-4 sm:py-8 gap-0 md:py-12 lg:py-24 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <motion.div
         className="relative flex justify-center items-center min-h-screen text-center sm:px-0"
-        style={{
-          backgroundImage: "url('/cfd.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        style={{ background: 'none' }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80 z-0" />
+        {/* Left-side background image */}
+        <div className="absolute left-0 top-0 h-full mt-2 w-1/2 z-0">
+          <div
+            style={{
+              backgroundImage: "url('/new.png')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              width: '100%',
+              height: '100%',
+            }}
+            className="h-full w-full"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80" />
+        </div>
 
         {/* Updated Container Div */}
-        <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:justify-start gap-6 sm:gap-8 lg:gap-24 max-w-7xl lg:pl-10 lg:pr-10"> {/* Adjusted gap and added right padding */}
+        <div className=" z-10 container mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:justify-start gap-6 sm:gap-8 lg:gap-20 max-w-7xl lg:pl-10 lg:pr-10"> {/* Adjusted gap and added right padding */}
           {/* Left Section */}
           <motion.div
             className="flex flex-col items-center mt-4 sm:mt-6 lg:items-start text-center lg:text-left max-w-full lg:max-w-xl px-4 sm:px-0"
-            initial={{ x: -20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.18 } }
+            }}
           >
-            <h1
-              className="text-3xl flex flex-col sm:text-4xl md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8"
+            <motion.h1
+              className="text-3xl flex flex-col sm:text-4xl mt-24 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8"
               style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700 }}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14 } }
+              }}
             >
               Ancient Stories.<br /> <span className='mt-4'>Modern Design.</span>
-            </h1>
+            </motion.h1>
             <motion.p
               className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8"
               style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 500 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.2 } }
+              }}
+              animate={{
+                opacity: 1,
+                x: [0, -5, 5, -5, 5, 0],
+                rotate: [0, 0, 0, 0, 0, 0],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                repeatType: 'loop',
+                times: [0, 0.15, 0.3, 0.45, 0.6, 1],
+                ease: 'easeInOut',
+                delay: 0.8
+              }}
             >
               Instantly.
             </motion.p>
             <motion.p
-              className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-10 max-w-md font-inter"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.4 } }
+              }}
             >
               Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
             </motion.p>
@@ -204,9 +238,10 @@ const Hero: React.FC = () => {
               className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition duration-300 text-sm sm:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.6 } }
+              }}
             >
               <img className='w-4 h-4 ' src="/flower.png" alt="" />
               Try Beta Free
@@ -232,7 +267,7 @@ const Hero: React.FC = () => {
 
               {/* Light green shadow (top) */}
               <motion.div
-                className="absolute inset-x-0 top-0 h-full bg-green-100 rounded-xl blur-xl"
+                className="absolute inset-x-0 top-0 h-full w bg-green-100 rounded-xl blur-xl"
                 style={{ height: '30px', top: '-10px' }}
                 animate={{ opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -258,19 +293,19 @@ const Hero: React.FC = () => {
                   <motion.button
                     key={culture}
                     className={`relative flex items-center justify-center p-2 sm:p-3 rounded-md text-xs sm:text-sm font-medium text-white h-16 sm:h-20 overflow-hidden transition-all duration-200
-                      ${selectedCulture === culture ? 'ring-2 ring-purple-500 ring-offset-1 sm:ring-offset-2 scale-[1.02]' : 'hover:scale-[1.02]'}
+                      ${selectedCulture === culture ? 'scale-[1.02]' : 'hover:scale-[1.02]'}
                       ${culture === 'Japan' ? 'col-span-2 mx-auto w-32 sm:col-span-1 sm:mx-0' : ''} `}
                     onClick={() => handleCultureSelect(culture)}
+                    onMouseEnter={() => culture === 'Yoruba' && setIsYorubaHovered(true)} // Set state for Yoruba hover
+                    onMouseLeave={() => culture === 'Yoruba' && setIsYorubaHovered(false)} // Clear state for Yoruba hover
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.98 }}
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ type: "spring", stiffness: 300 }}
-                    onMouseEnter={() => culture === 'Yoruba' && setHoveredAsset('YorubaHover')}
-                    onMouseLeave={() => culture === 'Yoruba' && setHoveredAsset(null)}
                   >
-                    {/* Show alternate image on hover for Yoruba */}
-                    {culture === 'Yoruba' && hoveredAsset === 'YorubaHover' ? (
+                    {/* Conditional image source for Yoruba on hover */}
+                    {culture === 'Yoruba' && isYorubaHovered ? (
                       <img src="/Hover state.png" alt="Yoruba Culture Hover" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
                     ) : (
                       <img src={`/${culture.toLowerCase()}.png`} alt={`${culture} Culture`} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
@@ -291,99 +326,117 @@ const Hero: React.FC = () => {
                 </svg>
               </motion.div>
 
-              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Generated Assets</h2>
               {isLoading ? (
-                <SkeletonLoader />
+                <>
+                  <motion.h2
+                    className="text-base items-start sm:text-lg md:text-xl font-semibold text-gray-300 mb-3 sm:mb-4"
+                    animate={{ opacity: [1, 0.5, 1], scale: [1, 1.05, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    Heritengine processing
+                  </motion.h2>
+                  <SkeletonLoader />
+                </>
               ) : (
-                <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                  {generatedAssets.map((asset) => (
-                    <div key={asset.label} className="group relative">
-                      <motion.div
-                        className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
-                        onMouseEnter={() => setHoveredAsset(asset.label)}
-                        onMouseLeave={() => setHoveredAsset(null)}
-                        whileHover={{ x: 5 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                      >
-                        <div className="flex items-center space-x-2 sm:space-x-3">
-                          <motion.div className="relative">
-                            <img
-                              src={asset.src}
-                              alt={asset.label}
-                              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover border border-gray-200"
-                            />
-                            <div className={`absolute inset-0 rounded-lg border-2 ${asset.label === 'Obatala' ? 'border-purple-300' : asset.label === 'Amala' ? 'border-red-300' : 'border-yellow-300'} opacity-0 group-hover:opacity-100 transition-opacity duration-200`}></div>
-                          </motion.div>
-                          <span className="text-sm sm:text-base text-gray-800 font-medium">{asset.label}</span>
+                <div className="bg-gray-50 rounded-lg px-4 py-4 mb-6 sm:mb-8">
+                  <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-left">Generated Assets</h2>
+                  <div className="space-y-3 sm:space-y-4">
+                    {generatedAssets.map((asset) => (
+                      <div key={asset.label} className="group relative">
+                        <div
+                          className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
+                        >
+                          <div className="flex items-center space-x-2 sm:space-x-3">
+                            <motion.div
+                              className="relative"
+                              onMouseEnter={() => setHoveredAsset(asset.label)} // Set hovered asset on mouse enter
+                              onMouseLeave={() => setHoveredAsset(null)} // Clear hovered asset on mouse leave
+                              whileHover={{ scale: 1.05 }} // Added a small scale hover for the image itself
+                              transition={{ type: "spring", stiffness: 300 }}
+                            >
+                              <img
+                                src={asset.src}
+                                alt={asset.label}
+                                className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover border border-gray-200"
+                              />
+                              <div className={`absolute inset-0 rounded-lg border-2 ${asset.label === 'Obatala' ? 'border-purple-300' : asset.label === 'Amala' ? 'border-red-300' : 'border-yellow-300'} opacity-0 group-hover:opacity-100 transition-opacity duration-200`}></div>
+                            </motion.div>
+                            <span className="text-sm sm:text-base text-gray-800 font-medium">{asset.label}</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2 text-xs sm:text-sm">
+                            <motion.button
+                              className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                              whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
+                                <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export</button>
+                            </motion.button>
+                            <motion.button
+                              className="px-2 py-1 sm:px-3 sm:py-1   text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                              whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><FaShare /><span className="mr-1"></span>Share</button>
+                            </motion.button>
+                          </div>
                         </div>
-                        <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2 text-xs sm:text-sm">
-                          <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <img src="/export.png" alt="Export" />
-                          </motion.button>
-                          <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1   text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <img src="/import.png" alt="Share" />
-                          </motion.button>
-                        </div>
-                      </motion.div>
-                      <AnimatePresence>
-                        {hoveredAsset === asset.label && <AssetDropdown assetLabel={asset.label} />}
-                      </AnimatePresence>
-                    </div>
-                  ))}
+                        <AnimatePresence>
+                          {hoveredAsset === asset.label && <AssetDropdown assetLabel={asset.label} />}
+                        </AnimatePresence>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
-              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Color Palette</h2>
+              
               {isLoading ? ( // Apply skeleton loader here
                 <ColorPaletteSkeletonLoader />
               ) : (
-                <motion.div
-                  className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0"
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="flex space-x-1 sm:space-x-2">
-                    <motion.div
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
-                      style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
-                      whileHover={{ scale: 1.2 }}
-                    />
-                    <motion.div
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border bg-[#4B3621] bg-cover bg-center"
-                      style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
-                      whileHover={{ scale: 1.2 }}
-                    />
-                    {/* Added third color palette */}
-                    <motion.div
-                      className="w-6 h-6 sm:w-8 sm:h-8 rounded-full   bg-[#FFD700] bg-cover bg-center"
-                      style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
-                      whileHover={{ scale: 1.2 }}
-                    />
-                  </div>
-                  <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
+                <div className="bg-gray-50 rounded-lg px-4 py-4">
+                  <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-left">Color Palette</h2>
+                  <motion.div
+                    className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0"
+                    whileHover={{ scale: 1.01 }}
+                  >
+                    <div className="flex space-x-1 sm:space-x-2">
+                      <motion.div
+                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
+                        style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
+                        whileHover={{ scale: 1.2 }}
+                      />
+                      <motion.div
+                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border bg-[#4B3621] bg-cover bg-center"
+                        style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
+                        whileHover={{ scale: 1.2 }}
+                      />
+                      {/* Added third color palette */}
+                      <motion.div
+                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full   bg-[#FFD700] bg-cover bg-center"
+                        style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
+                        whileHover={{ scale: 1.2 }}
+                      />
+                    </div>
+                    <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
                     <motion.button
-                      className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                      whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <img src="/export.png" alt="" />
-                    </motion.button>
-                    <motion.button
-                      className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                      whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <img src="/import.png" alt="" />
-                    </motion.button>
-                  </div>
-                </motion.div>
+                              className="px-2 py-1 sm:px-3 sm:py-1  text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                              whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
+                                <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export</button>
+                            </motion.button>
+                     <motion.button
+                              className="px-2 py-1 sm:px-3 sm:py-1   text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                              whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><FaShare /><span className="mr-1"></span>Share</button>
+                            </motion.button>
+                    </div>
+                  </motion.div>
+                </div>
               )}
             </motion.div>
           </motion.div>
