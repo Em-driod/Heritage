@@ -165,7 +165,7 @@ const Hero: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         {/* Left-side background image */}
-        <div className="absolute left-0 top-0 h-full mt-2 w-1/2 z-0">
+        <div className="absolute left-0 top-0 h-[688px]  mt-0 w-1/2 z-0">
           <div
             style={{
               backgroundImage: "url('/meve.png')",
@@ -250,7 +250,7 @@ const Hero: React.FC = () => {
 
           {/* Right Section Card */}
           <motion.div
-            className="relative w-full max-w-sm sm:max-w-md lg:max-w-xl lg:mt-0 flex-grow" // Reduced max-w-2xl to max-w-xl
+            className="relative w-full max-w-sm sm:max-w-md h-[688px] lg:max-w-xl lg:mt-0 flex-grow mt-[28px]" // Added mt-[8px] to drop the card by 8px
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -275,7 +275,7 @@ const Hero: React.FC = () => {
 
               {/* Light yellow shadow (left) */}
               <motion.div
-                className="absolute inset-y-4 left-0 w-full bg-yellow-200 rounded-full blur-xl"
+                className="absolute inset-y-8 left-0 w-full bg-yellow-200 rounded-full blur-xl"
                 style={{ width: '30px', left: '-10px' }}
                 animate={{ opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
@@ -287,7 +287,7 @@ const Hero: React.FC = () => {
               whileHover={{ y: -5 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-4 sm:mb-6">Select Culture</h2>
+              <h2 className="text-base sm:text-lg md:text-xl text-start  font-semibold text-gray-800 mb-4 sm:mb-6">Select Culture</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {['Yoruba', 'Igbo', 'Japan'].map((culture) => (
                   <motion.button
