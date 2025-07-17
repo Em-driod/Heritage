@@ -71,8 +71,8 @@ const Hero: React.FC = () => {
         break;
       case 'Amala':
         content = (
-          <div className="flex items-start space-x-3">
-            <div className="flex-1 text-start min-w-0">
+          <div className="flex items-start space-x-3 ">
+            <div className="flex-1 text-start min-w-0 text-xl ">
               <p className="mb-4"><span className='text-[#EF4444]'>Symbol</span> Symbolic of earthiness heritage, <br />and resilience</p>
               <p className="mb-4"><span className='text-[#EF4444]'>Color:</span> Dark brown/Charcoal. </p>
               <p className="mb-4"> <span className='text-[#EF4444]'>Made From:</span> Elubo (yam flour), sometimes <br />chocolate flour or plaintain flour.</p>
@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className="absolute left-1/2 z-30 -translate-x-1/2 top-[-10px] sm:top-[-20px] bg-white w-80 p-4 rounded-lg border border-red-200 shadow-xl text-sm text-gray-800"
+        className="absolute left-1/2 z-30 -translate-x-1/2 top-[-10px] sm:top-[-20px] bg-white w-90 p-4 rounded-lg border border-red-200 shadow-xl text-sm text-gray-800"
         style={{ pointerEvents: 'auto' }}
       >
         {content}
