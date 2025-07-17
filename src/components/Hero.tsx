@@ -60,11 +60,11 @@ const Hero: React.FC = () => {
       case 'Obatala':
         content = (
           <div className="flex items-start space-x-3">
-            <div className="flex-1 text-start min-w-0">
-              <p className="mb-4"><span className='text-[#EF4444]'>Symbol</span> Obatala, the Orisha of purity, <br />wisdom, and peace.</p>
-              <p className="mb-4"><span className='text-[#EF4444]'>Color:</span> Pure white </p>
-              <p className="mb-4"> <span className='text-[#EF4444]'>Why:</span> White symbolizes purity, clarity, and <br />divine intelligence. Obatala devotees wear <br />white head to toe</p>
-              <p className="mb-4"> <span className='text-[#EF4444]'>Seen:</span> Robes, beads, shrine cloth, and <br />ceremonial food offerings (always white )</p>
+            <div className="flex-1 text-start min-w-0 text-xl ">
+              <p className="mb-4 text-gray-700 "><span className='text-[#EF4444]'>Symbol</span> Obatala, the Orisha of purity, <br />wisdom, and peace.</p>
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Color:</span> Pure white </p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Why:</span> White symbolizes purity, clarity, and <br />divine intelligence. Obatala devotees wear <br />white head to toe</p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Seen:</span> Robes, beads, shrine cloth, and <br />ceremonial food offerings (always white )</p>
             </div>
           </div>
         );
