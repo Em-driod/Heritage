@@ -61,10 +61,10 @@ const Hero: React.FC = () => {
         content = (
           <div className="flex items-start space-x-3">
             <div className="flex-1 text-start min-w-0">
-              <p className="mb-4"><span className='text-pink-400'>Symbol</span> Obatala, the Orisha of purity, <br />wisdom, and peace.</p>
-              <p className="mb-4"><span className='text-pink-400'>Color:</span> Pure white </p>
-              <p className="mb-4"> <span className='text-pink-400'>Why:</span> White symbolizes purity, clarity, and <br />divine intelligence. Obatala devotees wear <br />white head to toe</p>
-              <p className="mb-4"> <span className='text-pink-400'>Seen:</span> Robes, beads, shrine cloth, and <br />ceremonial food offerings (always white )</p>
+              <p className="mb-4"><span className='text-[#EF4444]'>Symbol</span> Obatala, the Orisha of purity, <br />wisdom, and peace.</p>
+              <p className="mb-4"><span className='text-[#EF4444]'>Color:</span> Pure white </p>
+              <p className="mb-4"> <span className='text-[#EF4444]'>Why:</span> White symbolizes purity, clarity, and <br />divine intelligence. Obatala devotees wear <br />white head to toe</p>
+              <p className="mb-4"> <span className='text-[#EF4444]'>Seen:</span> Robes, beads, shrine cloth, and <br />ceremonial food offerings (always white )</p>
             </div>
           </div>
         );
@@ -73,11 +73,11 @@ const Hero: React.FC = () => {
         content = (
           <div className="flex items-start space-x-3">
             <div className="flex-1 text-start min-w-0">
-              <p className="mb-4"><span className='text-pink-700'>Symbol</span> Symbolic of earthiness heritage, <br />and resilience</p>
-              <p className="mb-4"><span className='text-pink-700'>Color:</span> Dark brown/Charcoal. </p>
-              <p className="mb-4"> <span className='text-pink-700'>Made From:</span> Elubo (yam flour), sometimes <br />chocolate flour or plaintain flour.</p>
-              <p className="mb-4"> <span className='text-pink-700'>Regions Known For it:</span> Deeply rooted in <br />Oyo, Osun, Ibadan. Especially beloved in <br /> Ibadan, where people</p>
-              <p className='mb-4'><span className='text-pink-700'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
+              <p className="mb-4"><span className='text-[#EF4444]'>Symbol</span> Symbolic of earthiness heritage, <br />and resilience</p>
+              <p className="mb-4"><span className='text-[#EF4444]'>Color:</span> Dark brown/Charcoal. </p>
+              <p className="mb-4"> <span className='text-[#EF4444]'>Made From:</span> Elubo (yam flour), sometimes <br />chocolate flour or plaintain flour.</p>
+              <p className="mb-4"> <span className='text-[#EF4444]'>Regions Known For it:</span> Deeply rooted in <br />Oyo, Osun, Ibadan. Especially beloved in <br /> Ibadan, where people</p>
+              <p className='mb-4'><span className='text-[#EF4444]'>Enjoyed With </span> Typically served with ewedu,<br />gbegiri, and obe ata</p>
               <p>sometimes called the "yoruba national combo."</p>
             </div>
           </div>
@@ -87,10 +87,10 @@ const Hero: React.FC = () => {
         content = (
           <div className="flex items-start space-x-3">
             <div className="flex-1 text-start min-w-0">
-              <p className="mb-4"><span className='text-pink-400'>Symbol</span> Oshun, Orisha of beauty, fertility, <br />rivers and femininity.</p>
-              <p className="mb-4"><span className='text-pink-400'>Color:</span> Gold </p>
-              <p className="mb-4"> <span className='text-pink-400'>Why:</span> Gold symbolizes wealth, femininity,<br />radiance, and sacred rivers</p>
-              <p className="mb-4"> <span className='text-pink-400'>Seen:</span> Beads, gele (headwrap), festival <br />garments, river offerings.</p>
+              <p className="mb-4"><span className='text-[#EF4444]'>Symbol</span> Oshun, Orisha of beauty, fertility, <br />rivers and femininity.</p>
+              <p className="mb-4"><span className='text-[#EF4444]'>Color:</span> Gold </p>
+              <p className="mb-4"> <span className='text-[#EF4444]'>Why:</span> Gold symbolizes wealth, femininity,<br />radiance, and sacred rivers</p>
+              <p className="mb-4"> <span className='text-[#EF4444]'>Seen:</span> Beads, gele (headwrap), festival <br />garments, river offerings.</p>
             </div>
           </div>
         );
@@ -193,7 +193,7 @@ const Hero: React.FC = () => {
             }}
           >
             <motion.h1
-              className="text-3xl flex flex-col sm:text-4xl mt-24 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8"
+              className="text-3xl flex flex-col sm:text-4xl mt-24 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2"
               style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700 }}
               variants={{
                 hidden: { opacity: 0, y: 40 },
@@ -275,7 +275,7 @@ const Hero: React.FC = () => {
 
               {/* Light yellow shadow (left) */}
               <motion.div
-                className="absolute inset-y-0 left-0 w-full bg-yellow-200 rounded-xl blur-xl"
+                className="absolute inset-y-4 left-0 w-full bg-yellow-200 rounded-full blur-xl"
                 style={{ width: '30px', left: '-10px' }}
                 animate={{ opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
@@ -402,18 +402,18 @@ const Hero: React.FC = () => {
                   >
                     <div className="flex space-x-1 sm:space-x-2">
                       <motion.div
-                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-300 bg-cover bg-center"
+                        className="w-6 h-6 sm:w-6 sm:h-6 rounded-full border border-gray-300 bg-cover bg-center"
                         style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
                         whileHover={{ scale: 1.2 }}
                       />
                       <motion.div
-                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border bg-[#4B3621] bg-cover bg-center"
+                        className="w-6 h-6 sm:w-6 sm:h-6 rounded-full  bg-[#4B3621] bg-cover bg-center"
                         style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
                         whileHover={{ scale: 1.2 }}
                       />
                       {/* Added third color palette */}
                       <motion.div
-                        className="w-6 h-6 sm:w-8 sm:h-8 rounded-full   bg-[#FFD700] bg-cover bg-center"
+                        className="w-6 h-6 sm:w-6 sm:h-6 rounded-full   bg-[#FFD700] bg-cover bg-center"
                         style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
                         whileHover={{ scale: 1.2 }}
                       />

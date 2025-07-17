@@ -134,7 +134,7 @@ const Landfifth = () => {
                 let text = '';
                 let hover = '';
                 if (item === 'Yoruba') {
-                  bg = 'bg-[#e0ffe6]';'bg-[#e0f0ff]';
+                  bg = 'bg-[#e0f0ff]';
                   text = 'text-[#4169E1]';
                   hover = 'hover:bg-[#ffe7b3]';
                 } else if (item === 'Maori') {
