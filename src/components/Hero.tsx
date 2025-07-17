@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 10 }}
         transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className="absolute left-1/2 z-30 -translate-x-1/2 top-[-10px] sm:top-[-20px] bg-white w-80 p-4 rounded-lg border border-gray-200 shadow-xl text-sm text-gray-800"
+        className="absolute left-1/2 z-30 -translate-x-1/2 top-[-10px] sm:top-[-20px] bg-white w-80 p-4 rounded-lg border border-red-200 shadow-xl text-sm text-gray-800"
         style={{ pointerEvents: 'auto' }}
       >
         {content}
