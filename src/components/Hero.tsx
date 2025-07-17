@@ -168,7 +168,7 @@ const Hero: React.FC = () => {
         <div className="absolute left-0 top-0 h-full mt-2 w-1/2 z-0">
           <div
             style={{
-              backgroundImage: "url('/new.png')",
+              backgroundImage: "url('/meve.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -339,7 +339,7 @@ const Hero: React.FC = () => {
                 </>
               ) : (
                 <div className="bg-gray-50 rounded-lg px-4 py-4 mb-6 sm:mb-8">
-                  <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-left">Generated Assets</h2>
+                  <h2 className=" sm:text-xs md:text-xs font-normal text-gray-600 mb-3 sm:mb-4  text-left">Generated Assets</h2>
                   <div className="space-y-3 sm:space-y-4">
                     {generatedAssets.map((asset) => (
                       <div key={asset.label} className="group relative">
@@ -395,7 +395,7 @@ const Hero: React.FC = () => {
                 <ColorPaletteSkeletonLoader />
               ) : (
                 <div className="bg-gray-50 rounded-lg px-4 py-4">
-                  <h2 className="text-base sm:text-lg md:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-left">Color Palette</h2>
+                  <h2 className=" sm:text-xs md:text-xs font-normal text-gray-600 mb-3 sm:mb-4 text-left">Color Palette</h2>
                   <motion.div
                     className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0"
                     whileHover={{ scale: 1.01 }}
