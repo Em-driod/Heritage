@@ -152,37 +152,36 @@ const Hero: React.FC = () => {
 
   return (
     <motion.div
-      className="py-4 sm:py-8 md:py-12 lg:py-24 overflow-hidden"
+      className="py-4 sm:py-8 gap-0  lg:py-24 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div
-        className="relative flex justify-center items-center min-h-screen text-center"
+        className="relative flex justify-center items-center min-h-screen text-center sm:px-0 mr-18"
         style={{ background: 'none' }}
       >
-        {/* Main container with full width and flex layout for side-by-side sections */}
-        <div className="z-10 flex flex-col h-[688px] lg:flex-row items-center lg:items-start lg:justify-start w-full gap-6 sm:gap-8 lg:gap-0">
-          {/* Left Section: Takes up half the width on large screens and spans full width horizontally */}
+        {/* Updated Container Div: No horizontal padding on large screens, no gap */}
+       
+          {/* Left Section: Uses flex-1 to fill available space, no max-width on lg screens */}
           <motion.div
-            className="relative flex flex-col items-center mt-0 -translate-y-5 sm:mt-6 lg:items-start text-center lg:text-left w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 rounded-xl overflow-hidden"
+            className="relative flex flex-col items-center mt-0 -translate-y-5 sm:mt-6 lg:items-start text-center lg:text-left w-full -translate-x-  px-0 sm:px-0 rounded-xl overflow-hidden"
             initial="hidden"
             animate="visible"
             variants={{
               hidden: { opacity: 0, y: 40 },
               visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.18 } }
             }}
-            // Added flex-grow and w-full for full width on smaller screens, and lg:w-1/2 for large
-            style={{ flexGrow: 1 }}
           >
             {/* Background image for the left section */}
             <div
-              className="absolute inset-0 h-full w-full z-0"
+              className="absolute h-full w-full z-0 left-0 top-0"
               style={{
                 backgroundImage: "url('/meve.png')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
+                margin: 0,
               }}
             >
               {/* Overlay for the background image */}
@@ -206,10 +205,10 @@ const Hero: React.FC = () => {
               }}
             />
 
-            {/* Content for the left section: Now has consistent padding */}
-            <div className="relative z-10 p-4 sm:p-6 lg:p-8 lg:pl-10 max-w-lg lg:max-w-none mx-auto lg:mx-0">
+            {/* Content for the left section: Added specific padding for visual alignment */}
+            <div className="relative z-10 p-4 sm:p-6 lg:p-8 lg:pl-10">
               <motion.h1
-                className="text-3xl flex flex-col sm:text-4xl mt-24 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2"
+                className="text-3xl flex flex-col sm:text-4xl mt-24 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 ml-7"
                 style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700 }}
                 variants={{
                   hidden: { opacity: 0, y: 40 },
@@ -219,7 +218,7 @@ const Hero: React.FC = () => {
                 Ancient Stories.<br /> <span className='mt-4'>Modern Design.</span>
               </motion.h1>
               <motion.p
-                className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8"
+                className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-7"
                 style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 500 }}
                 variants={{
                   hidden: { opacity: 0, y: 40 },
@@ -242,7 +241,7 @@ const Hero: React.FC = () => {
                 Instantly.
               </motion.p>
               <motion.p
-                className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter"
+                className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter ml-7"
                 variants={{
                   hidden: { opacity: 0, y: 40 },
                   visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.4 } }
@@ -251,7 +250,7 @@ const Hero: React.FC = () => {
                 Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
               </motion.p>
               <motion.button
-                className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-24 transition duration-300 text-sm sm:text-base"
+                className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-24 transition duration-300 text-sm sm:text-base ml-7"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 variants={{
@@ -456,7 +455,7 @@ const Hero: React.FC = () => {
               )}
             </motion.div>
           </motion.div>
-        </div>
+        
       </div>
     </motion.div>
   );
