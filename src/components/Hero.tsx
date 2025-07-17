@@ -266,7 +266,7 @@ const Hero: React.FC = () => {
 
           {/* Right Section Card: Retains its max-width for its card-like appearance */}
           <motion.div
-            className="relative w-full max-w-sm sm:max-w-md h-[678px] lg:max-w-xl lg:mt-0 flex-grow mt-[20px]"
+            className="relative w-full max-w-sm sm:max-w-md h-[678px] lg:max-w-xl lg:mt-0 flex-grow mt-[20px] -translate-y-2"
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
