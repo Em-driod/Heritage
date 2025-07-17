@@ -14,6 +14,7 @@ const Hero: React.FC = () => {
   const [generatedAssets, setGeneratedAssets] = useState<Asset[]>([]);
   const [hoveredAsset, setHoveredAsset] = useState<string | null>(null);
   const [isYorubaHovered, setIsYorubaHovered] = useState<boolean>(false); // New state for Yoruba button hover
+  // Removed unused showOverlay state
 
   const fetchGeneratedAssets = (cultureParam: string) => {
     setIsLoading(true);
@@ -47,6 +48,21 @@ const Hero: React.FC = () => {
   useEffect(() => {
     fetchGeneratedAssets(selectedCulture);
   }, [selectedCulture]);
+
+  // On initial load, show overlay and trigger each asset popup one after another
+  useEffect(() => {
+    if (generatedAssets.length === 3) {
+      setHoveredAsset(generatedAssets[0].label);
+      const timers = [
+        setTimeout(() => setHoveredAsset(generatedAssets[1].label), 3000),
+        setTimeout(() => setHoveredAsset(generatedAssets[2].label), 4000),
+        setTimeout(() => {
+          setHoveredAsset(null);
+        }, 3000)
+      ];
+      return () => timers.forEach(clearTimeout);
+    }
+  }, [generatedAssets]);
 
   const handleCultureSelect = (cultureName: string) => {
     setSelectedCulture(cultureName);
@@ -112,29 +128,6 @@ const Hero: React.FC = () => {
     );
   };
 
-  const SkeletonLoader = () => (
-    <div className="space-y-4">
-      {[1, 2, 3].map((_, index) => (
-        <motion.div
-          key={index}
-          className="flex items-center justify-between"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1 }}
-        >
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gray-200 animate-pulse"></div>
-            <div className="h-3 sm:h-4 bg-gray-200 rounded w-16 sm:w-24 animate-pulse"></div>
-          </div>
-          <div className="flex space-x-1 sm:space-x-2">
-            <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
-            <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  );
-
   // New Skeleton for Color Palette
   const ColorPaletteSkeletonLoader = () => (
     <div className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0">
@@ -147,6 +140,24 @@ const Hero: React.FC = () => {
         <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
         <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16 animate-pulse"></div>
       </div>
+    </div>
+  );
+
+  // SkeletonLoader for asset loading
+  const SkeletonLoader = () => (
+    <div className="space-y-3 sm:space-y-4">
+      {[1, 2, 3].map((i) => (
+        <div key={i} className="flex items-center justify-between p-2 rounded-lg bg-gray-100 animate-pulse">
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gray-200" />
+            <div className="h-4 sm:h-5 bg-gray-200 rounded w-20 sm:w-32" />
+          </div>
+          <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2">
+            <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16" />
+            <div className="h-6 sm:h-8 bg-gray-200 rounded w-12 sm:w-16" />
+          </div>
+        </div>
+      ))}
     </div>
   );
 

@@ -6,6 +6,13 @@ import { FaShare } from "react-icons/fa"; // Import useState
 
 const Landsecont: React.FC = () => {
   const [showKimonoText, setShowKimonoText] = useState(false); // State for hover effect
+  React.useEffect(() => {
+    setShowKimonoText(true);
+    const timer = setTimeout(() => {
+      setShowKimonoText(false);
+    }, 2000); // Show popup for 2 seconds
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white py-8 px-4 sm:py-16 sm:px-6 lg:px-8">
