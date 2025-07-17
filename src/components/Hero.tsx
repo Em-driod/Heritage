@@ -208,7 +208,7 @@ const Hero: React.FC = () => {
             {/* Content for the left section: Added specific padding for visual alignment */}
             <div className="relative z-10 p-4 sm:p-6 lg:p-8 lg:pl-10">
               <motion.h1
-                className="text-3xl flex flex-col sm:text-4xl mt-20 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1]  tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 ml-12"
+                className="text-3xl flex flex-col sm:text-4xl mt-20 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1]  tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 ml-16"
                 style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700 }}
                 variants={{
                   hidden: { opacity: 0, y: 40 },
@@ -218,7 +218,7 @@ const Hero: React.FC = () => {
                 Ancient Stories.<br /> <span className='mt-4'>Modern Design.</span>
               </motion.h1>
               <motion.p
-                className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-12"
+                className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-16"
                 style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 500 }}
                 variants={{
                   hidden: { opacity: 0, y: 40 },
@@ -241,7 +241,7 @@ const Hero: React.FC = () => {
                 Instantly.
               </motion.p>
               <motion.p
-                className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter ml-12"
+                className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter ml-16"
                 variants={{
                   hidden: { opacity: 0, y: 40 },
                   visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.4 } }
