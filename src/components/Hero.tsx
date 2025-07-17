@@ -165,7 +165,7 @@ const Hero: React.FC = () => {
         transition={{ duration: 0.8 }}
       >
         {/* Left-side background image */}
-        <div className="absolute left-0 top-0 h-[688px]  mt-0 w-1/2 z-0">
+        <div className="absolute left-0 top-0 h-full  mt-0 w-1/2 z-0">
           <div
             style={{
               backgroundImage: "url('/meve.png')",
