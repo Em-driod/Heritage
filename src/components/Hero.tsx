@@ -177,6 +177,22 @@ const Hero: React.FC = () => {
             }}
             className="h-full w-full"
           />
+          {/* Yellow blur at center right side */}
+          <div
+            className="absolute"
+            style={{
+              top: '50%',
+              right: '0',
+              left: 'auto',
+              transform: 'translateY(-10%)',
+              width: '180px',
+              height: '180px',
+              background: 'radial-gradient(circle, #ffe066 60%, transparent 100%)',
+              filter: 'blur(92px)',
+              zIndex: 2,
+              pointerEvents: 'none',
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80" />
         </div>
 
