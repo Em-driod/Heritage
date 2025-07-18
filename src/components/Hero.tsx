@@ -16,6 +16,7 @@ const Hero: React.FC = () => {
   const [isYorubaHovered, setIsYorubaHovered] = useState<boolean>(false);
   const [isAutoHoverActive, setIsAutoHoverActive] = useState<boolean>(false);
   const userInteractedRef = useRef<boolean>(false);
+  const [hoveredPalette, setHoveredPalette] = useState<number | null>(null);
 
   const fetchGeneratedAssets = (cultureParam: string) => {
     setIsLoading(true);
@@ -477,20 +478,68 @@ const Hero: React.FC = () => {
                 >
                   <div className="flex space-x-1 sm:space-x-2">
                     <motion.div
-                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full border border-gray-300 bg-cover bg-center"
+                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full border border-gray-300 bg-cover bg-center relative"
                       style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
-                    />
+                      onMouseEnter={() => setHoveredPalette(0)}
+                      onMouseLeave={() => setHoveredPalette(null)}
+                    >
+                      <AnimatePresence>
+                        {hoveredPalette === 0 && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-yellow-200 text-xs text-gray-700 text-center whitespace-nowrap"
+                          >
+                            Pure White (#FFFFFF)
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
                     <motion.div
-                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full bg-[#4B3621] bg-cover bg-center"
+                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full bg-[#4B3621] bg-cover bg-center relative"
                       style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
-                    />
+                      onMouseEnter={() => setHoveredPalette(1)}
+                      onMouseLeave={() => setHoveredPalette(null)}
+                    >
+                      <AnimatePresence>
+                        {hoveredPalette === 1 && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-brown-200 text-xs text-gray-700 text-center whitespace-nowrap"
+                          >
+                            Dark Brown (#4B3621)
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
                     <motion.div
-                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full bg-[#FFD700] bg-cover bg-center"
+                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full bg-[#FFD700] bg-cover bg-center relative"
                       style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
                       whileHover={{ scale: 1.2 }}
-                    />
+                      onMouseEnter={() => setHoveredPalette(2)}
+                      onMouseLeave={() => setHoveredPalette(null)}
+                    >
+                      <AnimatePresence>
+                        {hoveredPalette === 2 && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-yellow-300 text-xs text-gray-700 text-center whitespace-nowrap"
+                          >
+                            Gold (#FFD700)
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
                   </div>
                   <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
                     <motion.button
