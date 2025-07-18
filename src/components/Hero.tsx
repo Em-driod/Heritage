@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaShare } from "react-icons/fa";
+import { FaMousePointer } from "react-icons/fa";
 
 interface Asset {
   src: string;
@@ -416,6 +417,18 @@ const Hero: React.FC = () => {
                             whileHover={{ scale: 1.05 }}
                             transition={{ type: "spring", stiffness: 300 }}
                           >
+                            {/* Mouse pointer icon for auto hover */}
+                            {isAutoHoverActive && hoveredAsset === asset.label && (
+                              <motion.div
+                                className="absolute -top-6 left-1/2 -translate-x-1/2 z-50"
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.4 }}
+                              >
+                                <FaMousePointer size={28} color="#333" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
+                              </motion.div>
+                            )}
                             <img
                               src={asset.src}
                               alt={asset.label}
