@@ -420,13 +420,14 @@ const Hero: React.FC = () => {
                             {/* Mouse pointer icon for auto hover */}
                             {isAutoHoverActive && hoveredAsset === asset.label && (
                               <motion.div
-                                className="absolute -top-6 left-1/2 -translate-x-1/2 z-50"
+                                className="absolute top-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center"
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.4 }}
                               >
-                                <FaMousePointer size={28} color="#333" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
+                                <FaMousePointer size={28} color='red' style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
+                                <span className="mt-2 px-2 py-0.5 bg-white text-xs font-semibold rounded shadow text-gray-700 border border-gray-200">Herit</span>
                               </motion.div>
                             )}
                             <img
