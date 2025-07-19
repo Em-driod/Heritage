@@ -30,7 +30,7 @@ const Landsecont: React.FC = () => {
         </h1>
         <p className="mt-4 text-sm text-gray-400 sm:text-base sm:mt-6 sm:text-gray-600 max-w-md sm:max-w-xl mx-auto leading-relaxed">
           Let's be honest, typing "tribal pattern" into Google <br /> isn't design research.{' '}
-          HeritengineAI helps you skip the <br />confusion and design with real meaning.
+          <span className="bg-amber-300 py-0.5 px-0.5 rounded-sm text-black">Her</span>itengineAI helps you skip the <br />confusion and design with real meaning.
         </p>
       </motion.div>
 
@@ -151,15 +151,15 @@ const Landsecont: React.FC = () => {
               {/* Header */}
               <div className="flex items-center mb-4">
                 <span className="mr-2 w-8"><img src="/victory.png" alt="" /></span>
-                <span className="text-xl font-mono text-green-700">After: Heritengine</span>
+                <span className="text-xl font-mono text-green-700">After: <span className="bg-amber-300 py-1 px-0.5 rounded-sm text-black">Her</span>itengine</span>
               </div>
               {/* Card */}
               <div className="rounded-xl bg-white shadow-md overflow-hidden border border-gray-100 mb-6">
                 {/* Top bar */}
-                <div className="bg-gradient-to-r from-orange-600 to-orange-500 px-4 py-2 flex items-center justify-between">
+                <div className="bg-gradient-to-r from-[#EF4444] to-orange-400 px-4 py-2 flex items-center justify-between">
                   <span className="font-semibold text-white text-base flex items-center">
-                    <span className=" font-light text-white px-1 rounded mr-1 ">Heritengine</span>
-                    <span className="ml-1 text-yellow-100 text-xs ">❓</span>
+                    <span className=" font-extralight text-white px-1 rounded mr-1 ">Heritengine</span>
+                    <span className="ml-1 text-yellow-100 text-xs "><img src="/question.png" alt="" /></span>
                   </span>
                 </div>
                 {/* Search bar */}
