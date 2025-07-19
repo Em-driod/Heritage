@@ -163,12 +163,12 @@ const Landsecont: React.FC = () => {
                   </span>
                 </div>
                 {/* Search bar */}
-                <div className=" mx-4 px-2 py-2 mt-4 border-b border-gray-100 bg-pink-100 rounded-sm flex items-center">
+                <div className=" mx-4 px-2 py-2 mt-4 border-b border-gray-100 bg-[#FFEBE0] rounded-sm flex items-center">
                   <span className="text-gray-400 mr-2">
                     <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
                   </span>
                   <input
-                    className="bg-transparent outline-none text-sm flex-1 text-gray-700 placeholder:text-[#ff8a65]"
+                    className="bg-transparent outline-none text-sm flex-1 text-gray-700 placeholder:text-[#EF4444]"
                     value="Searching for Japanese wears"
                     readOnly
                     style={{ color: '#ff8a65' }}
