@@ -57,20 +57,22 @@ const Hero: React.FC = () => {
     if (generatedAssets.length === 3 && !userInteractedRef.current) {
       setIsAutoHoverActive(true);
       setAutoYorubaHover(true);
-      const timers = [
-        setTimeout(() => setHoveredAsset(generatedAssets[0].label), 1000),
-        setTimeout(() => setHoveredAsset(generatedAssets[1].label), 3000),
-        setTimeout(() => setHoveredAsset(generatedAssets[2].label), 5000),
+      // Show Yoruba hover for 2 seconds, then start asset popups
+      const yorubaTimer = setTimeout(() => {
+        setAutoYorubaHover(false);
+        setHoveredAsset(generatedAssets[0].label);
+      }, 1000);
+      const assetTimers = [
+        setTimeout(() => setHoveredAsset(generatedAssets[1].label), 4000),
+        setTimeout(() => setHoveredAsset(generatedAssets[2].label), 6000),
         setTimeout(() => {
           setHoveredAsset(null);
           setIsAutoHoverActive(false);
-          setAutoYorubaHover(false);
-        }, 7000)
+        }, 8000)
       ];
-      // Remove Yoruba hover after 2 seconds
-      setTimeout(() => setAutoYorubaHover(false), 2000);
       return () => {
-        timers.forEach(clearTimeout);
+        clearTimeout(yorubaTimer);
+        assetTimers.forEach(clearTimeout);
         setIsAutoHoverActive(false);
         setAutoYorubaHover(false);
       };
