@@ -210,7 +210,7 @@ Male kimono tends to be simpler and less decorative than female versions <br /><
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center mt-12 ml-24">
+                  <div className="flex items-center justify-center mt-12 ml-34">
                     <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-500 rounded-md text-xs font-medium border border-pink-200 mr-2"><span className="w-3.5"><img src="/Vector.png" alt="" /></span>Export</button>
                     <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><span className="mr-1"><FaShare /></span>Share</button>
                   </div>
