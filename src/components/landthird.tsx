@@ -10,7 +10,7 @@ const Landthird = () => {
   <p className="text-3xl italic text-red-500 mb-2">
     2 minutes search
     <br />
-    with <span className="px-1 rounded-md"><span className="bg-amber-400 py-1.5 text-black rounded-sm">Her</span>itageAI</span>
+    with <span className="px-1 rounded-md">HeritageAI</span>
   </p>
   <p className="text-sm text-gray-600">
     Vs. Traditional research today
