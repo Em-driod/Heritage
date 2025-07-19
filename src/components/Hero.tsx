@@ -57,22 +57,22 @@ const Hero: React.FC = () => {
     if (generatedAssets.length === 3 && !userInteractedRef.current) {
       setIsAutoHoverActive(true);
       setAutoYorubaHover(true);
-      // Show Yoruba hover for 2 seconds, then start asset popups
+      // Show Yoruba hover for 1 second, then start asset popups (each for 1 second)
       const yorubaTimer = setTimeout(() => {
         setAutoYorubaHover(false);
         setHoveredAsset(generatedAssets[0].label);
-      }, 1000);
-      const assetTimers = [
-        setTimeout(() => setHoveredAsset(generatedAssets[1].label), 4000),
-        setTimeout(() => setHoveredAsset(generatedAssets[2].label), 6000),
+        // Remove Obatala popup after 1 second
+        setTimeout(() => setHoveredAsset(generatedAssets[1].label), 1000);
+        // Remove Amala popup after 1 second
+        setTimeout(() => setHoveredAsset(generatedAssets[2].label), 2000);
+        // Remove Oshun popup after 1 second
         setTimeout(() => {
           setHoveredAsset(null);
           setIsAutoHoverActive(false);
-        }, 8000)
-      ];
+        }, 3000);
+      }, 1000);
       return () => {
         clearTimeout(yorubaTimer);
-        assetTimers.forEach(clearTimeout);
         setIsAutoHoverActive(false);
         setAutoYorubaHover(false);
       };
@@ -436,7 +436,7 @@ const Hero: React.FC = () => {
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.4 }}
                               >
-                                <FaMousePointer size={28} color='red' style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
+                                <FaMousePointer size={28} color="#F59E42" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
                                 <span className="mt-2 px-2 py-0.5 bg-white text-xs font-semibold rounded shadow text-gray-700 border border-gray-200">Herit</span>
                               </motion.div>
                             )}
