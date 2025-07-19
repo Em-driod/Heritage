@@ -1,79 +1,61 @@
 import React, { useState } from 'react';
-import { CiMenuBurger } from "react-icons/ci";
-import { CiMenuKebab } from "react-icons/ci";
-import { CiSearch } from "react-icons/ci";
-// Import menu and close icons
- // Import a search icon (e.g., from ionicons)
+import { CiMenuBurger, CiMenuKebab, CiSearch } from "react-icons/ci";
 
-// No specific props for Navbar, so we can use React.FC<object> or just React.FC
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // Explicitly type useState with <boolean>
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <nav className="relative bg-white shadow-sm border-t-4 border-black">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <nav className=" bg-white shadow-sm border-t-4 border-black fixed top-0 w-screen z-50 ">
+      <div className="container mx-auto pl-4 sm:px-6 lg:pl-8 h-16 flex items-center justify-between"> {/* Added justify-between here */}
         {/* Left Section: Logo & Desktop Links */}
-        <div className="flex items-center">
+        <div className="flex items-center ">
           {/* Logo */}
-          <div className="flex items-center text-gray-800 font-bold text-2xl mr-8 relative">
+          <div className="flex items-center text-gray-800 font-bold text-2xl mr-8 ml-6 relative">
             {/* The purple/yellow icon simulated with Tailwind */}
-            <span className="w-6 h-6 bg-gradient-to-r from-purple-700 to-yellow-500 rounded mr-2 flex-shrink-0"></span>
-            HeritengineAI
+            <img src="/heritlogo.png" alt="" className='w-8 h-8' />
+            Heritengine
           </div>
 
-          {/* Desktop Navigation Links + Search Bar */}
-          <ul className="hidden md:flex items-center space-x-8">
-            <li className="relative group">
-              <a href="#culture" className="text-gray-600 hover:text-gray-900 text-lg flex items-center">
-                Culture
-                {/* SVG for dropdown arrow - ensure accessibility if interactive */}
-                <svg className="ml-1 w-4 h-4 text-gray-600 group-hover:text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </a>
-              {/* Dropdown content would go here if needed */}
-            </li>
+          {/* Desktop Navigation Links */}
+          <ul className="hidden md:flex items-center space-x-8 ml-4">
             <li>
-              <a href="#gallery" className="text-gray-600 hover:text-gray-900 text-lg">
+              <a href="#gallery" className="text-gray-400 hover:text-gray-900 text-lg">
                 Gallery
               </a>
             </li>
             <li>
-              <a href="#about" className="text-gray-600 hover:text-gray-900 text-lg">
+              <a href="#about" className="text-gray-400 hover:text-gray-900 text-lg">
                 About
               </a>
-            </li>
-            {/* Desktop Search Bar placed after About */}
-            <li className="flex items-center">
-              <div className="hidden md:flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 max-w-sm w-80 focus-within:ring-2 focus-within:ring-blue-300 ml-2">
-                <CiSearch />
-                <input
-                  type="text"
-                  placeholder="Yoruba culture"
-                  className="outline-none bg-transparent text-gray-700 placeholder-gray-400 w-full"
-                />
-              </div>
             </li>
           </ul>
         </div>
 
-        {/* Right Section: Mobile Menu Button */}
-        <div className="flex items-center">
-          {/* Mobile Menu Button */}
-          <div className="md:hidden ml-4">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-md p-2"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"} // Add aria-label for accessibility
-            >
-              {isMenuOpen ? (
-                <CiMenuKebab />// Close icon
-              ) : (
-                <CiMenuBurger />
-// Menu icon
-              )}
-            </button>
+        {/* Desktop Search Bar (moved to its own flex item for better control) */}
+        <div className="hidden md:flex flex-grow justify-center mr-8"> {/* Use flex-grow and justify-center */}
+          <div className="flex items-center border border-gray-300 rounded-sm w-full max-w-2xl py-2 px-4 bg-gray-50 focus-within:ring-2 focus-within:ring-blue-300">
+            <CiSearch className='text-xl text-gray-500 mr-2' /> {/* Added text-xl and text-gray-500 for icon size/color */}
+            <input
+              type="text"
+              placeholder="Yoruba culture"
+              className="outline-none bg-transparent text-gray-700 placeholder-gray-400 w-full text-lg"
+            />
           </div>
+        </div>
+
+        {/* Right Section: Mobile Menu Button */}
+        <div className="flex items-center md:hidden"> {/* Hide on medium screens and up */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded-md p-2"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMenuOpen ? (
+              <CiMenuKebab size={24} /> // Increased icon size for better visibility
+            ) : (
+              <CiMenuBurger size={24} /> // Increased icon size for better visibility
+            )}
+          </button>
         </div>
       </div>
 
@@ -98,13 +80,12 @@ const Navbar: React.FC = () => {
             </li>
             {/* Mobile Search Bar */}
             <li className="w-full px-4">
-              <div className="flex items-center border border-gray-300 rounded-full py-2 px-4 bg-gray-50 w-full">
-              <CiSearch />
-
+              <div className="flex items-center border border-gray-300 rounded-sm w-full py-2 px-4 bg-gray-50 focus-within:ring-2 focus-within:ring-blue-300">
+                <CiSearch className='text-xl text-gray-500 mr-2' />
                 <input
                   type="text"
                   placeholder="Yoruba culture"
-                  className="outline-none bg-transparent text-gray-700 placeholder-gray-400 w-full"
+                  className="outline-none bg-transparent text-gray-700 placeholder-gray-400 w-full text-lg"
                 />
               </div>
             </li>

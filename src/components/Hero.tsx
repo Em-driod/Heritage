@@ -179,7 +179,7 @@ const Hero: React.FC = () => {
 
   return (
     <motion.div
-      className="py-4 sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen"
+      className="py-4 sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen mt-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -223,7 +223,7 @@ const Hero: React.FC = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80" />
           </div>
-
+                                       {/*yellow color*/}
           <div
             className="absolute"
             style={{
@@ -491,7 +491,7 @@ const Hero: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-yellow-200 text-xs text-gray-700 text-center whitespace-nowrap"
+                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-white text-xs text-gray-700 text-center whitespace-nowrap"
                           >
                             Pure White (#FFFFFF)
                           </motion.div>

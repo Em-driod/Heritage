@@ -201,16 +201,16 @@ Male kimono tends to be simpler and less decorative than female versions <br /><
                       <div className="font-thin text-sm text-[#e57373]">Kimono</div>
                     </div>
                     <div className="flex items-center ">
-                      <div className="text-xs text-gray-600 mt-1 flex items-center">ColorPalettes:
-                        <span className="ml-2 flex items-center">
-                          <span className="w-4 h-4 rounded-full bg-gray-800 inline-block mr-1"></span>
-                          <span className="w-4 h-4 rounded-full bg-gray-500 inline-block mr-1"></span>
-                          <span className="w-4 h-4 rounded-full bg-gray-300 inline-block"></span>
+                      <div className="text-xs text-gray-600 mt-1 flex items-center">Color Palettes:
+                        <span className="ml-1 flex items-center">
+                          <span className="w-3 h-3 rounded-full bg-gray-800 inline-block mr-1"></span>
+                          <span className="w-3 h-3 rounded-full bg-gray-500 inline-block mr-1"></span>
+                          <span className="w-3 h-3 rounded-full bg-gray-300 inline-block"></span>
                         </span>
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center mt-12 ml-44">
+                  <div className="flex items-center justify-center mt-12 ml-24">
                     <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-500 rounded-md text-xs font-medium border border-pink-200 mr-2"><span className="w-3.5"><img src="/Vector.png" alt="" /></span>Export</button>
                     <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><span className="mr-1"><FaShare /></span>Share</button>
                   </div>
