@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center text-gray-800 font-bold text-2xl mr-8 ml-6 relative">
             {/* The purple/yellow icon simulated with Tailwind */}
-            <img src="/heritlogo.png" alt="" className='w-8 h-8' />
+            <img src="/heritlogo.png" alt="" className='w-8 h-8 mr-3' />
             Heritengine
           </div>
 
