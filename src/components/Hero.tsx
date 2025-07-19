@@ -17,6 +17,7 @@ const Hero: React.FC = () => {
   const [isAutoHoverActive, setIsAutoHoverActive] = useState<boolean>(false);
   const userInteractedRef = useRef<boolean>(false);
   const [hoveredPalette, setHoveredPalette] = useState<number | null>(null);
+  const [autoYorubaHover, setAutoYorubaHover] = useState<boolean>(false);
 
   const fetchGeneratedAssets = (cultureParam: string) => {
     setIsLoading(true);
@@ -55,6 +56,7 @@ const Hero: React.FC = () => {
   useEffect(() => {
     if (generatedAssets.length === 3 && !userInteractedRef.current) {
       setIsAutoHoverActive(true);
+      setAutoYorubaHover(true);
       const timers = [
         setTimeout(() => setHoveredAsset(generatedAssets[0].label), 1000),
         setTimeout(() => setHoveredAsset(generatedAssets[1].label), 3000),
@@ -62,11 +64,15 @@ const Hero: React.FC = () => {
         setTimeout(() => {
           setHoveredAsset(null);
           setIsAutoHoverActive(false);
+          setAutoYorubaHover(false);
         }, 7000)
       ];
+      // Remove Yoruba hover after 2 seconds
+      setTimeout(() => setAutoYorubaHover(false), 2000);
       return () => {
         timers.forEach(clearTimeout);
         setIsAutoHoverActive(false);
+        setAutoYorubaHover(false);
       };
     }
   }, [generatedAssets, userInteractedRef.current]);
@@ -76,6 +82,7 @@ const Hero: React.FC = () => {
     setHoveredAsset(null);
     userInteractedRef.current = false;
     setIsAutoHoverActive(false);
+    setAutoYorubaHover(false);
   };
 
   const handleMouseEnterAsset = (assetLabel: string) => {
@@ -369,7 +376,7 @@ const Hero: React.FC = () => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  {culture === 'Yoruba' && isYorubaHovered ? (
+                  {culture === 'Yoruba' && (isYorubaHovered || autoYorubaHover) ? (
                     <img src="/Hover state.png" alt="Yoruba Culture Hover" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
                   ) : (
                     <img src={`/${culture.toLowerCase()}.png`} alt={`${culture} Culture`} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
