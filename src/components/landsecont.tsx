@@ -59,7 +59,7 @@ const Landsecont: React.FC = () => {
 
             <div className="overflow-hidden mt-4 w-full ">
               {/* Cloned 'Before: Google Search' Card */}
-              <div className="w-[480px] max-w-full mx-auto bg-[#fff6f6] rounded-2xl shadow-lg border border-[#fbeaea] p-0 relative">
+              <div className="w-[480px] max-w-full mx-auto bg-[#FEE2E2] rounded-2xl shadow-lg border border-[#fbeaea] p-0 relative">
                 {/* Header */}
                 <div className="flex items-center px-6 pt-5 pb-2">
                   <span className="w-8 mr-2"><img src="/sleep.png" alt="" /></span>
@@ -147,7 +147,7 @@ const Landsecont: React.FC = () => {
             </motion.div>
 
             {/* Cloned UI from screenshot */}
-            <div className="w-[490px] max-w-full mx-auto rounded-2xl p-4 shadow-lg mt-4 bg-blue-50"> {/* Changed to bg-white */}
+            <div className="w-[490px] max-w-full mx-auto rounded-2xl p-4 shadow-lg mt-4 bg-[#DCFCE7]"> {/* Changed to bg-white */}
               {/* Header */}
               <div className="flex items-center mb-4">
                 <span className="mr-2 w-8"><img src="/victory.png" alt="" /></span>
