@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion'; // <-- Changed here
+import { Link } from 'react-router-dom';
 
 const Landfifth = () => {
   // Animation variants
@@ -165,7 +166,7 @@ const Landfifth = () => {
           </div>
 
           {/* Separator Lines */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-pink-300 transform -translate-x-1/2 z-10"></div>
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-300 transform -translate-x-1/2 z-10"></div>
           <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
 
           {/* Image section */}
@@ -201,7 +202,7 @@ const Landfifth = () => {
           </motion.div>
 
           {/* Separator Lines */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-pink-300 transform -translate-x-1/2 z-10"></div>
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-300 transform -translate-x-1/2 z-10"></div>
           <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
 
           <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pl-[80px] order-2 lg:order-2 flex flex-col items-center lg:items-start">
@@ -311,7 +312,7 @@ const Landfifth = () => {
           </div>
 
           {/* Separator Lines */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-pink-300 transform -translate-x-1/2 z-10"></div>
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-300 transform -translate-x-1/2 z-10"></div>
           <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
 
           <motion.div
@@ -346,7 +347,7 @@ const Landfifth = () => {
           </motion.div>
 
           {/* Separator Lines */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-pink-300 transform -translate-x-1/2 z-10"></div>
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-300 transform -translate-x-1/2 z-10"></div>
           <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
 
           <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pl-[80px] order-2 lg:order-2 flex flex-col items-center lg:items-start">
@@ -381,7 +382,7 @@ const Landfifth = () => {
               respect the traditions that inspire your designs.
             </motion.p>
             <motion.div
-              className="bg-[#f0e0ff] text-[#9333ea] px-[18px] py-[12px] rounded-[10px] text-base font-semibold transition-colors duration-200 hover:bg-[#e0d0ef] w-full max-w-[300px] text-left"
+              className="bg-[#f0e0ff] text-[#9333ea] pr-[120px] pl-4 py-[2px] rounded-[10px]  font-semibold transition-colors duration-200 hover:bg-[#e0d0ef] w-full  text-left"
               whileHover={{ y: -3 }}
             >
               <div className="flex items-center mb-2">
@@ -418,13 +419,15 @@ const Landfifth = () => {
           >
             Ready to Create with Culture?
           </motion.span>
+          <Link to='/Waitlist'>
           <motion.button
             className="px-[32px] py-[12px] bg-white text-[#ff7a50] font-semibold rounded-full shadow-md hover:shadow-lg transition duration-200 text-lg sm:text-xl"
             whileHover={{ y: -3, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-          >
+            >
             Explore a Demo Culture Kit
           </motion.button>
+            </Link>
           <motion.p
             className="mt-6 text-white text-[15px] opacity-90"
             whileHover={{ scale: 1.01 }}

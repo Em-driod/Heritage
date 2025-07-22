@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaShare } from "react-icons/fa";
-import { FaMousePointer } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
+import { LuMousePointer2 } from "react-icons/lu";
 
 interface Asset {
   src: string;
@@ -188,7 +190,7 @@ const Hero: React.FC = () => {
 
   return (
     <motion.div
-      className="py-4 sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen mt-20"
+      className="py-4  sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen mt-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -306,6 +308,7 @@ const Hero: React.FC = () => {
             >
               Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
             </motion.p>
+            <Link to="/waitlist">
             <motion.button
               className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-24 transition duration-300 text-sm sm:text-base ml-12"
               whileHover={{ scale: 1.05 }}
@@ -318,10 +321,11 @@ const Hero: React.FC = () => {
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.6 } }
               }}
-            >
+              >
               <img className='w-4 h-4 ' src="/flower.png" alt="" />
               Try Beta Free
             </motion.button>
+              </Link>
           </div>
         </motion.div>
 
@@ -436,7 +440,7 @@ const Hero: React.FC = () => {
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.4 }}
                               >
-                                <FaMousePointer size={28} color="#F59E42" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
+                                <LuMousePointer2 size={28} color="#F59E42" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
                                 <span className="mt-2 px-2 py-0.5 bg-white text-xs font-semibold rounded shadow text-gray-700 border border-gray-200">Herit</span>
                               </motion.div>
                             )}

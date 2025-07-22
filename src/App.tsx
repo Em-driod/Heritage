@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/House';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Waitlist from './pages/Waitlist';
 
 
 
@@ -15,6 +16,8 @@ const App: React.FC = () => {
       
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/waitlist" element={<Waitlist />} />
+          {/* Add more routes as needed */}
         
           
         </Routes>

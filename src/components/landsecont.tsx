@@ -105,7 +105,7 @@ const Landsecont: React.FC = () => {
                     <div className="text-xs text-[#4caf50]">Culture.com</div>
                   </div>
                   <hr className="border-t border-gray-200  mx-4" />
-                  <div className="bg-white p-3">
+                  <div className="bg-white rounded-b-xl p-3">
                     <div className="flex items-center mb-1">
                       <span className="text-xs text-gray-700 font-semibold">Japanese Family Tree</span>
                     </div>
@@ -180,21 +180,21 @@ const Landsecont: React.FC = () => {
                   <span className=" px-2 py-1 rounded text-base font-light text-gray-600">Heritengine Processing...</span>
                 </div>
                 {/* Kimono Card */}
-                <div className="flex items-center px-4 py-2 border-b border-gray-100">
+                <div className="flex items-center px-4 py-2 border-b border-red-100">
                   <div className='flex flex-col'>
                     <div className='flex items-center relative'
                          onMouseEnter={() => setShowKimonoText(true)}
                          onMouseLeave={() => setShowKimonoText(false)}>
                       <img src="/kimono.png" alt="Kimono" className="w-14 h-14 rounded-lg object-cover mr-4 border border-gray-200" />
                       {showKimonoText && (
-                        <div className="absolute bg-white bg-opacity-75 w-56 h-58 text-gray-800 text-xs px-2 py-1 rounded-md shadow-2xl  -bottom-12 left-1/2 transform -translate-x-1/8">
+                        <div className="absolute bg-white bg-opacity-75 w-76 h-48 text-gray-800 text-xs px-2 py-1 rounded-md shadow-2xl  -bottom-7 left-1/2 transform -translate-x-1/8">
                           <p className="mb-4 space-x-1"><span className="text-red-400">Type:</span> Traditional long robe worn with an obi (belt)</p>
                           <p className="mb-4"><span className="text-red-400">Use:</span> Formal occasions, festivals, weddings, ceremonies</p>
                           <p className="mb-0"><span className="text-red-400">Origin:</span> Evolved during the Heian period (794–1185) as kosode (“small sleeves”) <br /> <br />
 
 Later formalized into today's kimono during the Edo period (1603–1868)
 
-Male kimono tends to be simpler and less decorative than female versions <br /><br /></p>
+Male kimono tends to be simpler and less decorative than female versions <br /></p>
                           
                         </div>
                       )}

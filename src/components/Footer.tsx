@@ -47,7 +47,7 @@ const Footer = () => {
 
           {/* Bottom of support */}
           <div className="bg-white border border-amber-500 w-full rounded-2xl mt-3 h-26">
-            <div className="flex gap-5 ml-20 mt-auto pt-5 relative z-10">
+            <div className="flex gap-5 ml-20 mt-7 pt-5 relative z-10">
               <a href="/terms-of-use" className="text-sm text-gray-600 no-underline hover:underline">Terms of use</a>
               <a href="/privacy-policy" className="text-sm text-gray-600 no-underline hover:underline">Privacy Policy</a>
             </div>

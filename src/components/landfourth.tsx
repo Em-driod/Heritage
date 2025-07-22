@@ -101,8 +101,10 @@ const Landfourth = () => {
           {/* Horizontal line */}
           <div className="bg-[#eeeeee] h-[1px] w-[200px] my-[15px]"></div> {/* Horizontal line added here */}
           {/* Content below the line */}
-          <div className="flex mt-auto">
-            <img src="/C2.png" alt="Figma icon" className="w-[300px] h-[30px]" />
+          <div className="flex gap-2.5 mt-auto">
+            <img src="relap 3.png" alt=""  className=""/>
+            <img src="relap 2.png" alt="" />
+            <img src="relap 1.png" alt="" />
           </div>
         </div>
 

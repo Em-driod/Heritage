@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CiMenuBurger, CiMenuKebab, CiSearch } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -8,13 +9,16 @@ const Navbar: React.FC = () => {
     <nav className=" bg-white shadow-sm border-t-4 border-black fixed top-0 w-screen z-50 ">
       <div className="container mx-auto pl-4 sm:px-6 lg:pl-8 h-16 flex items-center justify-between"> {/* Added justify-between here */}
         {/* Left Section: Logo & Desktop Links */}
+
         <div className="flex items-center ">
+          <Link to='/'>
           {/* Logo */}
           <div className="flex items-center text-gray-800 font-bold text-2xl mr-8 ml-6 relative">
             {/* The purple/yellow icon simulated with Tailwind */}
             <img src="/heritlogo.png" alt="" className='w-8 h-8 mr-3' />
             Heritengine
           </div>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex items-center space-x-8 ml-4">
