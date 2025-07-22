@@ -10,6 +10,13 @@ interface Asset {
   label: string;
 }
 
+interface ColorPalette {
+  color?: string;
+  hex?: string;
+  label: string;
+  img?: string; // add image URL or data
+}
+
 const Hero: React.FC = () => {
   const [selectedCulture, setSelectedCulture] = useState<string>('Yoruba');
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -20,17 +27,25 @@ const Hero: React.FC = () => {
   const userInteractedRef = useRef<boolean>(false);
   const [hoveredPalette, setHoveredPalette] = useState<number | null>(null);
   const [autoYorubaHover, setAutoYorubaHover] = useState<boolean>(false);
+  const [colorPalette, setColorPalette] = useState<ColorPalette[]>([]);
 
   const fetchGeneratedAssets = (cultureParam: string) => {
     setIsLoading(true);
 
     setTimeout(() => {
       let assetsData: Asset[] = [];
+      let paletteData: ColorPalette[] = [];
+
       if (cultureParam === 'Yoruba') {
         assetsData = [
           { src: "/obatala.png", label: "Obatala" },
           { src: "/amala.png", label: "Amala" },
           { src: "/osun.png", label: "Oshun" },
+        ];
+        paletteData = [
+          { color: 'Pure White', hex: '#FFFFFF', label: 'Pure White' },
+          { color: 'Dark Brown', hex: '#4B3621', label: 'Dark Brown' },
+          { color: 'Gold', hex: '#FFD700', label: 'Gold' },
         ];
       } else if (cultureParam === 'Igbo') {
         assetsData = [
@@ -38,14 +53,25 @@ const Hero: React.FC = () => {
           { src: "/path-to-igbo-asset2.jpg", label: "Agbogho Mmuo" },
           { src: "/path-to-igbo-asset3.jpg", label: "Igbo Ukwu" },
         ];
+        paletteData = [
+          { img: '/brownshit.png', label: 'Red Ochre' },
+          { color: 'Black', hex: '#000000', label: 'Black' },
+          { color: 'White', hex: '#FFFFFF', label: 'White' },
+        ];
       } else if (cultureParam === 'Japan') {
         assetsData = [
-          { src: "/path-to-japanese-asset1.jpg", label: "Geisha" },
-          { src: "/path-to-japanese-asset2.jpg", label: "Samurai" },
-          { src: "/path-to-japanese-asset3.jpg", label: "Sakura" },
+          { src: "/seamless.png", label: "Geisha" },
+          { src: "/bird.png", label: "Samurai" },
+          { src: "/hongkong.png", label: "Sakura" },
+        ];
+        paletteData = [
+          { color: 'Cherry Blossom Pink', hex: '#FFB7C5', label: 'Cherry Blossom Pink' },
+          { color: 'Indigo', hex: '#3F00FF', label: 'Indigo' },
+          { color: 'Forest Green', hex: '#228B22', label: 'Forest Green' },
         ];
       }
       setGeneratedAssets(assetsData);
+      setColorPalette(paletteData);
       setIsLoading(false);
       userInteractedRef.current = false;
     }, 1500);
@@ -140,6 +166,78 @@ const Hero: React.FC = () => {
           </div>
         );
         break;
+      case 'Odinani':
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Symbol</span> Odinani, the traditional Igbo religion, <br />emphasizes a supreme being (Chukwu) and <br />numerous deities (Alusi) representing natural forces.</p>
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Color:</span> Red Ochre </p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Why:</span> Represents earth, blood, and vital force. Used in rituals and body adornment.</p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Seen:</span> Traditional art, ceremonial masks, body paint, shrine decorations.</p>
+            </div>
+          </div>
+        );
+        break;
+      case 'Agbogho Mmuo':
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Symbol</span> Agbogho Mmuo (Maiden Spirit) masks <br />represent ideal feminine beauty and purity <br />of deceased maidens.</p>
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Color:</span> White </p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Why:</span> Symbolizes purity, beauty, and the spiritual realm.</p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Seen:</span> Annual dry season festivals, particularly among the Igbo of northern Igboland.</p>
+            </div>
+          </div>
+        );
+        break;
+      case 'Igbo Ukwu':
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Symbol</span> Igbo Ukwu artifacts showcase <br />sophisticated bronze casting and represent <br />ancient Igbo civilization and artistry.</p>
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Color:</span> Bronze/Copper </p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Why:</span> Reflects the material of the artifacts, signifying wealth and advanced craftsmanship.</p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Seen:</span> Discovered archaeological sites in <br />Igbo Ukwu, Nigeria, dating back to the 9th century AD.</p>
+            </div>
+          </div>
+        );
+        break;
+      case 'Geisha':
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Symbol</span> Geisha embody traditional Japanese <br />arts, beauty, and entertainment, acting as <br />cultural custodians.</p>
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Color:</span> Various, often vibrant </p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Why:</span> Their kimonos and makeup feature <br />diverse colors, often symbolizing seasons or <br />specific occasions.</p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Seen:</span> Traditional tea houses, cultural <br />performances, and festivals in Japan, <br />especially Kyoto.</p>
+            </div>
+          </div>
+        );
+        break;
+      case 'Samurai':
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Symbol</span> Samurai represent loyalty, honor, <br />discipline, and martial prowess in feudal <br />Japan.</p>
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Color:</span> Indigo, Black, Crimson </p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Why:</span> These colors were commonly used in <br />their armor and clothing, symbolizing strength, <br />dignity, and battle readiness.</p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Seen:</span> Historical artworks, traditional <br />dramas, and museums showcasing feudal <br />Japanese history.</p>
+            </div>
+          </div>
+        );
+        break;
+      case 'Sakura':
+        content = (
+          <div className="flex items-start space-x-3">
+            <div className="flex-1 text-start min-w-0">
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Symbol</span> Sakura (cherry blossoms) symbolize <br />the fleeting nature of life, beauty, and renewal <br />in Japanese culture.</p>
+              <p className="mb-4 text-gray-700"><span className='text-[#EF4444]'>Color:</span> Pink and White </p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Why:</span> Represents the delicate and transient <br />beauty of the blossoms themselves.</p>
+              <p className="mb-4 text-gray-700"> <span className='text-[#EF4444]'>Seen:</span> Across Japan during spring, in <br />traditional art, textiles, and everyday <br />design.</p>
+            </div>
+          </div>
+        );
+        break;
       default:
         return null;
     }
@@ -211,7 +309,7 @@ const Hero: React.FC = () => {
       <div className="relative flex flex-col lg:flex-row justify-center items-center min-h-screen text-center sm:px-0">
         {/* Left Section */}
         <motion.div
-          className={`relative  flex flex-col items-center h-[678px] mt-12 -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-8 lg:text-left  px-0 sm:px-0 rounded-xl overflow-hidden z-10 w-[750px]`} 
+          className={`relative flex flex-col items-center h-[678px] mt-12 -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-8 lg:text-left px-0 sm:px-0 rounded-xl overflow-hidden z-10 w-[750px]`}
           initial="hidden"
           animate="visible"
           variants={{
@@ -253,7 +351,7 @@ const Hero: React.FC = () => {
 
           <div className="z-10 sm:p-6 lg:p-8 lg:pl-10">
             <motion.h1
-              className="text-3xl sm:text-sm sm:w-screen overflow-hidden flex flex-col  mt-20 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2  lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
+              className="text-3xl sm:text-sm sm:w-screen overflow-hidden flex flex-col mt-20 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 700,
@@ -327,7 +425,7 @@ const Hero: React.FC = () => {
 
         {/* Right Section Card */}
         <motion.div
-          className="relative  max-w-md sm:max-w-lg h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-8 z-30 w-[550px]" 
+          className="relative max-w-md sm:max-w-lg h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-8 z-30 w-[550px]"
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -486,69 +584,30 @@ const Hero: React.FC = () => {
                   whileHover={{ scale: 1.01 }}
                 >
                   <div className="flex space-x-1 sm:space-x-2">
-                    <motion.div
-                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full border border-gray-300 bg-cover bg-center relative"
-                      style={{ backgroundImage: "url('/path-to-yellow-palette-image.png')" }}
-                      whileHover={{ scale: 1.2 }}
-                      onMouseEnter={() => setHoveredPalette(0)}
-                      onMouseLeave={() => setHoveredPalette(null)}
-                    >
-                      <AnimatePresence>
-                        {hoveredPalette === 0 && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-white text-xs text-gray-700 text-center whitespace-nowrap"
-                          >
-                            Pure White (#FFFFFF)
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
-                    <motion.div
-                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full bg-[#4B3621] bg-cover bg-center relative"
-                      style={{ backgroundImage: "url('/path-to-dark-palette-image.png')" }}
-                      whileHover={{ scale: 1.2 }}
-                      onMouseEnter={() => setHoveredPalette(1)}
-                      onMouseLeave={() => setHoveredPalette(null)}
-                    >
-                      <AnimatePresence>
-                        {hoveredPalette === 1 && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-brown-200 text-xs text-gray-700 text-center whitespace-nowrap"
-                          >
-                            Dark Brown (#4B3621)
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
-                    <motion.div
-                      className="w-6 h-6 sm:w-6 sm:h-6 rounded-full bg-[#FFD700] bg-cover bg-center relative"
-                      style={{ backgroundImage: "url('/path-to-third-palette-image.png')" }}
-                      whileHover={{ scale: 1.2 }}
-                      onMouseEnter={() => setHoveredPalette(2)}
-                      onMouseLeave={() => setHoveredPalette(null)}
-                    >
-                      <AnimatePresence>
-                        {hoveredPalette === 2 && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-yellow-300 text-xs text-gray-700 text-center whitespace-nowrap"
-                          >
-                            Gold (#FFD700)
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
+                    {colorPalette.map((palette, index) => (
+                      <motion.div
+                        key={index}
+                        className="w-6 h-6 sm:w-6 sm:h-6 rounded-full border border-gray-300 relative"
+                        style={{ backgroundColor: palette.hex }}
+                        whileHover={{ scale: 1.2 }}
+                        onMouseEnter={() => setHoveredPalette(index)}
+                        onMouseLeave={() => setHoveredPalette(null)}
+                      >
+                        <AnimatePresence>
+                          {hoveredPalette === index && (
+                            <motion.div
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0, y: 10 }}
+                              transition={{ duration: 0.2 }}
+                              className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-gray-200 text-xs text-gray-700 text-center whitespace-nowrap"
+                            >
+                              {palette.label} ({palette.hex})
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    ))}
                   </div>
                   <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
                     <motion.button
