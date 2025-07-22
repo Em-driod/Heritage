@@ -2,6 +2,7 @@ import React from "react";
 import { FaShare } from "react-icons/fa";
 // Corrected import: Use 'type' keyword for type-only import
 import { motion, type Variants } from "framer-motion";
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
 
 const Waitlist: React.FC = () => {
   // Define animation variants with TypeScript type 'Variants'
@@ -29,28 +30,37 @@ const Waitlist: React.FC = () => {
     <div className="min-h-screen mt-12 bg-white flex flex-col md:flex-row items-center md:justify-center px-6 md:px-12 py-12 text-gray-900">
       {/* Left Section */}
       <motion.div
-        className="max-w-xl space-y-6 mr-8"
+        className="max-w-xl space-y-6 mr-8 mt-14"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.h1 className="text-4xl flex md:text-5xl font-extrabold leading-tight" variants={itemVariants}>
+        <motion.h1 className="text-4xl flex md:text-5xl font-extrabold leading-tight mt-12" style={{
+            fontFamily: 'manrope',
+            fontWeight: 600,
+            fontStyle: 'bold',
+            lineHeight: '100%',
+            letterSpacing: '-3%',
+          
+          }} variants={itemVariants}>
           <span role="img" aria-label="party">
-            <img src="/victory.png" alt="" />
-          </span>{" "}
-          Try{" "}
-          <span className="bg-yellow-300 px-1 rounded font-black">Herit</span>
-          engine
+            <img src="/victory.png" alt="" className="w-12 h-12" />
+          </span>
+          <p className="mr-2">Try</p>  
+             <span className="bg-yellow-300 py-0.5  rounded "> Her</span>
+          itengine
         </motion.h1>
-        <motion.h2 className="text-3xl font-bold text-black" variants={itemVariants}>
+        <motion.h2 className="text-3xl font-bold text-black mb-7" variants={itemVariants}>
           Free in Beta!
         </motion.h2>
-        <motion.p className="text-[#7C787F] text-lg" variants={itemVariants}>
+        
+        <motion.p className="text-[#7C787F] text-sm" variants={itemVariants}>
           Get early access to culturally intelligent design <br /> tools powered by AI.
           One click. Infinite tools.
         </motion.p>
+        <br />
 
-        <motion.ul className="space-y-3 text-gray-700 rounded-lg text-lg" variants={containerVariants}>
+        <motion.ul className="space-y-3 mb-7 text-gray-700 rounded-lg text-smoin" variants={containerVariants}>
           <motion.li className="flex items-start" variants={itemVariants}>
             <span className="text-red-500 text-xl mr-2">
               <img src="markdown.png" alt="" />
@@ -84,7 +94,7 @@ const Waitlist: React.FC = () => {
             placeholder="Enter your email"
             className="flex-1 border border-gray-300 rounded-l-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
           />
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-r-lg">
+          <button className="bg-gradient-to-r from-orange-600 to-orange-400 hover:bg-orange-400 text-white font-semibold px-6 ml-4 py-3 rounded-lg">
             Join the Beta
           </button>
         </motion.div>

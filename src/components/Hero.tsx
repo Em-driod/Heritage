@@ -190,7 +190,7 @@ const Hero: React.FC = () => {
 
   return (
     <motion.div
-      className="py-4  sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen mt-20"
+      className="py-4 sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen mt-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -199,7 +199,7 @@ const Hero: React.FC = () => {
       <AnimatePresence>
         {isAutoHoverActive && (
           <motion.div
-            className="fixed inset-0 z-20  bg-black/2"
+            className="fixed inset-0 z-20 bg-black/20" // Increased opacity for better blur effect
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -208,10 +208,10 @@ const Hero: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="relative flex justify-center items-center min-h-screen text-center sm:px-0 mr-18">
+      <div className="relative flex flex-col lg:flex-row justify-center items-center min-h-screen text-center sm:px-0">
         {/* Left Section */}
         <motion.div
-          className={`relative flex flex-col items-center h-[678px] mt-12 -translate-y-5 sm:mt-6 lg:items-start text-center lg:text-left w-full px-0 sm:px-0 rounded-xl overflow-hidden z-10`}
+          className={`relative  flex flex-col items-center h-[678px] mt-12 -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-8 lg:text-left  px-0 sm:px-0 rounded-xl overflow-hidden z-10 w-[750px]`} 
           initial="hidden"
           animate="visible"
           variants={{
@@ -221,7 +221,7 @@ const Hero: React.FC = () => {
         >
           {/* Background image for the left section */}
           <div
-            className="absolute h-full w-full z-0 left-0 top-0"
+            className="absolute h-full w-full z-0 top-0"
             style={{
               backgroundImage: "url('/meve.png')",
               backgroundSize: 'cover',
@@ -234,7 +234,7 @@ const Hero: React.FC = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80" />
           </div>
-                                       {/*yellow color*/}
+          {/*yellow color*/}
           <div
             className="absolute"
             style={{
@@ -251,11 +251,11 @@ const Hero: React.FC = () => {
             }}
           />
 
-          <div className="relative z-10 p-4 sm:p-6 lg:p-8 lg:pl-10">
+          <div className="z-10 sm:p-6 lg:p-8 lg:pl-10">
             <motion.h1
-              className="text-3xl flex flex-col sm:text-4xl mt-20 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 ml-16"
-              style={{ 
-                fontFamily: 'Manrope, sans-serif', 
+              className="text-3xl sm:text-sm sm:w-screen overflow-hidden flex flex-col  mt-20 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2  lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
+              style={{
+                fontFamily: 'Manrope',
                 fontWeight: 700,
                 filter: isAutoHoverActive ? 'blur(2px)' : 'none',
                 transition: 'filter 0.3s ease'
@@ -268,16 +268,12 @@ const Hero: React.FC = () => {
               Ancient Stories.<br /> <span className='mt-4'>Modern Design.</span>
             </motion.h1>
             <motion.p
-              className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-16"
-              style={{ 
-                fontFamily: 'Instrument Serif, serif', 
+              className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-0 lg:ml-16 text-center lg:text-left" /* Adjusted margin and text alignment */
+              style={{
+                fontFamily: 'Instrument Serif, serif',
                 fontWeight: 500,
                 filter: isAutoHoverActive ? 'blur(2px)' : 'none',
                 transition: 'filter 0.3s ease'
-              }}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.2 } }
               }}
               animate={{
                 opacity: 1,
@@ -296,7 +292,7 @@ const Hero: React.FC = () => {
               Instantly.
             </motion.p>
             <motion.p
-              className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter ml-16"
+              className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter ml-0 lg:ml-16 text-center lg:text-left mx-auto lg:mx-0" /* Adjusted margin and text alignment */
               style={{
                 filter: isAutoHoverActive ? 'blur(2px)' : 'none',
                 transition: 'filter 0.3s ease'
@@ -309,29 +305,29 @@ const Hero: React.FC = () => {
               Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
             </motion.p>
             <Link to="/waitlist">
-            <motion.button
-              className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-24 transition duration-300 text-sm sm:text-base ml-12"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              style={{
-                filter: isAutoHoverActive ? 'blur(2px)' : 'none',
-                transition: 'filter 0.3s ease'
-              }}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.6 } }
-              }}
+              <motion.button
+                className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-24 transition duration-300 text-sm sm:text-base mx-auto lg:ml-12" /* Centered on small screens, left aligned on large */
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                style={{
+                  filter: isAutoHoverActive ? 'blur(2px)' : 'none',
+                  transition: 'filter 0.3s ease'
+                }}
+                variants={{
+                  hidden: { opacity: 0, y: 40 },
+                  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.6 } }
+                }}
               >
-              <img className='w-4 h-4 ' src="/flower.png" alt="" />
-              Try Beta Free
-            </motion.button>
-              </Link>
+                <img className='w-4 h-4 ' src="/flower.png" alt="" />
+                Try Beta Free
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
 
         {/* Right Section Card */}
         <motion.div
-          className="relative w-full max-w-sm sm:max-w-md h-[678px] lg:max-w-xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 z-30"
+          className="relative  max-w-md sm:max-w-lg h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-8 z-30 w-[550px]" 
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
