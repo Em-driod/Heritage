@@ -1,4 +1,5 @@
 import { FaGlobe, FaPalette, FaMobileAlt, FaUniversity } from "react-icons/fa";
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
 
 const cards = [
   {
@@ -59,8 +60,15 @@ const Landsix = () => {
       <img className="gap-4" src="/Group.png" alt="" />
       <span>Use it your way</span>
     </div>
-    <div className="text-5xl font-sans font-bold leading-tight">
-      Built for <span className="text-blue-700">Creators,</span> <br/> <span className="text-yellow-600">Makers,</span> and <span className="text-green-600">Curators</span>
+    <div className=" text-5xl" style={{
+            fontFamily: 'manrope, sans-serif',
+            fontWeight: 800,
+            fontStyle: 'thin',
+            lineHeight: '100%',
+            letterSpacing: '-3%',
+            textAlign: 'center',
+          }}>
+      Built for <span className="text-blue-700   italic "style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}}>Creators,</span> <br/> <span className="text-yellow-600 "style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Makers,</span> and <span className="text-green-600" style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Curators</span>
     </div>
   </div>
 </div>

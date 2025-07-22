@@ -1,5 +1,6 @@
 import { FaBookOpen } from "react-icons/fa";
 import { PiFlowerTulipBold } from "react-icons/pi";
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
 const Landfourth = () => {
   return (
     <div className="min-h-screen bg-[#FFEBE0]

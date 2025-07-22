@@ -1,15 +1,43 @@
+/* Reset default font settings if needed */
 body {
-  font-family: 'Manrope', 'Poppins', sans-serif;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
+
+/* Specific font classes */
 
 .font-manrope {
   font-family: 'Manrope', sans-serif;
 }
 
 .font-poppins {
-  font-family: 'Poppins',   sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-/* Your existing CSS */
+
 .font-instrument {
   font-family: 'Instrument Serif', serif;
+}
+
+/* A broader scale with multiple fallback fonts, ordered by preference */
+
+.font-custom-scale {
+  font-family: 
+    'Manrope', 
+    'Poppins', 
+    'Helvetica Neue', 
+    Helvetica, 
+    Arial, 
+    'Segoe UI', 
+    'Roboto', 
+    'Montserrat', 
+    'Lato', 
+    'Open Sans', 
+    'Fira Sans', 
+    'Ubuntu', 
+    'Noto Sans', 
+    'Source Sans Pro', 
+    'Droid Sans', 
+    'DIN', 
+    'Georgia', 
+    'Times New Roman', 
+    serif;
 }

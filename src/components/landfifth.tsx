@@ -1,5 +1,6 @@
 import { motion, type Variants } from 'framer-motion'; // <-- Changed here
 import { Link } from 'react-router-dom';
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
 
 const Landfifth = () => {
   // Animation variants
