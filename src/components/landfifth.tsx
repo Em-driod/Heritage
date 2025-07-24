@@ -437,7 +437,7 @@ const Landfifth = () => {
             >
               Export your designs, share with your team, and customize to your heart's content. The creative possibilities are endless!
             </motion.p>
-            <div className="flex gap-x-4 gap-y-3 text-[#666666] text-[16px] w-full max-w-[400px] mx-auto lg:mx-0 lg:text-left">
+            <div className="flex gap-x-1  text-[#666666] text-[16px] w-full max-w-[400px] mx-auto lg:mx-0 lg:text-left">
             <motion.button
                             className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                             whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
