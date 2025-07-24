@@ -30,7 +30,7 @@ const Landsecont: React.FC = () => {
         </h1>
         <p className="mt-4 text-sm text-gray-400 sm:text-base sm:mt-6 sm:text-gray-600 max-w-md sm:max-w-xl mx-auto leading-relaxed">
           Let's be honest, typing "tribal pattern" into Google <br /> isn't design research.{' '}
-          <span className="bg-amber-300 py-0.5 px-0.5 rounded-sm text-black">Her</span>itengineAI helps you skip the <br />confusion and design with real meaning.
+          HeritengineAI helps you skip the <br />confusion and design with real meaning.
         </p>
       </motion.div>
 
@@ -151,7 +151,7 @@ const Landsecont: React.FC = () => {
               {/* Header */}
               <div className="flex items-center mb-4">
                 <span className="mr-2 w-8"><img src="/victory.png" alt="" /></span>
-                <span className="text-xl font-mono text-green-700">After: <span className="bg-amber-300 py-1 px-0.5 rounded-sm text-black">Her</span>itengine</span>
+                <span className="text-xl font-mono text-green-700">After: Heritengine</span>
               </div>
               {/* Card */}
               <div className="rounded-xl bg-white shadow-md overflow-hidden border border-gray-100 mb-6">

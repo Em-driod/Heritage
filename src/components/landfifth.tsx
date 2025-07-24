@@ -1,6 +1,6 @@
 import { motion, type Variants } from 'framer-motion'; // <-- Changed here
 import { Link } from 'react-router-dom';
-import React from 'react';
+
 import { FaShare } from "react-icons/fa";
 
 const Landfifth = () => {
@@ -107,15 +107,20 @@ const Landfifth = () => {
           whileHover={{ y: -5 }}
         >
           <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
-            <motion.div
-              className="flex items-center mb-[20px]"
-              whileHover={{ scale: 1.05 }}
-            >
+              <div className='flex'>
+
               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
                 1
               </span>
-              <span className="text-[32px] leading-none">🎭</span>
+              <motion.div
+              className="flex items-center mb-[20px]"
+              whileHover={{ scale: 1.05 }}
+              animate={{ rotate: [0, 10, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              >
+              <span className="text-[32px] leading-none"><img src="mask.png" alt="" /></span>
             </motion.div>
+              </div>
             <motion.h2
               className="text-[40px] font-semibold text-[#333333] mb-[20px]"
               whileHover={{ x: 5 }}
@@ -191,11 +196,13 @@ const Landfifth = () => {
           className="p-[40px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
           variants={sectionVariants}
           whileHover={{ y: -5 }}
+         
         >
           <motion.div
             className="lg:w-1/2 flex items-center justify-center order-1 lg:order-1 lg:pr-[80px] mt-10 lg:mt-0"
             variants={imageVariants}
             whileHover="hover"
+            
           >
             <img
               src="/two.png"
@@ -209,15 +216,20 @@ const Landfifth = () => {
           <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
 
           <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pl-[80px] order-2 lg:order-2 flex flex-col items-center lg:items-start">
-            <motion.div
-              className="flex items-center mb-[20px]"
-              whileHover={{ scale: 1.05 }}
-            >
+               
+            <div className='flex'>
+
               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
                 2
               </span>
+              <motion.div
+              className="flex items-center mb-[20px]"
+              whileHover={{ scale: 1.05 }}
+              animate={{ rotate: [0, 10, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}>
               <span className="text-[32px] leading-none">🧠</span>
             </motion.div>
+              </div>
             <motion.h2
               className="text-[40px] font-semibold text-[#333333] mb-[20px]"
               whileHover={{ x: 5 }}
@@ -385,20 +397,30 @@ const Landfifth = () => {
               respect the traditions that inspire your designs.
             </motion.p>
             <motion.div
-              className="bg-[#f0e0ff] text-[#9333ea] pr-[120px] pl-4 py-[2px] rounded-[10px]  font-semibold transition-colors duration-200 hover:bg-[#e0d0ef] w-full  text-left"
+              className="bg-[#f0e0ff] text-[#9333ea] pr-[120px] pl-4  rounded-[10px]  font-semibold transition-colors duration-200 hover:bg-[#e0d0ef] w-full  text-left"
               whileHover={{ y: -3 }}
             >
               <div className="flex items-center mb-2">
+                <div className='flex'>
+
+                <div className='mt-4'>
+
                 <img
-                  src="/five.png"
+                  src="/globe.png"
                   alt="Cultural Context Icon"
-                  className="w-[20px] h-[20px] mr-2"
-                />
-                <span>Cultural Context</span>
-              </div>
-              <p className="text-[14px] text-[#666666] leading-relax mb-[28px]">
+                  className="w-[10px] h-[15px] mr-2"
+                  />
+                  </div>
+                  <div className='flex flex-col'>
+
+                <span className='text- #581C87'>Cultural Context</span>
+                <p className="text-[10px] text-[ #7E22CE] leading-tight ">
                 Every symbol tells a story, every color has meaning
               </p>
+                  </div>
+              </div>
+             
+                  </div>
             </motion.div>
           </div>
         </motion.div>

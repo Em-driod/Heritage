@@ -7,13 +7,13 @@ const Landfourth = () => {
  py-[80px] px-4 flex flex-col items-center font-sans overflow-hidden">
       {/* Top Section: What HeritageAI Gives You */}
       <div className="text-center mb-[70px]">
-        <div className="inline-flex items-center bg-white rounded-full py-[8px] px-[15px] shadow-[0_2px_4px_rgba(0,0,0,0.05)] mb-[45px]">
+        <div className="inline-flex items-center border-[#EF4444] border-1 bg-white rounded-full py-[8px] px-[15px] shadow-[0_2px_4px_rgba(0,0,0,0.05)] mb-[45px]">
           <img
             src="/Box.png"
             alt="HeritageAI Icon"
             className="w-6 h-6 mr-2"
           />
-          <span className="text-sm font-semibold p-2  text-[#EF4444]">What <span className="bg-amber-400 rounded-sm text-black p-1">Heri</span>tengineAI Gives You</span>
+          <span className="text-sm font-semibold p-2  text-[#EF4444]">What HeritengineAI Gives You</span>
         </div>
         <h5
           className="text-center  text-[50px] font-medium text-[#333333] leading-[1.0] tracking-[-0.01em] m-0"
@@ -36,7 +36,7 @@ const Landfourth = () => {
             letterSpacing: '-1%',
             textAlign: 'center',
           }}>
-           Infinite <span  style={{ fontFamily: 'Manrope, sans-serif', fontStyle: 'thin', fontWeight: 400 }}>heritage.</span></h1>
+           <span  style={{ fontFamily: 'Manrope, sans-serif', fontStyle: 'thin', fontWeight: 400 }}>Infinite heritage.</span></h1>
         </h5>
       </div>
 
