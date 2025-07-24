@@ -1,6 +1,7 @@
 import { motion, type Variants } from 'framer-motion'; // <-- Changed here
 import { Link } from 'react-router-dom';
-<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
+import React from 'react';
+import { FaShare } from "react-icons/fa";
 
 const Landfifth = () => {
   // Animation variants
@@ -64,6 +65,7 @@ const Landfifth = () => {
       viewport={{ once: true, margin: '-100px' }}
       variants={containerVariants}
     >
+      <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
       {/* Header Section */}
       <motion.div
         className="text-center mb-[80px] max-w-2xl mx-auto"
@@ -400,6 +402,78 @@ const Landfifth = () => {
             </motion.div>
           </div>
         </motion.div>
+
+        {/* Section 5: Apply to Real-World Products */}
+        <motion.div
+          className="p-[40px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
+          variants={sectionVariants}
+          whileHover={{ y: -5 }}
+        >
+          <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
+            <motion.div
+              className="flex items-center mb-[20px]"
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
+                5
+              </span>
+              <motion.span
+                className="text-[32px] leading-none"
+                animate={{ rotate: [0, -10, 10, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              >
+                🚀
+              </motion.span>
+            </motion.div>
+            <motion.h2
+              className="text-[40px] font-semibold text-[#333333] mb-[20px]"
+              whileHover={{ x: 5 }}
+            >
+             Export & Customize
+            </motion.h2>
+            <motion.p
+              className="text-[14px] text-[#666666] leading-relax mb-[28px]"
+              whileHover={{ x: 5 }}
+            >
+              Export your designs, share with your team, and customize to your heart's content. The creative possibilities are endless!
+            </motion.p>
+            <div className="flex gap-x-4 gap-y-3 text-[#666666] text-[16px] w-full max-w-[400px] mx-auto lg:mx-0 lg:text-left">
+            <motion.button
+                            className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
+                              <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export</button>
+                          </motion.button>
+            <motion.button
+                            className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><FaShare /><span className="mr-1"></span>Share</button>
+                          </motion.button>
+              
+            </div>
+          </div>
+
+          {/* Separator Lines */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-300 transform -translate-x-1/2 z-10"></div>
+          <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
+
+          <motion.div
+            className="lg:w-1/2 flex items-center justify-center lg:pl-[80px] mt-10 lg:mt-0"
+            variants={imageVariants}
+            whileHover="hover"
+          >
+            <img
+              src="/five.png" // Placeholder image, replace with an actual image for step 5
+              alt="Product Application Showcase"
+              className="w-full h-auto rounded-[15px] max-w-[450px]"
+            />
+          </motion.div>
+        </motion.div>
+
       </motion.div>
 
       {/* Call to Action Button at the Bottom */}
@@ -421,14 +495,14 @@ const Landfifth = () => {
             Ready to Create with Culture?
           </motion.span>
           <Link to='/Waitlist'>
-          <motion.button
-            className="px-[32px] py-[12px] bg-white text-[#ff7a50] font-semibold rounded-full shadow-md hover:shadow-lg transition duration-200 text-lg sm:text-xl"
-            whileHover={{ y: -3, scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            <motion.button
+              className="px-[32px] py-[12px] bg-white text-[#ff7a50] font-semibold rounded-full shadow-md hover:shadow-lg transition duration-200 text-lg sm:text-xl"
+              whileHover={{ y: -3, scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-            Explore a Demo Culture Kit
-          </motion.button>
-            </Link>
+              Explore a Demo Culture Kit
+            </motion.button>
+          </Link>
           <motion.p
             className="mt-6 text-white text-[15px] opacity-90"
             whileHover={{ scale: 1.01 }}

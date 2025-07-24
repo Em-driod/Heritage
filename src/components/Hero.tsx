@@ -309,7 +309,7 @@ const Hero: React.FC = () => {
       <div className="relative flex flex-col lg:flex-row justify-center items-center min-h-screen text-center sm:px-0">
         {/* Left Section */}
         <motion.div
-          className={`relative flex flex-col items-center h-[678px] mt-12 -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-8 lg:text-left px-0 sm:px-0 rounded-xl overflow-hidden z-10 w-[750px]`}
+          className={`relative flex flex-col items-center h-[678px]  -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-8 lg:text-left px-0 sm:px-0 rounded-xl overflow-hidden z-10 w-[750px]`}
           initial="hidden"
           animate="visible"
           variants={{
@@ -349,9 +349,9 @@ const Hero: React.FC = () => {
             }}
           />
 
-          <div className="z-10 sm:p-6 lg:p-8 lg:pl-10">
+          <div className="z-10 ml-6 sm:p-6 lg:p-8 lg:pl-10">
             <motion.h1
-              className="text-3xl sm:text-sm sm:w-screen overflow-hidden flex flex-col mt-20 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
+              className="text-3xl sm:text-sm sm:w-screen overflow-hidden flex flex-col mt-18 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 700,
@@ -363,7 +363,7 @@ const Hero: React.FC = () => {
                 visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14 } }
               }}
             >
-              Ancient Stories.<br /> <span className='mt-4'>Modern Design.</span>
+              Ancient Stories.<br /> <span className='mt-4 z-[9998]'>Modern Design.</span>
             </motion.h1>
             <motion.p
               className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-0 lg:ml-16 text-center lg:text-left" /* Adjusted margin and text alignment */
@@ -425,7 +425,7 @@ const Hero: React.FC = () => {
 
         {/* Right Section Card */}
         <motion.div
-          className="relative max-w-md sm:max-w-lg h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-8 z-30 w-[550px]"
+          className="relative max-w-md sm:max-w-lg h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-10 z-30 w-[550px]"
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
