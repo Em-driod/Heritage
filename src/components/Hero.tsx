@@ -288,7 +288,7 @@ const Hero: React.FC = () => {
 
   return (
     <motion.div
-      className="py-4 sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen mt-20"
+      className="py-4 sm:py-8 gap-0 lg:py-24 overflow-hidden relative min-h-screen mt-20 px-8 sm:px-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -306,10 +306,10 @@ const Hero: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="relative flex flex-col lg:flex-row justify-center items-center min-h-screen text-center sm:px-0">
+      <div className=" flex flex-col lg:flex-row justify-center lg:ml-0  items-center min-h-screen text-center sm:px-0">
         {/* Left Section */}
         <motion.div
-          className={`relative flex flex-col items-center h-[678px]  -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-8 lg:text-left px-0 sm:px-0 rounded-xl overflow-hidden z-10 w-[750px]`}
+          className={`relative flex flex-col items-center h-auto lg:h-[678px] -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-0 lg:-translate-x-8 lg:text-left px-2 sm:px-0 rounded-xl overflow-hidden z-10 w-full max-w-sm sm:max-w-none lg:w-[750px] mx-4 sm:mx-0`}
           initial="hidden"
           animate="visible"
           variants={{
@@ -349,9 +349,9 @@ const Hero: React.FC = () => {
             }}
           />
 
-          <div className="z-10 ml-6 sm:p-6 lg:p-8 lg:pl-10">
+          <div className="z-10 ml-0 lg:ml-6 p-4 sm:p-6 lg:p-8 lg:pl-10">
             <motion.h1
-              className="text-3xl sm:text-sm sm:w-screen flex flex-col mt-18 md:text-6xl lg:text-7xl font-manrope  leading-[1.1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
+              className="text-2xl sm:text-sm sm:w-screen flex flex-col mt-8 lg:mt-18 md:text-6xl lg:text-7xl font-manrope leading-[1.1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 700,
@@ -366,7 +366,7 @@ const Hero: React.FC = () => {
               Ancient Stories.<br /> <span className='mt-4 z-[9998]'>Modern Design.</span>
             </motion.h1>
             <motion.p
-              className="text-4xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-0 lg:ml-16 text-center lg:text-left" /* Adjusted margin and text alignment */
+              className="text-3xl sm:text-4xl md:text-4xl lg:text-7xl italic text-[60px] sm:text-[90px] leading-[1] tracking-[-0.03em] text-gray-900 mb-6 sm:mb-8 ml-0 lg:ml-16 text-center lg:text-left" /* Adjusted margin and text alignment */
               style={{
                 fontFamily: 'Instrument Serif, serif',
                 fontWeight: 500,
@@ -390,7 +390,7 @@ const Hero: React.FC = () => {
               Instantly.
             </motion.p>
           <motion.p
-  className="text-sm md:text-lg lg:w-full sm:w-20 text-gray-600 mb-8 sm:mb-10 max-w-md font-inter mx-auto text-center lg:ml-16 lg:text-left lg:mx-0"
+  className="text-sm md:text-lg lg:w-full w-full text-gray-600 mb-8 sm:mb-10 max-w-sm lg:max-w-md font-inter mx-auto text-center lg:ml-16 lg:text-left lg:mx-0"
   style={{
     filter: isAutoHoverActive ? 'blur(2px)' : 'none',
     transition: 'filter 0.3s ease'
@@ -404,7 +404,7 @@ const Hero: React.FC = () => {
 </motion.p>
             <Link to="/waitlist">
               <motion.button
-                className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-24 transition duration-300 text-sm sm:text-base mx-auto lg:ml-12" /* Centered on small screens, left aligned on large */
+                className="flex items-center px-4 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-8 lg:mb-24 transition duration-300 text-sm sm:text-base mx-auto lg:ml-12" /* Centered on small screens, left aligned on large */
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 style={{
@@ -425,7 +425,7 @@ const Hero: React.FC = () => {
 
         {/* Right Section Card */}
         <motion.div
-          className="relative max-w-md sm:max-w-lg h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-10 z-30 w-[550px]"
+          className="relative max-w-sm sm:max-w-lg h-auto lg:h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-0 lg:-translate-x-10 z-30 w-full lg:w-[550px] mx-4 sm:mx-0"
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -434,7 +434,7 @@ const Hero: React.FC = () => {
           <div className="absolute -inset-2 sm:-inset-3 z-0 opacity-70 pointer-events-none">
             <motion.div
               className="absolute inset-y-0 right-0 w-full bg-purple-400 rounded-xl blur-xl shadow-lg"
-              style={{ width: '100px', marginLeft: '500px', right: '-45px' }}
+              style={{ width: '100px', marginLeft: '300px', right: '-45px' }}
               animate={{ opacity: [0.5, 0.7, 0.5] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -460,32 +460,32 @@ const Hero: React.FC = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <h2 className="text-base sm:text-lg md:text-xl text-start font-semibold text-gray-800 mb-4 sm:mb-6">Select Culture</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-6 sm:mb-8">
-              {['Yoruba', 'Igbo', 'Japan'].map((culture) => (
-                <motion.button
-                  key={culture}
-                  className={`relative flex items-center justify-center p-2 sm:p-3 rounded-md text-xs sm:text-sm font-medium text-white h-16 sm:h-20 overflow-hidden transition-all duration-200
-                    ${selectedCulture === culture ? 'scale-[1.02]' : 'hover:scale-[1.02]'}
-                    ${culture === 'Japan' ? 'col-span-2 mx-auto w-32 sm:col-span-1 sm:mx-0' : ''} `}
-                  onClick={() => handleCultureSelect(culture)}
-                  onMouseEnter={() => culture === 'Yoruba' && setIsYorubaHovered(true)}
-                  onMouseLeave={() => culture === 'Yoruba' && setIsYorubaHovered(false)}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {culture === 'Yoruba' && (isYorubaHovered || autoYorubaHover) ? (
-                    <img src="/Hover state.png" alt="Yoruba Culture Hover" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
-                  ) : (
-                    <img src={`/${culture.toLowerCase()}.png`} alt={`${culture} Culture`} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
-                  )}
-                  <div className="absolute inset-0 bg-opacity-30 flex items-center justify-center"></div>
-                  <span className="relative z-10 text-shadow"></span>
-                </motion.button>
-              ))}
-            </div>
+   <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6 sm:mb-8">
+  {['Yoruba', 'Igbo', 'Japan'].map((culture) => (
+    <motion.button
+      key={culture}
+      className={`
+        relative flex items-center justify-center p-2 sm:p-3 rounded-md text-xs sm:text-sm font-medium text-white h-16 sm:h-20 overflow-hidden transition-all duration-200
+        ${selectedCulture === culture ? 'scale-[1.02]' : 'hover:scale-[1.02]'}
+      `}
+      onClick={() => handleCultureSelect(culture)}
+      onMouseEnter={() => culture === 'Yoruba' && setIsYorubaHovered(true)}
+      onMouseLeave={() => culture === 'Yoruba' && setIsYorubaHovered(false)}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.98 }}
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      {culture === 'Yoruba' && (isYorubaHovered || autoYorubaHover) ? (
+        <img src="/Hover state.png" alt="Yoruba Culture Hover" className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
+      ) : (
+        <img src={`/${culture.toLowerCase()}.png`} alt={`${culture} Culture`} className="absolute inset-0 w-full h-full object-cover transition-opacity duration-200" />
+      )}
+      <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-10 transition-opacity duration-200"></div>
+    </motion.button>
+  ))}
+</div>
 
             <motion.div
               className="flex flex-col items-center mb-4 sm:mb-6"
@@ -510,124 +510,125 @@ const Hero: React.FC = () => {
               </>
             ) : (
               <div className="bg-gray-50 rounded-lg px-4 py-4 mb-6 sm:mb-8">
-                <h2 className="sm:text-xs md:text-xs font-normal text-gray-600 mb-3 sm:mb-4 text-left">Generated Assets</h2>
-                <div className="space-y-3 sm:space-y-4">
-                  {generatedAssets.map((asset) => (
-                    <div key={asset.label} className="group relative">
-                      <div
-                        className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors duration-150"
-                      >
-                        <div className="flex items-center space-x-2 sm:space-x-3">
-                          <motion.div
-                            className="relative"
-                            onMouseEnter={() => handleMouseEnterAsset(asset.label)}
-                            onMouseLeave={handleMouseLeaveAsset}
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                          >
-                            {/* Mouse pointer icon for auto hover */}
-                            {isAutoHoverActive && hoveredAsset === asset.label && (
-                              <motion.div
-                                className="absolute top-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center"
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -10 }}
-                                transition={{ duration: 0.4 }}
-                              >
-                                <LuMousePointer2 size={28} color="#F59E42" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
-                                <span className="mt-2 px-2 py-0.5 bg-white text-xs font-semibold rounded shadow text-gray-700 border border-gray-200">Herit</span>
-                              </motion.div>
-                            )}
-                            <img
-                              src={asset.src}
-                              alt={asset.label}
-                              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover border border-gray-200"
-                            />
-                            <div className={`absolute inset-0 rounded-lg border-2 ${asset.label === 'Obatala' ? 'border-purple-300' : asset.label === 'Amala' ? 'border-red-300' : 'border-yellow-300'} opacity-0 group-hover:opacity-100 transition-opacity duration-200`}></div>
-                          </motion.div>
-                          <span className="text-sm sm:text-base text-gray-800 font-medium">{asset.label}</span>
-                        </div>
-                        <div className="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-2 text-xs sm:text-sm">
-                          <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
-                              <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export</button>
-                          </motion.button>
-                          <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><FaShare /><span className="mr-1"></span>Share</button>
-                          </motion.button>
-                        </div>
-                      </div>
-                      <AnimatePresence>
-                        {hoveredAsset === asset.label && <AssetDropdown assetLabel={asset.label} />}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-              </div>
+  <h2 className="text-xs font-normal text-gray-600 mb-3 sm:text-xs sm:mb-4 text-left">Generated Assets</h2>
+  <div className="space-y-3 sm:space-y-4">
+    {generatedAssets.map((asset) => (
+      <div key={asset.label} className="group relative">
+        <div className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50 transition-colors duration-150">
+          <div className="flex items-center space-x-2">
+            <motion.div
+              className="relative"
+              onMouseEnter={() => handleMouseEnterAsset(asset.label)}
+              onMouseLeave={handleMouseLeaveAsset}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              {isAutoHoverActive && hoveredAsset === asset.label && (
+                <motion.div
+                  className="absolute top-6 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <LuMousePointer2 size={28} color="#F59E42" style={{ filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.18))' }} />
+                  <span className="mt-2 px-2 py-0.5 bg-white text-xs font-semibold rounded shadow text-gray-700 border border-gray-200">Herit</span>
+                </motion.div>
+              )}
+              <img
+                src={asset.src}
+                alt={asset.label}
+                className="w-10 h-10 rounded-lg object-cover border border-gray-200 sm:w-12 sm:h-12"
+              />
+              <div className={`absolute inset-0 rounded-lg border-2 ${asset.label === 'Obatala' ? 'border-purple-300' : asset.label === 'Amala' ? 'border-red-300' : 'border-yellow-300'} opacity-0 group-hover:opacity-100 transition-opacity duration-200`}></div>
+            </motion.div>
+            <span className="text-sm font-medium text-gray-800 sm:text-base">{asset.label}</span>
+          </div>
+          <div className="flex items-center space-x-2 text-xs sm:text-sm">
+            <motion.button
+              className="px-2 py-1 text-gray-600 rounded-md transition-colors duration-150 hover:bg-gray-100 sm:px-3 sm:py-1"
+              whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <button className="flex items-center rounded-md border border-pink-200 bg-pink-100 px-2 py-1 text-xs font-medium text-pink-800">
+                <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export
+              </button>
+            </motion.button>
+            <motion.button
+              className="px-2 py-1 text-gray-600 rounded-md transition-colors duration-150 hover:bg-gray-100 sm:px-3 sm:py-1"
+              whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <button className="flex items-center rounded-md border border-blue-200 bg-blue-100 px-2 py-1 text-xs font-medium text-blue-500">
+                <FaShare /><span className="mr-1"></span>Share
+              </button>
+            </motion.button>
+          </div>
+        </div>
+        <AnimatePresence>
+          {hoveredAsset === asset.label && <AssetDropdown assetLabel={asset.label} />}
+        </AnimatePresence>
+      </div>
+    ))}
+  </div>
+</div>
             )}
 
             {isLoading ? (
               <ColorPaletteSkeletonLoader />
             ) : (
-              <div className="bg-gray-50 rounded-lg px-4 py-4">
-                <h2 className="sm:text-xs md:text-xs font-normal text-gray-600 mb-3 sm:mb-4 text-left">Color Palette</h2>
-                <motion.div
-                  className="flex flex-col sm:flex-row items-center justify-between space-y-3 sm:space-y-0"
-                  whileHover={{ scale: 1.01 }}
-                >
-                  <div className="flex space-x-1 sm:space-x-2">
-                    {colorPalette.map((palette, index) => (
-                      <motion.div
-                        key={index}
-                        className="w-6 h-6 sm:w-6 sm:h-6 rounded-full border border-gray-300 relative"
-                        style={{ backgroundColor: palette.hex }}
-                        whileHover={{ scale: 1.2 }}
-                        onMouseEnter={() => setHoveredPalette(index)}
-                        onMouseLeave={() => setHoveredPalette(null)}
-                      >
-                        <AnimatePresence>
-                          {hoveredPalette === index && (
-                            <motion.div
-                              initial={{ opacity: 0, y: 10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, y: 10 }}
-                              transition={{ duration: 0.2 }}
-                              className="absolute left-1/2 -translate-x-1/2 top-8 z-50 bg-white px-3 py-1 rounded shadow-lg border border-gray-200 text-xs text-gray-700 text-center whitespace-nowrap"
-                            >
-                              {palette.label} ({palette.hex})
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </motion.div>
-                    ))}
-                  </div>
-                  <div className="flex space-x-1 sm:space-x-2 text-xs sm:text-sm">
-                    <motion.button
-                      className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                      whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
-                        <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export</button>
-                    </motion.button>
-                    <motion.button
-                      className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                      whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><FaShare /><span className="mr-1"></span>Share</button>
-                    </motion.button>
-                  </div>
-                </motion.div>
-              </div>
+             <div className="bg-gray-50 rounded-lg px-4 py-4">
+  <h2 className="text-xs font-normal text-gray-600 mb-3 text-left sm:mb-4 sm:text-xs">Color Palette</h2>
+  <motion.div
+    className="flex items-center justify-between space-x-2"
+    whileHover={{ scale: 1.01 }}
+  >
+    <div className="flex space-x-1 sm:space-x-2">
+      {colorPalette.map((palette, index) => (
+        <motion.div
+          key={index}
+          className="relative h-6 w-6 rounded-full border border-gray-300 sm:h-6 sm:w-6"
+          style={{ backgroundColor: palette.hex }}
+          whileHover={{ scale: 1.2 }}
+          onMouseEnter={() => setHoveredPalette(index)}
+          onMouseLeave={() => setHoveredPalette(null)}
+        >
+          <AnimatePresence>
+            {hoveredPalette === index && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-1/2 top-8 z-50 -translate-x-1/2 whitespace-nowrap rounded border border-gray-200 bg-white px-3 py-1 text-center text-xs text-gray-700 shadow-lg"
+              >
+                {palette.label} ({palette.hex})
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      ))}
+    </div>
+    <div className="flex space-x-1 text-xs sm:space-x-2 sm:text-sm">
+      <motion.button
+        className="rounded-md px-2 py-1 text-gray-600 transition-colors duration-150 hover:bg-gray-100 sm:px-3 sm:py-1"
+        whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <button className="flex items-center rounded-md border border-pink-200 bg-pink-100 px-2 py-1 text-xs font-medium text-pink-800">
+          <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export
+        </button>
+      </motion.button>
+      <motion.button
+        className="rounded-md px-2 py-1 text-gray-600 transition-colors duration-150 hover:bg-gray-100 sm:px-3 sm:py-1"
+        whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <button className="flex items-center rounded-md border border-blue-200 bg-blue-100 px-2 py-1 text-xs font-medium text-blue-500"><FaShare /><span className="mr-1"></span>Share</button>
+      </motion.button>
+    </div>
+  </motion.div>
+</div>
             )}
           </motion.div>
         </motion.div>
