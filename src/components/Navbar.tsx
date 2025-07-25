@@ -6,11 +6,11 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <nav className=" bg-white shadow-sm border-t-4 border-black fixed top-0 w-screen z-50 ">
+    <nav className=" bg-white shadow-sm border-t-4 border-black fixed top-0 z-50 w-screen ">
       <div className="container mx-auto pl-4 sm:px-6 lg:pl-8 h-16 flex items-center justify-between"> {/* Added justify-between here */}
         {/* Left Section: Logo & Desktop Links */}
 
-        <div className="flex items-center ">
+        <div className="flex items-center "> 
           <Link to='/'>
           {/* Logo */}
           <div className="flex items-center text-gray-800 font-bold text-2xl mr-8 ml-6 relative">

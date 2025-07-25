@@ -9,7 +9,10 @@ import Landseven from "../components/landseven"
 const Home = () => {
   return (
     <div>
+     
+
       <Hero />
+   
       <Landsecont />
       <Landthird />
      <Landfourth />

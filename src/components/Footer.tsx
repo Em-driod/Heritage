@@ -6,7 +6,7 @@ import { RiTwitterXFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
-    <footer className="relative flex justify-center items-center min-h-screen py-10 font-inter bg-gray-50">
+    <footer className="relative flex justify-center items-center min-h-screen py-10 font-inter bg-gray-50 overflow-hidden">
       {/* New background element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[90%]  bottom-0 rounded-full z-0"> <img src="/move.png" alt="" /></div>
 

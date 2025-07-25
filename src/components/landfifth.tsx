@@ -466,7 +466,7 @@ const Landfifth = () => {
                             whileTap={{ scale: 0.95 }}
                           >
                             <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
-                              <span className="mr-1"><img src="/Vector.png" alt="" /></span>Export</button>
+                              <span className=""><img src="/Vector.png" alt="" /></span>Export</button>
                           </motion.button>
             <motion.button
                             className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
@@ -475,6 +475,9 @@ const Landfifth = () => {
                           >
                             <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><FaShare /><span className="mr-1"></span>Share</button>
                           </motion.button>
+                          <button className='ml-1'>
+                            <img src="/custom.png" alt="" />
+                          </button>
               
             </div>
           </div>
@@ -507,7 +510,7 @@ const Landfifth = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <motion.div
-          className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[50px] sm:py-[60px] lg:py-[70px] px-6 sm:px-8 lg:px-10 max-w-[900px]"
+          className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[20px] sm:py-[60px] lg:py-[40px] px-6 sm:px-8 lg:px-10 max-w-[900px]"
           whileHover={{ scale: 1.02 }}
         >
           <motion.span

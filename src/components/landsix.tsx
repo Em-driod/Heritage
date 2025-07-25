@@ -65,10 +65,12 @@ const Landsix = () => {
             fontWeight: 800,
             fontStyle: 'thin',
             lineHeight: '100%',
-            letterSpacing: '-3%',
+           
             textAlign: 'center',
           }}>
-      Built for <span className="text-blue-700   italic "style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}}>Creators,</span> <br/> <span className="text-yellow-600 "style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Makers,</span> and <span className="text-green-600" style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Curators</span>
+      Built for <span className="text-blue-700   italic "style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-3%'}}>Creators,</span> <br/>
+       <span className="text-yellow-600 italic"style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Makers,</span> 
+       and <span className="text-green-600 italic" style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Curators</span>
     </div>
   </div>
 </div>

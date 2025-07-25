@@ -351,7 +351,7 @@ const Hero: React.FC = () => {
 
           <div className="z-10 ml-6 sm:p-6 lg:p-8 lg:pl-10">
             <motion.h1
-              className="text-3xl sm:text-sm sm:w-screen flex flex-col mt-18 md:text-6xl lg:text-7xl font-manrope text-[70px] leading-[1.1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
+              className="text-3xl sm:text-sm sm:w-screen flex flex-col mt-18 md:text-6xl lg:text-7xl font-manrope  leading-[1.1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
               style={{
                 fontFamily: 'Manrope',
                 fontWeight: 700,
@@ -389,19 +389,19 @@ const Hero: React.FC = () => {
             >
               Instantly.
             </motion.p>
-            <motion.p
-              className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 max-w-md font-inter ml-0 lg:ml-16 text-center lg:text-left mx-auto lg:mx-0" /* Adjusted margin and text alignment */
-              style={{
-                filter: isAutoHoverActive ? 'blur(2px)' : 'none',
-                transition: 'filter 0.3s ease'
-              }}
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.4 } }
-              }}
-            >
-              Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
-            </motion.p>
+          <motion.p
+  className="text-sm md:text-lg lg:w-full sm:w-20 text-gray-600 mb-8 sm:mb-10 max-w-md font-inter mx-auto text-center lg:ml-16 lg:text-left lg:mx-0"
+  style={{
+    filter: isAutoHoverActive ? 'blur(2px)' : 'none',
+    transition: 'filter 0.3s ease'
+  }}
+  variants={{
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.4 } }
+  }}
+>
+  Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
+</motion.p>
             <Link to="/waitlist">
               <motion.button
                 className="flex items-center px-5 lg:px-18 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl mb-24 transition duration-300 text-sm sm:text-base mx-auto lg:ml-12" /* Centered on small screens, left aligned on large */
