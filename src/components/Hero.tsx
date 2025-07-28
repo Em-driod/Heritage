@@ -433,8 +433,8 @@ const Hero: React.FC = () => {
   {/* Colored shadow effects */}
   <div className="absolute -inset-2 sm:-inset-3 z-0 opacity-70 pointer-events-none">
     <motion.div
-      className="absolute inset-y-0 right-0 w-full bg-purple-400 rounded-xl blur-xl shadow-lg"
-      style={{ width: '100px', marginLeft: '300px', right: '-45px' }}
+      className="absolute inset-y-0 bg-purple-400 rounded-xl blur-xl shadow-lg     w-[100px] ml-[300px] lg:right-[-45px]  "
+    
       animate={{ opacity: [0.5, 0.7, 0.5] }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
     />
