@@ -424,7 +424,7 @@ const Hero: React.FC = () => {
 </motion.div>
 
         {/* Right Section Card */}
-       <motion.div
+ <motion.div
   className="relative max-w-sm sm:max-w-lg h-auto lg:h-[678px] lg:max-w-2xl lg:mt-0 flex-grow mt-[20px] -translate-y-2 -translate-x-0 lg:-translate-x-10 z-30 w-full lg:w-[550px] mx-2 sm:mx-0"
   initial={{ x: 20, opacity: 0 }}
   animate={{ x: 0, opacity: 1 }}
@@ -433,8 +433,12 @@ const Hero: React.FC = () => {
   {/* Colored shadow effects */}
   <div className="absolute -inset-2 sm:-inset-3 z-0 opacity-70 pointer-events-none">
     <motion.div
-      className="absolute inset-y-0 bg-purple-400 rounded-xl blur-xl shadow-lg     w-[100px] ml-[300px] lg:right-[-45px]  "
-    
+      className="absolute inset-y-0 bg-purple-400 rounded-xl blur-xl shadow-lg w-[100px] left-[-45px] sm:left-auto sm:ml-[300px] lg:right-[-45px]"
+      animate={{ opacity: [0.5, 0.7, 0.5] }}
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+    />
+    <motion.div
+      className="absolute inset-y-0 bg-purple-400 rounded-xl blur-xl shadow-lg w-[100px] right-[-45px] sm:hidden"
       animate={{ opacity: [0.5, 0.7, 0.5] }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
     />
@@ -542,7 +546,7 @@ const Hero: React.FC = () => {
                   </motion.div>
                   <span className="text-sm font-medium text-gray-800 sm:text-base">{asset.label}</span>
                 </div>
-                <div className="flex  items-center space-x-2 text-xs sm:text-sm">
+                <div className="flex items-center space-x-2 text-xs sm:text-sm">
                   <motion.button
                     className="px-2 py-1 text-gray-600 rounded-md transition-colors duration-150 hover:bg-gray-100 sm:px-3 sm:py-1"
                     whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
@@ -623,7 +627,7 @@ const Hero: React.FC = () => {
               whileTap={{ scale: 0.95 }}
             >
               <button className="flex items-center rounded-md border border-blue-200 bg-blue-100 px-2 py-1 text-xs font-medium text-blue-500"><FaShare /><span className="mr-1"></span>Share</button>
- </motion.button>
+            </motion.button>
           </div>
         </motion.div>
       </div>
