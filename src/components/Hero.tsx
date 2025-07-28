@@ -353,7 +353,7 @@ const Hero: React.FC = () => {
     <motion.h1
       className="text-4xl sm:text-4xl sm:w-screen flex flex-col mt-8 lg:mt-18 md:text-6xl lg:text-7xl font-manrope leading-[1.1] tracking-[-0.03em] text-gray-900 mb-2 sm:mb-2 lg:ml-20 text-center lg:text-left" /* Adjusted margin and text alignment */
       style={{
-        fontFamily: 'Manrope',
+        fontFamily: 'Manrope, sans-serif',
         fontWeight: 700,
         filter: isAutoHoverActive ? 'blur(2px)' : 'none',
         transition: 'filter 0.3s ease'
