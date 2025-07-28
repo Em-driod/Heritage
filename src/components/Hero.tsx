@@ -432,22 +432,43 @@ const Hero: React.FC = () => {
 >
   {/* Colored shadow effects */}
   <div className="absolute -inset-2 sm:-inset-3 z-0 opacity-70 pointer-events-none">
+    {/* Purple shadow on the left for mobile (hidden on sm and larger) */}
     <motion.div
-      className="absolute inset-y-0 bg-purple-400 rounded-xl blur-xl shadow-lg w-[100px] left-[-45px] sm:left-auto sm:ml-[300px] lg:right-[-45px]"
+      className="absolute inset-y-0 bg-purple-400 rounded-xl blur-xl shadow-lg w-[100px] left-[-45px] sm:hidden"
       animate={{ opacity: [0.5, 0.7, 0.5] }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
     />
+
+    {/* Purple shadow on the right for mobile (hidden on sm and larger) */}
     <motion.div
-      className="absolute inset-y-0 bg-purple-400 rounded-xl blur-xl shadow-lg w-[100px] right-[-45px] sm:hidden"
+      className="absolute inset-y-0 bg-purple-300 rounded-xl blur-xl shadow-lg w-[100px] right-[-45px] sm:hidden"
+      animate={{ opacity: [0.5, 0.7, 0.5] }}
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+    />
+
+    {/* Purple shadow under the card for mobile (hidden on sm and larger) */}
+    <motion.div
+      className="absolute bg-purple-300 rounded-xl blur-xl shadow-lg w-[80%] left-1/2 -translate-x-1/2 sm:hidden"
+      style={{ top: 'calc(100% + 10px)', height: '50px' }}
+      animate={{ opacity: [0.5, 0.7, 0.5] }}
+      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+    />
+
+    {/* Single purple shadow on the right for larger screens (visible on sm and larger) */}
+    <motion.div
+      className="absolute inset-y-0 lg:bg-purple-400 sm:bg-purple-300 rounded-xl blur-xl shadow-lg w-[100px] ml-[300px] lg:right-[-45px] hidden sm:block"
       animate={{ opacity: [0.5, 0.7, 0.5] }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
     />
+
+    {/* Green shadow (no change) */}
     <motion.div
       className="absolute inset-x-0 top-0 h-full w bg-green-100 rounded-xl blur-xl"
       style={{ height: '30px', top: '-10px' }}
       animate={{ opacity: [0.3, 0.5, 0.3] }}
       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
     />
+    {/* Yellow shadow (no change) */}
     <motion.div
       className="absolute inset-y-8 left-0 w-full bg-yellow-200 rounded-full blur-xl"
       style={{ width: '30px', left: '-10px' }}

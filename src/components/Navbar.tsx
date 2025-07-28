@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               <div className="flex-shrink-0  items-center">
-               <img src="/Info.png" alt="" className='w-5' />
+               <img src="/kunle.png" alt="" className='w-5' />
             </div>
               <div className="ml-3">
                 <p className="text-sm font-medium text-gray-900">About</p>
