@@ -55,16 +55,22 @@ const Landsix = () => {
   return (
     <section className="py-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
    <div className="flex items-center justify-center p-4 bg-white">
-  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-0">
+  <div className="lg:flex lg:flex-row sm:flex sm:flex-col items-center justify-center sm:items-start sm:justify-start gap-[1.5vw] px-[4vw] sm:px-[3vw] lg:px-0 py-[2vw]">
   {/* Pill Box - Always Top Left */}
-  <div className="flex items-center px-2.5 py-1 sm:px-4 sm:py-2 border border-red-300 rounded-full text-red-500">
-    <img className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" src="/Group.png" alt="badge icon" />
-    <span className="text-xs sm:text-sm font-medium">Use it your way</span>
-  </div>
+ <div className="flex items-center px-[10px] py-[4px] border border-red-300 rounded-full text-red-500 flex-nowrap sm:px-[1vw] sm:py-[0.2vw]">
+  <img
+    className="w-[16px] h-[16px] mr-[6px] sm:w-[1.2vw] sm:h-[1.2vw] sm:mr-[0.5vw] lg:w-[30px] lg:h-[30px] lg:mr-[12px]"
+    src="/Group.png"
+    alt="badge icon"
+  />
+  <span className="text-[12px] font-medium sm:text-[clamp(0.6rem,0.7vw,0.8rem)] lg:text-[14px]">
+    Use it your way
+  </span>
+</div>
 
   {/* Main Heading */}
-  <div 
-    className="text-[1.75rem] sm:text-4xl lg:text-5xl leading-tight text-center sm:text-left"
+  <div
+    className="text-[clamp(2rem,4.5vw,3.5rem)] leading-tight text-center sm:text-left sm:text-[clamp(0.5rem,2vw,1.5rem)]"
     style={{
       fontFamily: 'manrope, sans-serif',
       fontWeight: 800,
@@ -72,8 +78,8 @@ const Landsix = () => {
       lineHeight: '110%',
     }}
   >
-    Built for{' '}
-    <span 
+    Built for
+    <span
       className="text-blue-700 italic"
       style={{
         fontFamily: 'instrument-serif',
@@ -86,7 +92,7 @@ const Landsix = () => {
     </span>
     <br className="hidden sm:block" />
     <span className="sm:hidden"> </span>
-    <span 
+    <span
       className="text-yellow-600 italic"
       style={{
         fontFamily: 'instrument-serif',
@@ -96,9 +102,9 @@ const Landsix = () => {
       }}
     >
       Makers,
-    </span>{' '}
-    and{' '}
-    <span 
+    </span>
+    and
+    <span
       className="text-green-600 italic"
       style={{
         fontFamily: 'instrument-serif',
