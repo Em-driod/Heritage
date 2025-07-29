@@ -55,70 +55,119 @@ const Landsix = () => {
   return (
     <section className="py-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
    <div className="flex items-center justify-center p-4 bg-white">
-  <div className="flex items-center space-x-8">
-    <div className="flex items-center px-4 py-2 border border-red-300 rounded-full text-red-500">
-      <img className="gap-4" src="/Group.png" alt="" />
-      <span>Use it your way</span>
-    </div>
-    <div className=" text-5xl" style={{
-            fontFamily: 'manrope, sans-serif',
-            fontWeight: 800,
-            fontStyle: 'thin',
-            lineHeight: '100%',
-           
-            textAlign: 'center',
-          }}>
-      Built for <span className="text-blue-700   italic "style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-3%'}}>Creators,</span> <br/>
-       <span className="text-yellow-600 italic"style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Makers,</span> 
-       and <span className="text-green-600 italic" style={{fontFamily: 'instrument-serif',fontWeight: 100,fontSize:'50px', fontStyle: 'thin', lineHeight: '100%', letterSpacing: '-5%'}} >Curators</span>
-    </div>
+  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-0">
+  {/* Pill Box - Always Top Left */}
+  <div className="flex items-center px-2.5 py-1 sm:px-4 sm:py-2 border border-red-300 rounded-full text-red-500">
+    <img className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" src="/Group.png" alt="badge icon" />
+    <span className="text-xs sm:text-sm font-medium">Use it your way</span>
+  </div>
+
+  {/* Main Heading */}
+  <div 
+    className="text-[1.75rem] sm:text-4xl lg:text-5xl leading-tight text-center sm:text-left"
+    style={{
+      fontFamily: 'manrope, sans-serif',
+      fontWeight: 800,
+      fontStyle: 'normal',
+      lineHeight: '110%',
+    }}
+  >
+    Built for{' '}
+    <span 
+      className="text-blue-700 italic"
+      style={{
+        fontFamily: 'instrument-serif',
+        fontWeight: 100,
+        letterSpacing: '-0.03em',
+        fontStyle: 'italic',
+      }}
+    >
+      Creators,
+    </span>
+    <br className="hidden sm:block" />
+    <span className="sm:hidden"> </span>
+    <span 
+      className="text-yellow-600 italic"
+      style={{
+        fontFamily: 'instrument-serif',
+        fontWeight: 100,
+        letterSpacing: '-0.05em',
+        fontStyle: 'italic',
+      }}
+    >
+      Makers,
+    </span>{' '}
+    and{' '}
+    <span 
+      className="text-green-600 italic"
+      style={{
+        fontFamily: 'instrument-serif',
+        fontWeight: 100,
+        letterSpacing: '-0.05em',
+        fontStyle: 'italic',
+      }}
+    >
+      Curators
+    </span>
   </div>
 </div>
 
-      {/* First row: 2 big cards */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-   
-  {cards
-    .filter((card) => card.size === "large")
-    .map((card, idx) => (
-      <div
-        key={idx}
-        className={`rounded-xl p-8 md:p-10 ${card.bg} shadow-lg h-full flex flex-col`}
-      >
-        {/* Main flex container for the card's top section */}
-        <div className="flex items-start justify-between flex-grow">
-          {/* Div for icon, title, description, and points */}
-          <div className="w-3/5 pr-4 flex flex-col"> {/* Added flex flex-col here for internal stacking */}
-            <div className={`w-12 h-12 flex items-center justify-center rounded-full ${card.iconBg}`}>
-              {card.icon}
-            </div>
-            <h3 className="mt-5 text-xl font-semibold text-gray-800">{card.title}</h3>
-            <p className="text-base text-gray-700 mt-3">{card.description}</p>
 
-            {/* Points list is now inside this div to be grouped with text content */}
-            <ul className="mt-4 space-y-2 text-sm text-gray-700">
-              {card.points.map((point, i) => (
-                <li key={i} className="flex items-center">
-                  <span className={`${card.iconBg.replace('bg-', 'text-')} font-bold mr-2`}>✓</span> {point}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Separate Div for the image */}
-          {card.img && (
-            <div className="ml-10 mt-25"> {/* Added ml-10 for horizontal spacing and mt-6 to bring it down */}
-              <img
-                src={card.img}
-                alt="icon"
-                className="w-45 h-40 object-contain"
-              />
-            </div>
-          )}
-        </div>
-      </div>
-    ))}
 </div>
+
+      {/* First row: 2 big cards */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5 lg:mb-6">
+      {cards
+        .filter((card) => card.size === "large")
+        .map((card, idx) => (
+          <div
+            key={idx}
+            className={`rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 lg:p-10 ${card.bg} shadow-lg h-full flex flex-col`}
+          >
+            {/* Main flex container for the card's top section */}
+            <div className="flex items-start justify-between flex-grow">
+              {/* Div for icon, title, description, and points */}
+              <div className="w-3/5 pr-2 sm:pr-3 lg:pr-4 flex flex-col">
+                <div className={`w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full ${card.iconBg}`}>
+                  <span className="text-sm sm:text-base lg:text-lg text-white">
+                    {card.icon}
+                  </span>
+                </div>
+                <h3 className="mt-3 sm:mt-4 lg:mt-5 text-base sm:text-lg lg:text-xl font-semibold text-gray-800 leading-tight">
+                  {card.title}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700 mt-2 sm:mt-2.5 lg:mt-3 leading-relaxed">
+                  {card.description}
+                </p>
+
+                {/* Points list */}
+                <ul className="mt-3 sm:mt-3.5 lg:mt-4 space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-700">
+                  {card.points.map((point, i) => (
+                    <li key={i} className="flex items-center">
+                      <span className={`${card.iconBg.replace('bg-', 'text-')} font-bold mr-1.5 sm:mr-2 text-xs sm:text-sm`}>
+                        ✓
+                      </span> 
+                      <span className="leading-relaxed">{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Separate Div for the image */}
+              {card.img && (
+                <div className="ml-4 sm:ml-6 lg:ml-10 mt-4 sm:mt-6 lg:mt-8 flex-shrink-0">
+                  <img
+                    src={card.img}
+                    alt="icon"
+                    className="w-24 h-20 sm:w-32 sm:h-28 lg:w-45 lg:h-40 object-contain rounded-md"
+                   
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+    </div>
 
       {/* Second row: 3 small cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

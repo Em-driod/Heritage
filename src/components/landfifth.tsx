@@ -502,41 +502,40 @@ const Landfifth = () => {
       </motion.div>
 
       {/* Call to Action Button at the Bottom */}
-      <motion.div
-        className="text-center mt-[80px] px-4 w-full"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <motion.div
-          className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[20px] sm:py-[60px] lg:py-[40px] px-6 sm:px-8 lg:px-10 max-w-[900px]"
-          whileHover={{ scale: 1.02 }}
-        >
-          <motion.span
-            className="text-[36px] sm:text-[42px] font-extrabold mb-[24px] text-white leading-tight"
-            whileHover={{ scale: 1.01 }}
-          >
-            Ready to Create with Culture?
-          </motion.span>
-          <Link to='/Waitlist'>
-            <motion.button
-              className="px-[32px] py-[12px] bg-white text-[#ff7a50] font-semibold rounded-full shadow-md hover:shadow-lg transition duration-200 text-lg sm:text-xl"
-              whileHover={{ y: -3, scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Explore a Demo Culture Kit
-            </motion.button>
-          </Link>
-          <motion.p
-            className="mt-6 text-white text-[15px] opacity-90"
-            whileHover={{ scale: 1.01 }}
-          >
-            Start your cultural design journey today
-          </motion.p>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+   <motion.div         
+      className="text-center mt-[50px] sm:mt-[60px] lg:mt-[80px] px-3 sm:px-4 w-full"         
+      initial={{ opacity: 0, y: 30 }}         
+      whileInView={{ opacity: 1, y: 0 }}         
+      viewport={{ once: true }}         
+      transition={{ duration: 0.8, delay: 0.2 }}       
+    >         
+      <motion.div           
+        className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 max-w-[900px]"           
+        whileHover={{ scale: 1.02 }}         
+      >           
+        <motion.span             
+          className="text-[24px] sm:text-[32px] lg:text-[42px] font-extrabold mb-[16px] sm:mb-[20px] lg:mb-[24px] text-white leading-tight text-center px-2"             
+          whileHover={{ scale: 1.01 }}           
+        >             
+          Ready to Create with Culture?           
+        </motion.span>           
+        <Link to='/Waitlist'>             
+          <motion.button               
+            className="px-[20px] sm:px-[28px] lg:px-[32px] py-[8px] sm:py-[10px] lg:py-[12px] bg-white text-[#ff7a50] font-semibold rounded-full shadow-md hover:shadow-lg transition duration-200 text-sm sm:text-lg lg:text-xl"               
+            whileHover={{ y: -3, scale: 1.05 }}               
+            whileTap={{ scale: 0.95 }}             
+          >               
+            Explore a Demo Culture Kit             
+          </motion.button>           
+        </Link>           
+        <motion.p             
+          className="mt-3 sm:mt-4 lg:mt-6 text-white text-[12px] sm:text-[14px] lg:text-[15px] opacity-90 text-center"             
+          whileHover={{ scale: 1.01 }}           
+        >             
+          Start your cultural design journey today           
+        </motion.p>         
+      </motion.div>       
+    </motion.div>    </motion.div>
   );
 };
 
