@@ -58,7 +58,7 @@ const Landsecont: React.FC = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 2.2 }}
-              className="absolute lg:-top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:-top-8"
+              className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:-top-8"
             >
               <span className="text-3xl sm:text-4xl" role="img" aria-label="party popper">
                 {' '}
@@ -66,9 +66,9 @@ const Landsecont: React.FC = () => {
               </span>
             </motion.div>
 
-           
+            
             {/* Cloned 'Before: Google Search' Card */}
-            <div className="bg-[#FEE2E2] w-[550px] max-w-full mx-auto rounded-2xl p-6 shadow-lg mt-4 " style={{ minHeight: '400px'  }}> {/* Responsive width, minHeight, and heavy mobile margin */}
+            <div className="bg-[#FEE2E2] w-[550px] max-w-full mx-auto rounded-2xl px-2 py-6 shadow-lg mt-4 " style={{ minHeight: '400px'  }}> {/* Responsive width, minHeight, and heavy mobile margin */}
               {/* Header */}
               <div className="flex items-center px-4 sm:px-6 pt-5 pb-2">
                 <span className="w-7 sm:w-8 mr-2"><img src="/sleep.png" alt="" className="w-full h-auto" /></span>
@@ -132,7 +132,7 @@ const Landsecont: React.FC = () => {
                 </ul>
               </div>
             </div>
-         
+          
           </motion.div>
 
           {/* After Card */}
@@ -156,7 +156,7 @@ const Landsecont: React.FC = () => {
             </motion.div>
 
             {/* Cloned UI from screenshot */}
-            <div className=" bg-[#DCFCE7] w-[550px] max-w-full mx-auto rounded-2xl p-6 shadow-lg mt-4 " style={{ minHeight: '600px'  }}> {/* Changed to bg-white */}
+            <div className=" bg-[#DCFCE7] w-[550px] max-w-full mx-auto rounded-2xl px-2 py-6 shadow-lg mt-4 " style={{ minHeight: '400px'  }}> {/* Changed to bg-white */}
               {/* Header */}
               <div className="flex items-center mb-4">
                 <span className="mr-2 w-8"><img src="/victory.png" alt="" /></span>
@@ -192,11 +192,11 @@ const Landsecont: React.FC = () => {
                 <div className="flex items-center px-4 py-2 border-b border-red-100">
                   <div className='flex flex-col'>
                     <div className='flex items-center relative'
-                         onMouseEnter={() => setShowKimonoText(true)}
-                         onMouseLeave={() => setShowKimonoText(false)}>
+                          onMouseEnter={() => setShowKimonoText(true)}
+                          onMouseLeave={() => setShowKimonoText(false)}>
                       <img src="/kimono.png" alt="Kimono" className="w-14 h-14 rounded-lg object-cover mr-4 border border-gray-200" />
                       {showKimonoText && (
-                        <div className="absolute bg-white bg-opacity-75 w-86 h-48 text-gray-800 text-xs px-2 py-1 rounded-md shadow-2xl  -bottom-7 left-1/2 transform -translate-x-1/8 z-50">
+                        <div className="absolute bg-white bg-opacity-75 w-86 h-48 text-gray-800 text-xs px-2 py-1 rounded-md shadow-2xl  -bottom-7 left-1/2 transform -translate-x-1/8 z-50">
                           <p className="mb-4 space-x-1"><span className="text-red-400">Type:</span> Traditional long robe worn with an obi (belt)</p>
                           <p className="mb-4"><span className="text-red-400">Use:</span> Formal occasions, festivals, weddings, ceremonies</p>
                           <p className="mb-0"><span className="text-red-400">Origin:</span> Evolved during the Heian period (794–1185) as kosode (“small sleeves”) <br /> <br />
@@ -204,14 +204,14 @@ const Landsecont: React.FC = () => {
 Later formalized into today's kimono during the Edo period (1603–1868)
 
 Male kimono tends to be simpler and less decorative than female versions <br /></p>
-                         
+                          
                         </div>
                       )}
                       <div className="font-thin text-sm text-[#e57373]">Kimono</div>
                     </div>
-                    <div className="flex items-center mr-36 ">
-                      <div className="text-xs text-gray-600 mt-1 flex items-center">Color Palettes:
-                        <span className="ml-1 flex items-center">
+                    <div className="flex items-center  ">
+                      <div className="text-xs text-gray-600 mt-1  flex items-center">ColorPalettes:
+                        <span className=" lg:ml-1 flex items-center lg:mr-36  ">
                           {kimonoPalettes.map((palette, idx) => (
                             <span
                               key={palette.label}
@@ -238,7 +238,7 @@ Male kimono tends to be simpler and less decorative than female versions <br /><
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center mt-12 ml-0">
+                  <div className="flex items-center justify-end lg:justify-center mt-12 w-full lg:ml-12"> {/* Changed justify-center to justify-end for mobile, added lg:justify-center */}
                     <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-500 rounded-md text-xs font-medium border border-pink-200 mr-2"><span className="w-3.5"><img src="/Vector.png" alt="" /></span>Export</button>
                     <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><span className="mr-1"><FaShare /></span>Share</button>
                   </div>
