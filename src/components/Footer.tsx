@@ -52,13 +52,13 @@ const Footer = () => {
         <div className="bg-white rounded-xl  border-1 border-amber-400 sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg flex flex-col items-start flex-0.5 min-w-[120px] sm:min-w-[135px] lg:min-w-[150px]">
           <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-8 sm:mb-12 lg:mb-16">Social</h3>
           <div className="flex flex-col gap-8 sm:gap-12 lg:gap-20 justify-between mt-4 sm:mt-6 lg:mt-10">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full text-gray-800 hover:bg-gray-200 transition-colors">
               <FaInstagram size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full text-gray-800 hover:bg-gray-200 transition-colors">
               <FaFacebookF size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full  text-gray-800 hover:bg-gray-200 transition-colors">
               <RiTwitterXFill size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
             </a>
           </div>
