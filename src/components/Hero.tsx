@@ -14,7 +14,7 @@ interface ColorPalette {
   color?: string;
   hex?: string;
   label: string;
-  img?: string; // add image URL or data
+  img?: string; 
 }
 
 const Hero: React.FC = () => {
@@ -65,9 +65,9 @@ const Hero: React.FC = () => {
           { src: "/hongkong.png", label: "Sakura" },
         ];
         paletteData = [
-          { color: 'Cherry Blossom Pink', hex: '#FFB7C5', label: 'Cherry Blossom Pink' },
-          { color: 'Indigo', hex: '#3F00FF', label: 'Indigo' },
-          { color: 'Forest Green', hex: '#228B22', label: 'Forest Green' },
+          { img:'brownshit.png', label: 'Cherry Blossom Pink' },
+          { img: '/multi.png', label: 'Indigo' },
+          { img: '/multi.png', label: 'Forest Green' },
         ];
       }
       setGeneratedAssets(assetsData);
@@ -321,7 +321,7 @@ const Hero: React.FC = () => {
   <div
     className="absolute h-full w-full z-0 top-0"
     style={{
-      backgroundImage: "url('/meve.png')",
+      backgroundImage: "url('/new.png')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -610,12 +610,19 @@ const Hero: React.FC = () => {
             {colorPalette.map((palette, index) => (
               <motion.div
                 key={index}
-                className="relative h-6 w-6 rounded-full border border-gray-300 sm:h-6 sm:w-6"
+                className="relative h-6 w-6 rounded-full border border-gray-300 sm:h-6 sm:w-6 overflow-hidden"
                 style={{ backgroundColor: palette.hex }}
                 whileHover={{ scale: 1.2 }}
                 onMouseEnter={() => setHoveredPalette(index)}
                 onMouseLeave={() => setHoveredPalette(null)}
               >
+                {palette.img && (
+                  <img 
+                    src={palette.img} 
+                    alt={palette.label}
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 <AnimatePresence>
                   {hoveredPalette === index && (
                     <motion.div

@@ -37,7 +37,7 @@ const Landfourth = () => {
       extra: (
         <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-xs sm:text-sm">
           <FaBookOpen className="text-xs sm:text-sm" />
-          <span className="ml-1">Rich storytelling</span>
+          <span className="ml-1 text-gray-500">Rich storytelling</span>
         </div>
       ),
     },
@@ -61,7 +61,7 @@ const Landfourth = () => {
         <div className="flex items-center justify-center">
           <div className="inline-flex items-center rounded-full py-[3px] px-[6px] sm:py-[4px] sm:px-[8px] lg:py-[6px] lg:px-[12px] text-gray-700 font-medium text-xs sm:text-sm">
             <PiFlowerTulipBold className="text-xs sm:text-sm" />
-            <span className="ml-1 sm:ml-2">Authentic foundations</span>
+            <span className="ml-0 sm:ml-2 text-gray-500">Authentic foundations</span>
           </div>
         </div>
       ),
@@ -98,7 +98,8 @@ const Landfourth = () => {
         {cards.map((card, i) => (
           <motion.div
             key={card.title}
-            className="bg-white rounded-lg sm:rounded-xl shadow-md p-3 sm:p-4 lg:p-6 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] lg:min-h-[260px]"
+            // Reduced min-h for mobile (default) from min-h-[220px] to min-h-[180px]
+            className="bg-white rounded-lg sm:rounded-xl shadow-md p-3 sm:p-4 lg:p-6 flex flex-col justify-between min-h-[180px] sm:min-h-[20px] sm:h-[50px] lg:min-h-[260px]"
             initial={{ opacity: 0, y: 40 }}
             animate={cardsControls}
             custom={i}
@@ -118,9 +119,10 @@ const Landfourth = () => {
             />
             <div className="flex flex-col items-stretch flex-1">
               <h3 className="text-[13px] sm:text-[16px] lg:text-[18px] font-semibold text-[#333] mb-1.5 sm:mb-2 leading-tight">{card.title}</h3>
-              <p className="text-[10px] sm:text-[12px] lg:text-[13px] text-[#666] whitespace-pre-line mb-2 sm:mb-3 leading-relaxed flex-1">{card.desc}</p>
-              <div className="h-[0.5px] sm:h-[1px] bg-[#eee] w-full mb-2 sm:mb-3" />
-              <div className="mt-auto">{card.extra}</div>
+              <p className="text-[10px] sm:text-[12px] lg:text-[13px] text-[#666] whitespace-pre-line leading-relaxed flex-1 mb-1 sm:mb-3">{card.desc}</p>
+              <div className="h-[0.5px] sm:h-[1px] bg-[#eee] w-full mb-1 sm:mb-3" />
+              {/* Extra Content */}
+              <div className="mt-auto text-gray-400">{card.extra}</div>
             </div>
           </motion.div>
         ))}

@@ -44,7 +44,7 @@ const Landsecont: React.FC = () => {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="w-full max-w-5xl mt-28">
+      <div className="w-full max-w-5xl lg:mt-28 sm:mt-8">
         <div className="flex flex-col lg:flex-row justify-center items-stretch gap-6 sm:gap-8">
           {/* Before Card */}
           <motion.div
@@ -62,7 +62,7 @@ const Landsecont: React.FC = () => {
             >
               <span className="text-3xl sm:text-4xl" role="img" aria-label="party popper">
                 {' '}
-                <img src="/sleep.png" alt="" />
+                <img src="/sleep.png" alt="" className="lg:w-20 sm:w-8" />
               </span>
             </motion.div>
 
@@ -151,7 +151,7 @@ const Landsecont: React.FC = () => {
             >
               <span className="text-3xl sm:text-4xl" role="img" aria-label="party popper">
                 {' '}
-                <img src="/victory.png" alt="" />
+                <img src="/victory.png" alt="" className="lg:w-20 sm:w-8" />
               </span>
             </motion.div>
 

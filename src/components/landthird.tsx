@@ -5,7 +5,7 @@ const Landthird = () => {
       <div className="flex flex-col lg:flex-row items-stretch justify-center gap-8 w-full max-w-6xl">
 
         {/* Card 1: 2 minutes search */}
-        <div className="flex-1 bg-white border border-red-500 rounded-xl shadow-lg p-6 text-center min-h-[160px] flex flex-col justify-center transition-transform duration-300 hover:scale-105">
+        <div className="flex-1 bg-white border border-red-500 rounded-xl shadow-lg p-6 text-center min-h-[60px] flex flex-col justify-center transition-transform duration-300 hover:scale-105">
           <p className="text-2xl sm:text-3xl italic text-red-500 mb-2 font-instrument">
             2 minutes search
             <br />
