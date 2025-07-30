@@ -308,7 +308,7 @@ const Hero: React.FC = () => {
 
       <div className=" flex flex-col lg:flex-row justify-center lg:ml-0  items-center min-h-screen text-center sm:px-0">
         {/* Left Section */}
-<motion.div
+        <motion.div
   className={`relative flex flex-col items-center h-auto lg:h-[678px] -translate-y-5 sm:mt-6 lg:items-start text-center -translate-x-0 lg:-translate-x-8 lg:text-left px-2 sm:px-0 rounded-xl overflow-visible z-10 w-full max-w-sm sm:max-w-none lg:w-[750px] mx-4 sm:mx-0`}
   initial="hidden"
   animate="visible"
@@ -332,9 +332,9 @@ const Hero: React.FC = () => {
   >
     <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-purple-50 opacity-80" />
   </div>
-  {/*yellow color*/}
+  {/*yellow color for larger screens*/}
   <div
-    className="absolute"
+    className="absolute hidden sm:block" // Hide on small screens, show on medium and up
     style={{
       top: '50%',
       right: '0',
@@ -389,37 +389,59 @@ const Hero: React.FC = () => {
     >
       Instantly.
     </motion.p>
-  <motion.p
-    className="text-sm md:text-lg lg:w-full w-full text-gray-600 mb-8 sm:mb-10 max-w-sm lg:max-w-md font-inter mx-auto text-center lg:ml-16 lg:text-left lg:mx-0"
-    style={{
-      filter: isAutoHoverActive ? 'blur(2px)' : 'none',
-      transition: 'filter 0.3s ease'
-    }}
-    variants={{
-      hidden: { opacity: 0, y: 40 },
-      visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.4 } }
-    }}
-  >
-    Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
-  </motion.p>
-    <Link to="/waitlist">
-      <motion.button
-        className="flex items-center lg:py-4 lg:px-20 px-12 py-6 sm:px-3 sm:py-3  bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 text-sm sm:text-base mx-auto lg:ml-12 -mb-10 sm:-mb-12 relative z-50 transform hover:scale-105 active:scale-95" /* Centered on small screens, left aligned on large, negative margin for mobile, and higher z-index */
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        style={{
-          filter: isAutoHoverActive ? 'blur(2px)' : 'none',
-          transition: 'filter 0.3s ease'
-        }}
-        variants={{
-          hidden: { opacity: 0, y: 40 },
-          visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.6 } }
-        }}
-      >
-        <img className='w-4 h-4 mr-2' src="/flower.png" alt="" />
-        Try Beta Free
-      </motion.button>
-    </Link>
+    <motion.p
+      className="text-sm md:text-lg lg:w-full w-full text-gray-600 mb-8 sm:mb-10 max-w-sm lg:max-w-md font-inter mx-auto text-center lg:ml-16 lg:text-left lg:mx-0"
+      style={{
+        filter: isAutoHoverActive ? 'blur(2px)' : 'none',
+        transition: 'filter 0.3s ease'
+      }}
+      variants={{
+        hidden: { opacity: 0, y: 40 },
+        visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.4 } }
+      }}
+    >
+      Bring ancient patterns, bold colors, and deep meaning into every pixel automatically.
+    </motion.p>
+
+    {/* Wrapper for the button and mobile yellow blur */}
+    <div className="relative z-50 flex flex-col items-center lg:items-start lg:ml-12">
+      <Link to="/waitlist">
+        <motion.button
+          className="flex items-center lg:py-4 lg:px-20 px-12 py-6 sm:px-3 sm:py-3  bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 text-sm sm:text-base mx-auto lg:mx-0 -mb-10 sm:-mb-12 relative transform hover:scale-105 active:scale-95" /* Removed z-50 here as it's on the wrapper now */
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.98 }}
+          style={{
+            filter: isAutoHoverActive ? 'blur(2px)' : 'none',
+            transition: 'filter 0.3s ease'
+          }}
+          variants={{
+            hidden: { opacity: 0, y: 40 },
+            visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14, delay: 0.6 } }
+          }}
+        >
+          <img className='w-4 h-4 mr-2' src="/flower.png" alt="" />
+          Try Beta Free
+        </motion.button>
+      </Link>
+
+             {/*yellow color for mobile only - positioned relative to the button's wrapper */}
+       <div
+         className="absolute sm:hidden" // Only visible on small screens
+         style={{
+           // Position relative to the parent `div` that wraps the button
+           bottom: '-70px', // Adjust this value to control distance from the bottom of the button
+           left: '50%', // Center horizontally
+           transform: 'translateX(-50%)', // Center horizontally
+           width: '220px', // Increased size for visibility
+           height: '60px', // Increased size
+           background: 'radial-gradient(circle,rgb(236, 193, 18) 60%, transparent 100%)',
+           filter: 'blur(40px)', // Adjust blur
+           zIndex: -1, // Ensure it's under the button but above background elements
+           pointerEvents: 'none',
+         }}
+       />
+    </div> {/* End of wrapper for button and mobile yellow blur */}
+
   </div>
 </motion.div>
 
