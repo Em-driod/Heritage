@@ -435,7 +435,7 @@ const Hero: React.FC = () => {
            width: '220px', // Increased size for visibility
            height: '60px', // Increased size
            background: 'radial-gradient(circle,rgb(236, 193, 18) 60%, transparent 100%)',
-           filter: 'blur(40px)', // Adjust blur
+           filter: 'blur(20px)', // Adjust blur
            zIndex: -1, // Ensure it's under the button but above background elements
            pointerEvents: 'none',
          }}
