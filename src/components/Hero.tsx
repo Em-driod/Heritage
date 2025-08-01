@@ -25,9 +25,10 @@ const Hero: React.FC = () => {
   const [isYorubaHovered, setIsYorubaHovered] = useState<boolean>(false);
   const [isAutoHoverActive, setIsAutoHoverActive] = useState<boolean>(false);
   const userInteractedRef = useRef<boolean>(false);
-  const [hoveredPalette, setHoveredPalette] = useState<number | null>(null);
+
   const [autoYorubaHover, setAutoYorubaHover] = useState<boolean>(false);
   const [colorPalette, setColorPalette] = useState<ColorPalette[]>([]);
+  const [hoveredPalette, setHoveredPalette] = useState<number | null>(null);
 
   const fetchGeneratedAssets = (cultureParam: string) => {
     setIsLoading(true);
@@ -624,43 +625,73 @@ const Hero: React.FC = () => {
     ) : (
       <div className="bg-gray-50 rounded-lg px-4 py-4">
         <h2 className="text-xs font-normal text-gray-600 mb-3 text-left sm:mb-4 sm:text-xs">Color Palette</h2>
-        <motion.div
-          className="flex items-center justify-between space-x-2"
-          whileHover={{ scale: 1.01 }}
-        >
-          <div className="flex space-x-1 sm:space-x-2">
-            {colorPalette.map((palette, index) => (
-              <motion.div
-                key={index}
-                className="relative h-6 w-6 rounded-full border border-gray-300 sm:h-6 sm:w-6 overflow-hidden"
-                style={{ backgroundColor: palette.hex }}
-                whileHover={{ scale: 1.2 }}
-                onMouseEnter={() => setHoveredPalette(index)}
-                onMouseLeave={() => setHoveredPalette(null)}
-              >
-                {palette.img && (
-                  <img 
-                    src={palette.img} 
-                    alt={palette.label}
-                    className="w-full h-full object-cover"
-                  />
-                )}
-                <AnimatePresence>
-                  {hoveredPalette === index && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute left-1/2 top-8 z-50 -translate-x-1/2 whitespace-nowrap rounded border border-gray-200 bg-white px-3 py-1 text-center text-xs text-gray-700 shadow-lg"
-                    >
-                      {palette.label} ({palette.hex})
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
+        <div className="flex items-center justify-between space-x-2">
+                     <div className="flex space-x-1 sm:space-x-2">
+             {colorPalette.map((palette, index) => (
+               <motion.div
+                 key={index}
+                 className="relative h-6 w-6 rounded-full border border-gray-300 sm:h-6 sm:w-6 cursor-pointer"
+                 style={{ backgroundColor: palette.hex }}
+                 whileHover={{ scale: 1.3, zIndex: 10 }}
+                 onMouseEnter={() => setHoveredPalette(index)}
+                 onMouseLeave={() => setHoveredPalette(null)}
+               >
+                 {palette.img && (
+                   <img 
+                     src={palette.img} 
+                     alt={palette.label}
+                     className="w-full h-full object-cover"
+                   />
+                 )}
+                                   <AnimatePresence>
+                    {hoveredPalette === index && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.8 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.8 }}
+                        transition={{ 
+                          duration: 0.3,
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 20
+                        }}
+                                                 className="absolute left-1/2 -top-8 z-[9999] -translate-x-1/2 whitespace-nowrap rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-gray-800 shadow-xl backdrop-blur-sm max-w-[200px]"
+                        style={{
+                          boxShadow: '0 10px 25px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.1)',
+                          transform: 'translateX(-50%) translateY(0)'
+                        }}
+                      >
+                        {(() => {
+                          if (selectedCulture === 'Yoruba') {
+                            switch (index) {
+                              case 0: return "Pure White: #FFFFFF.";
+                              case 1: return "Dark Brown:#4B3621.";
+                              case 2: return "Gold: #FFD700.";
+                              default: return palette.label;
+                            }
+                          } else if (selectedCulture === 'Igbo') {
+                            switch (index) {
+                              case 0: return "Earth's vital force, blood & ritual power. Odinani's heart.";
+                              case 1: return "Spiritual realm & ancestral wisdom. Pure & eternal.";
+                              case 2: return "Ancient craftsmanship & wealth. Bronze legacy.";
+                              default: return palette.label;
+                            }
+                          } else if (selectedCulture === 'Japan') {
+                            switch (index) {
+                              case 0: return "Spring's delicate beauty. Sakura's fleeting grace.";
+                              case 1: return "Samurai's strength & dignity. Indigo's depth.";
+                              case 2: return "Nature's harmony & growth. Forest's serenity.";
+                              default: return palette.label;
+                            }
+                          }
+                          return palette.label;
+                        })()}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+               </motion.div>
+             ))}
+           </div>
           <div className="flex space-x-1 text-xs sm:space-x-2 sm:text-sm">
             <motion.button
               className="rounded-md px-2 py-1 text-gray-600 transition-colors duration-150 hover:bg-gray-100 sm:px-3 sm:py-1"
@@ -679,7 +710,7 @@ const Hero: React.FC = () => {
               <button className="flex items-center rounded-md border border-blue-200 bg-blue-100 px-2 py-1 text-xs font-medium text-blue-500"><FaShare /><span className="mr-1"></span>Share</button>
             </motion.button>
           </div>
-        </motion.div>
+        </div>
       </div>
     )}
   </motion.div>
