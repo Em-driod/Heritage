@@ -671,16 +671,16 @@ const Hero: React.FC = () => {
                             }
                           } else if (selectedCulture === 'Igbo') {
                             switch (index) {
-                              case 0: return "Earth's vital force, blood & ritual power. Odinani's heart.";
-                              case 1: return "Spiritual realm & ancestral wisdom. Pure & eternal.";
-                              case 2: return "Ancient craftsmanship & wealth. Bronze legacy.";
+                              case 0: return "Black: #000000.";
+                              case 1: return "Red: #FF0000.";
+                              case 2: return "Green: #008000.";
                               default: return palette.label;
                             }
                           } else if (selectedCulture === 'Japan') {
                             switch (index) {
-                              case 0: return "Spring's delicate beauty. Sakura's fleeting grace.";
-                              case 1: return "Samurai's strength & dignity. Indigo's depth.";
-                              case 2: return "Nature's harmony & growth. Forest's serenity.";
+                              case 0: return ".";
+                              case 1: return ".";
+                              case 2: return ".";
                               default: return palette.label;
                             }
                           }
