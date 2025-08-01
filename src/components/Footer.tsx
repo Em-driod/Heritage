@@ -3,7 +3,7 @@ import { RiTwitterXFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
-    <footer className="relative flex justify-center items-center min-h-screen py-6 sm:py-8 lg:py-10 font-inter bg-gray-50 overflow-hidden">
+    <footer className="relative flex justify-center items-center min-h-screen py-6 sm:py-8 lg:py-10 font-inter bg-white overflow-hidden">
       {/* Background element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[87%] lg:w-[85%] h-[85%] sm:h-[88%] lg:h-[90%] bottom-0 rounded-full z-0">
         <img src="/move.png" alt="" className="w-full h-full object-contain" />
@@ -51,7 +51,7 @@ const Footer = () => {
         {/* Right Section (Social) */}
         <div className="bg-white rounded-xl  border-1 border-amber-400 sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg flex flex-col items-start flex-0.5 min-w-[120px] sm:min-w-[135px] lg:min-w-[150px]">
           <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-8 sm:mb-12 lg:mb-16">Social</h3>
-          <div className="flex flex-col gap-8 sm:gap-12 lg:gap-20 justify-between mt-4 sm:mt-6 lg:mt-10">
+          <div className="flex  lg:flex-col gap-8 sm:gap-12 lg:gap-20 justify-between mt-4 sm:mt-6 lg:mt-10">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full text-gray-800 hover:bg-gray-200 transition-colors">
               <FaInstagram size={20} className="sm:w-6 sm:h-6 lg:w-7 lg:h-7" />
             </a>

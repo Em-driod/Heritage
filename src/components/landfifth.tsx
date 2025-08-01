@@ -1,11 +1,9 @@
-import { motion, type Variants } from 'framer-motion'; // <-- Changed here
+import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-import { FaShare } from "react-icons/fa";
+import { FaShare } from 'react-icons/fa';
 
 const Landfifth = () => {
   // Animation variants
-  // Explicitly typing variants for better TypeScript inference and clarity
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,7 +63,10 @@ const Landfifth = () => {
       viewport={{ once: true, margin: '-100px' }}
       variants={containerVariants}
     >
-      <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap"
+        rel="stylesheet"
+      ></link>
       {/* Header Section */}
       <motion.div
         className="text-center mb-[80px] max-w-2xl mx-auto"
@@ -81,7 +82,7 @@ const Landfifth = () => {
           />
         </div>
         <motion.h1
-          className="text-[48px] sm:text-[56px]  text-[#333333] leading-tight mb-0"
+          className="text-[48px] sm:text-[56px] text-[#333333] leading-tight mb-0"
           style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600 }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,37 +91,49 @@ const Landfifth = () => {
         >
           From culture
           <br />
-          To <span className="font-thin italic" style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 100 }}> creation</span>
-          <div className='-mt-5'><span className='text-gray-500  text-sm font-light'>in Seconds</span></div>
+          To{' '}
+          <span
+            className="font-thin italic"
+            style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 100 }}
+          >
+            {' '}
+            creation
+          </span>
+          <div className="-mt-5">
+            <span className="text-gray-500 text-sm font-light">
+              in Seconds
+            </span>
+          </div>
         </motion.h1>
       </motion.div>
 
       {/* Main Content Sections */}
       <motion.div
-        className="max-w-[1100px] mx-auto mb-[80px]"
+        className="max-w-[1100px] lg:mx-auto sm:20px mb-[80px]"
         variants={containerVariants}
       >
         {/* Section 1: Pick a Culture */}
         <motion.div
-          className="p-[40px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
+          className="sm:p-[20px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
           <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
-              <div className='flex'>
-
+            <div className="flex">
               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
                 1
               </span>
               <motion.div
-              className="flex items-center mb-[20px]"
-              whileHover={{ scale: 1.05 }}
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+                className="flex items-center mb-[20px]"
+                whileHover={{ scale: 1.05 }}
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
               >
-              <span className="text-[32px] leading-none"><img src="mask.png" alt="" /></span>
-            </motion.div>
-              </div>
+                <span className="text-[32px] leading-none">
+                  <img src="mask.png" alt="" />
+                </span>
+              </motion.div>
+            </div>
             <motion.h2
               className="text-[40px] font-semibold text-[#333333] mb-[20px]"
               whileHover={{ x: 5 }}
@@ -133,12 +146,13 @@ const Landfifth = () => {
             >
               Choose from hundreds of rich cultural traditions like Yoruba,
               Maori, Edo, and many more. Each culture brings its <br /> unique
-              <span className="text-orange-600 px-1 rounded-sm">heritengine</span> and
-              visual identity.
+              <span className="text-orange-600 px-1 rounded-sm">
+                heritengine
+              </span>{' '}
+              and visual identity.
             </motion.p>
-            <div className="flex flex-wrap gap-x-[10px] gap-y-2">
+            <div className="flex overflow-x-auto gap-x-[10px] py-2 no-scrollbar">
               {['Yoruba', 'Maori', 'Edo', '+500 more'].map((item, index) => {
-                // Assign unique background and text color for each
                 let bg = '';
                 let text = '';
                 let hover = '';
@@ -162,7 +176,7 @@ const Landfifth = () => {
                 return (
                   <motion.button
                     key={index}
-                    className={`px-[18px] py-[8px] rounded-full text-base font-medium transition-colors duration-200 ${bg} ${text} ${hover}`}
+                    className={`shrink-0 px-[14px] py-[6px] rounded-full text-sm font-medium transition-colors duration-200 ${bg} ${text} ${hover}`}
                     whileHover={{ y: -3, scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -175,61 +189,58 @@ const Landfifth = () => {
 
           {/* Separator Lines */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-300 transform -translate-x-1/2 z-10"></div>
-          <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
+          <div className="lg:hidden w-full h-px bg-pink-300 my-2"></div>
 
           {/* Image section */}
           <motion.div
-            className="lg:w-1/2 flex items-center justify-center lg:pl-[80px] mt-10 lg:mt-0"
+            className="lg:w-1/2 flex items-center justify-center lg:pl-[80px] mt-4 lg:mt-0"
             variants={imageVariants}
             whileHover="hover"
           >
             <img
               src="/teli.png"
               alt="Cultural Masks Illustration"
-              className="w-full h-auto rounded-[15px] max-w-[450px]"
+              className="w-full rounded-[15px] max-w-full sm:max-w-none md:max-w-none lg:max-w-full"
             />
           </motion.div>
         </motion.div>
 
         {/* Section 2: AI Analyzes Patterns */}
         <motion.div
-          className="p-[40px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
+          className="sm:p-[20px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
           variants={sectionVariants}
           whileHover={{ y: -5 }}
-         
         >
           <motion.div
             className="lg:w-1/2 flex items-center justify-center order-1 lg:order-1 lg:pr-[80px] mt-10 lg:mt-0"
             variants={imageVariants}
             whileHover="hover"
-            
           >
             <img
               src="/two.png"
               alt="Analyzed Patterns UI"
-              className="w-full h-auto rounded-[15px] max-w-[450px]"
+              className="w-full h-auto rounded-[15px] max-w-[500px] sm:max-w-[450px] md:max-w-full"
             />
           </motion.div>
 
           {/* Separator Lines */}
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-pink-300 transform -translate-x-1/2 z-10"></div>
-          <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
+          <div className="lg:hidden w-full h-px bg-pink-300 my-1"></div>
 
           <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pl-[80px] order-2 lg:order-2 flex flex-col items-center lg:items-start">
-               
-            <div className='flex'>
-
+            <div className="flex">
               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
                 2
               </span>
               <motion.div
-              className="flex items-center mb-[20px]"
-              whileHover={{ scale: 1.05 }}
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}>
-              <span className="text-[32px] leading-none">🧠</span>
-            </motion.div>
-              </div>
+                className="flex items-center mb-[20px]"
+                whileHover={{ scale: 1.05 }}
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <span className="text-[32px] leading-none">🧠</span>
+              </motion.div>
+            </div>
             <motion.h2
               className="text-[40px] font-semibold text-[#333333] mb-[20px]"
               whileHover={{ x: 5 }}
@@ -270,7 +281,7 @@ const Landfifth = () => {
 
         {/* Section 3: Generate Design Kits */}
         <motion.div
-          className="p-[40px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
+          className="sm:p-[20px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
@@ -338,14 +349,14 @@ const Landfifth = () => {
             <img
               src="/three.png"
               alt="Design Kit UI"
-              className="w-full h-auto rounded-[15px] max-w-[450px]"
+              className="w-full h-auto rounded-[15px] max-w-[500px] sm:max-w-[450px] md:max-w-full"
             />
           </motion.div>
         </motion.div>
 
         {/* Section 4: Learn the Meaning */}
         <motion.div
-          className="p-[40px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
+          className="sm:p-[20px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
@@ -357,7 +368,7 @@ const Landfifth = () => {
             <img
               src="/four.png"
               alt="Open Book with Cultural Info"
-              className="w-full h-auto rounded-[15px] max-w-[450px]"
+              className="w-full h-auto rounded-[15px] max-w-[500px] sm:max-w-[450px] md:max-w-full"
             />
           </motion.div>
 
@@ -397,37 +408,33 @@ const Landfifth = () => {
               respect the traditions that inspire your designs.
             </motion.p>
             <motion.div
-              className="bg-[#f0e0ff] text-[#9333ea] pr-[120px] pl-4  rounded-[10px]  font-semibold transition-colors duration-200 hover:bg-[#e0d0ef] w-full  text-left"
+              className="bg-[#f0e0ff] text-[#9333ea] pr-[120px] pl-4 rounded-[10px] font-semibold transition-colors duration-200 hover:bg-[#e0d0ef] w-full text-left"
               whileHover={{ y: -3 }}
             >
               <div className="flex items-center mb-2">
-                <div className='flex'>
-
-                <div className='mt-4'>
-
-                <img
-                  src="/globe.png"
-                  alt="Cultural Context Icon"
-                  className="w-[10px] h-[15px] mr-2"
-                  />
+                <div className="flex">
+                  <div className="mt-4">
+                    <img
+                      src="/globe.png"
+                      alt="Cultural Context Icon"
+                      className="w-[10px] h-[15px] mr-2"
+                    />
                   </div>
-                  <div className='flex flex-col'>
-
-                <span className='text- #581C87'>Cultural Context</span>
-                <p className="text-[10px] text-[ #7E22CE] leading-tight ">
-                Every symbol tells a story, every color has meaning
-              </p>
+                  <div className="flex flex-col">
+                    <span className="text- #581C87">Cultural Context</span>
+                    <p className="text-[10px] text-[ #7E22CE] leading-tight ">
+                      Every symbol tells a story, every color has meaning
+                    </p>
                   </div>
+                </div>
               </div>
-             
-                  </div>
             </motion.div>
           </div>
         </motion.div>
 
         {/* Section 5: Apply to Real-World Products */}
         <motion.div
-          className="p-[40px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
+          className="sm:p-[20px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
@@ -442,7 +449,11 @@ const Landfifth = () => {
               <motion.span
                 className="text-[32px] leading-none"
                 animate={{ rotate: [0, -10, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
               >
                 🚀
               </motion.span>
@@ -451,34 +462,41 @@ const Landfifth = () => {
               className="text-[40px] font-semibold text-[#333333] mb-[20px]"
               whileHover={{ x: 5 }}
             >
-             Export & Customize
+              Export & Customize
             </motion.h2>
             <motion.p
               className="text-[14px] text-[#666666] leading-relax mb-[28px]"
               whileHover={{ x: 5 }}
             >
-              Export your designs, share with your team, and customize to your heart's content. The creative possibilities are endless!
+              Export your designs, share with your team, and customize to your
+              heart's content. The creative possibilities are endless!
             </motion.p>
-            <div className="flex gap-x-1  text-[#666666] text-[16px] w-full max-w-[400px] mx-auto lg:mx-0 lg:text-left">
-            <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
-                              <span className=""><img src="/Vector.png" alt="" /></span>Export</button>
-                          </motion.button>
-            <motion.button
-                            className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
-                            whileHover={{ scale: 1.05, backgroundColor: "#f3f4f6" }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200"><FaShare /><span className="mr-1"></span>Share</button>
-                          </motion.button>
-                          <button className='ml-1'>
-                            <img src="/custom.png" alt="" />
-                          </button>
-              
+            <div className="flex gap-x-1 text-[#666666] text-[16px] w-full max-w-[400px] mx-auto lg:mx-0 lg:text-left">
+              <motion.button
+                className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                whileHover={{ scale: 1.05, backgroundColor: '#f3f4f6' }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <button className="flex items-center px-2 py-1 lg:ml-0 sm:ml-10 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
+                  <span className="">
+                    <img src="/Vector.png" alt="" />
+                  </span>
+                  Export
+                </button>
+              </motion.button>
+              <motion.button
+                className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                whileHover={{ scale: 1.05, backgroundColor: '#f3f4f6' }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200">
+                  <FaShare />
+                  <span className="mr-1"></span>Share
+                </button>
+              </motion.button>
+              <button className="ml-1">
+                <img src="/custom.png" alt="" />
+              </button>
             </div>
           </div>
 
@@ -494,48 +512,48 @@ const Landfifth = () => {
             <img
               src="/five.png" // Placeholder image, replace with an actual image for step 5
               alt="Product Application Showcase"
-              className="w-full h-auto rounded-[15px] max-w-[450px]"
+              className="w-full h-auto rounded-[15px] max-w-[500px] sm:max-w-[450px] md:max-w-full"
             />
           </motion.div>
         </motion.div>
-
       </motion.div>
 
       {/* Call to Action Button at the Bottom */}
-   <motion.div         
-      className="text-center mt-[50px] sm:mt-[60px] lg:mt-[80px] px-3 sm:px-4 w-full"         
-      initial={{ opacity: 0, y: 30 }}         
-      whileInView={{ opacity: 1, y: 0 }}         
-      viewport={{ once: true }}         
-      transition={{ duration: 0.8, delay: 0.2 }}       
-    >         
-      <motion.div           
-        className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 max-w-[900px]"           
-        whileHover={{ scale: 1.02 }}         
-      >           
-        <motion.span             
-          className="text-[24px] sm:text-[32px] lg:text-[42px] font-extrabold mb-[16px] sm:mb-[20px] lg:mb-[24px] text-white leading-tight text-center px-2"             
-          whileHover={{ scale: 1.01 }}           
-        >             
-          Ready to Create with Culture?           
-        </motion.span>           
-        <Link to='/Waitlist'>             
-          <motion.button               
-            className="px-[20px] sm:px-[28px] lg:px-[32px] py-[8px] sm:py-[10px] lg:py-[12px] bg-white text-[#ff7a50] font-semibold rounded-full shadow-md hover:shadow-lg transition duration-200 text-sm sm:text-lg lg:text-xl"               
-            whileHover={{ y: -3, scale: 1.05 }}               
-            whileTap={{ scale: 0.95 }}             
-          >               
-            Explore a Demo Culture Kit             
-          </motion.button>           
-        </Link>           
-        <motion.p             
-          className="mt-3 sm:mt-4 lg:mt-6 text-white text-[12px] sm:text-[14px] lg:text-[15px] opacity-90 text-center"             
-          whileHover={{ scale: 1.01 }}           
-        >             
-          Start your cultural design journey today           
-        </motion.p>         
-      </motion.div>       
-    </motion.div>    </motion.div>
+      <motion.div
+        className="text-center mt-[50px] sm:mt-[60px] lg:mt-[80px] px-3 sm:px-4 w-full"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <motion.div
+          className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 max-w-[900px]"
+          whileHover={{ scale: 1.02 }}
+        >
+          <motion.span
+            className="text-[24px] sm:text-[32px] lg:text-[42px] font-extrabold mb-[16px] sm:mb-[20px] lg:mb-[24px] text-white leading-tight text-center px-2"
+            whileHover={{ scale: 1.01 }}
+          >
+            Ready to Create with Culture?
+          </motion.span>
+          <Link to="/Waitlist">
+            <motion.button
+              className="px-[20px] sm:px-[28px] lg:px-[32px] py-[8px] sm:py-[10px] lg:py-[12px] bg-white text-[#ff7a50] font-semibold rounded-full shadow-md hover:shadow-lg transition duration-200 text-sm sm:text-lg lg:text-xl"
+              whileHover={{ y: -3, scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Explore a Demo Culture Kit
+            </motion.button>
+          </Link>
+          <motion.p
+            className="mt-3 sm:mt-4 lg:mt-6 text-white text-[12px] sm:text-[14px] lg:text-[15px] opacity-90 text-center"
+            whileHover={{ scale: 1.01 }}
+          >
+            Start your cultural design journey today
+          </motion.p>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 
