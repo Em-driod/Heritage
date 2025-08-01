@@ -18,9 +18,9 @@ const Landsecont: React.FC = () => {
 
   // Palette data for Kimono
   const kimonoPalettes = [
-    { color: 'bg-gray-800', label: 'Charcoal' },
-    { color: 'bg-gray-500', label: 'Ash' },
-    { color: 'bg-gray-300', label: 'Pearl' },
+    { color: 'bg-[#1C1C1C]', label: '#1C1C1C' },
+    { color: 'bg-[#223A5E]', label: '#223A5E' },
+    { color: 'bg-[#7C6C57]', label: '#7C6C57' },
   ];
 
   return (
