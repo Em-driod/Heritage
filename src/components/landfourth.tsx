@@ -71,7 +71,7 @@ const Landfourth = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen bg-[#FFEBE0] py-12 sm:py-16 px-3 sm:px-4 flex flex-col items-center font-sans overflow-hidden"
+      className="bg-[#FFEBE0] pt-12 pb-2 lg:py-12 sm:py-4 px-3 sm:px-4 flex flex-col items-center font-sans overflow-hidden"
     >
       {/* Header */}
       <motion.div

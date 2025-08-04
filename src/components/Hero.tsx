@@ -655,7 +655,7 @@ const Hero: React.FC = () => {
                           stiffness: 300,
                           damping: 20
                         }}
-                                                 className="absolute left-1/2 -top-8 z-[9999] -translate-x-1/2 whitespace-nowrap rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-gray-800 shadow-xl backdrop-blur-sm max-w-[200px]"
+                                                 className="absolute left-1/2 -top-8 z-[9999] -translate-x-1/2 whitespace-nowrap rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-gray-800 shadow-xl backdrop-blur-sm "
                         style={{
                           boxShadow: '0 10px 25px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.1)',
                           transform: 'translateX(-50%) translateY(0)'
@@ -720,4 +720,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default Hero;                          

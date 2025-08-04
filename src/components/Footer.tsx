@@ -3,7 +3,7 @@ import { RiTwitterXFill } from 'react-icons/ri';
 
 const Footer = () => {
   return (
-    <footer className="relative flex justify-center items-center min-h-screen py-6 sm:py-8 lg:py-10 font-inter bg-white overflow-hidden">
+    <footer className="relative flex justify-center items-center max-h-11/12 py-4 sm:py-0 lg:py-10 font-inter bg-white overflow-hidden">
       {/* Background element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] sm:w-[87%] lg:w-[85%] h-[85%] sm:h-[88%] lg:h-[90%] bottom-0 rounded-full z-0">
         <img src="/move.png" alt="" className="w-full h-full object-contain" />
@@ -17,7 +17,7 @@ const Footer = () => {
           </h2>
           <div className="flex items-center mt-auto mb-1.5 sm:mb-2">
             <img src="/heritlogo.png" alt="" className='w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 mr-2 sm:mr-2.5 lg:mr-3' />
-            <span className="text-lg sm:text-xl font-semibold text-gray-800"> HeritengineAI</span>
+            <span className="text-lg sm:text-xl font-semibold text-gray-800"> Heritengine</span>
           </div>
           <p className="text-xs sm:text-sm text-gray-600">© 2025 All Rights Reserved. HeritengineAI.</p>
         </div>

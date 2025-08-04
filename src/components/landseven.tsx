@@ -7,11 +7,11 @@ const Landseven: React.FC = () => {
   const isInView = useInView(ref, { once: false }); // Set once to false to re-trigger on scroll out and back in
 
   return (
-    <div ref={ref} className="flex items-center justify-center bg-white p-4 min-h-screen">
-      <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl shadow-xl p-8 md:p-12 lg:p-16 w-full max-w-4xl text-center">
-        <p className="text-white text-sm md:text-base font-semibold mb-4 opacity-80">
+    <div ref={ref} className="flex items-center justify-center bg-white lg:p-4  py-8 lg:py-0">
+      <div className="relative flex flex-col items-center justify-center bg-gradient-to-r from-red-500  to-orange-500 text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 max-w-[900px]">
+        <p className="text-white text-sm md:text-base font-semibold mb-4 opacity-80 ">
           Beta Signup
-        </p>
+        </p> 
         <h1 className="text-white text-1xl md:text-3xl lg:text-4xl font-bold leading-tight mb-8">
           Get early access to the world's <br /> first culture to design AI
         </h1>

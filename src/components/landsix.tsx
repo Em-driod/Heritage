@@ -52,7 +52,7 @@ const cards = [
 
 const Landsix = () => {
   return (
-    <section className="py-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
+    <section className="pt-8 pb-4 lg:pt-16 lg:pb-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
       <div className="flex items-center justify-center p-4 bg-white">
         <div className="lg:flex lg:flex-row sm:flex sm:flex- items-center justify-center sm:items-start sm:justify-start gap-[1.5vw] px-[4vw] sm:px-[3vw] lg:px-0 py-[2vw]">
           {/* Pill Box - Always Top Left */}

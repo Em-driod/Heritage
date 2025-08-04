@@ -285,14 +285,16 @@ const Landfifth = () => {
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
-          <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
-            <motion.div
-              className="flex items-center mb-[20px]"
-              whileHover={{ scale: 1.05 }}
-            >
-              <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
-                3
-              </span>
+                     <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
+             {/* Vertical line for mobile view above number 3 */}
+             <div className="lg:hidden w-86 h-px bg-pink-300 mx-auto mb-4"></div>
+             <motion.div
+               className="flex items-center mb-[20px]"
+               whileHover={{ scale: 1.05 }}
+             >
+               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
+                 3
+               </span>
               <motion.img
                 src="/rain.png"
                 alt="Paint Palette Emoji"
@@ -438,14 +440,16 @@ const Landfifth = () => {
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
-          <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
-            <motion.div
-              className="flex items-center mb-[20px]"
-              whileHover={{ scale: 1.05 }}
-            >
-              <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
-                5
-              </span>
+                     <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
+             {/* Vertical line for mobile view above number 5 */}
+             <div className="lg:hidden w-86 h-px bg-pink-300 mx-auto mb-4"></div>
+             <motion.div
+               className="flex items-center mb-[20px]"
+               whileHover={{ scale: 1.05 }}
+             >
+               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
+                 5
+               </span>
               <motion.span
                 className="text-[32px] leading-none"
                 animate={{ rotate: [0, -10, 10, 0] }}

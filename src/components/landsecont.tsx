@@ -135,6 +135,9 @@ const Landsecont: React.FC = () => {
           
           </motion.div>
 
+          {/* Mobile gap between cards */}
+          <div className="lg:hidden h-16"></div>
+
           {/* After Card */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -147,7 +150,7 @@ const Landsecont: React.FC = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 2.2 }}
-              className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:-top-8"
+              className="absolute -top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:-top-4"
             >
               <span className="text-3xl sm:text-4xl" role="img" aria-label="party popper">
                 {' '}
