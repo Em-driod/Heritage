@@ -39,7 +39,7 @@ const Landsecont: React.FC = () => {
         </h1>
         <p className="mt-4 text-sm text-gray-400 sm:text-base sm:mt-6 sm:text-gray-600 max-w-md sm:max-w-xl mx-auto leading-relaxed">
           Let's be honest, typing "tribal pattern" into Google <br /> isn't design research.{' '}
-          HeritengineAI helps you skip the <br />confusion and design with real meaning.
+          Heritengine helps you skip the <br />confusion and design with real meaning.
         </p>
       </motion.div>
 
@@ -72,7 +72,7 @@ const Landsecont: React.FC = () => {
               {/* Header */}
               <div className="flex items-center px-4 sm:px-6 pt-5 pb-2">
                 <span className="w-7 sm:w-8 mr-2"><img src="/sleep.png" alt="" className="w-full h-auto" /></span>
-                <span className="text-lg sm:text-xl font-mono text-[#e95b5b]">Before: Google Search</span>
+                <span className="text-base sm:text-lg lg:text-xl font-mono text-[#e95b5b] whitespace-nowrap overflow-hidden text-ellipsis">Before: Google Search</span>
               </div>
               {/* Browser Bar */}
               <div className="flex items-center mx-3 sm:mx-5 bg-gray-200 px-2 sm:px-4 py-2 rounded-t-lg">
@@ -163,7 +163,7 @@ const Landsecont: React.FC = () => {
               {/* Header */}
               <div className="flex items-center mb-4">
                 <span className="mr-2 w-8"><img src="/victory.png" alt="" /></span>
-                <span className="text-xl font-mono text-green-700">After: Heritengine</span>
+                <span className="text-base sm:text-lg lg:text-xl font-mono text-green-700 whitespace-nowrap overflow-hidden text-ellipsis">After: Heritengine</span>
               </div>
               {/* Card */}
               <div className="rounded-xl bg-white shadow-md overflow-hidden border border-gray-100 mb-6">

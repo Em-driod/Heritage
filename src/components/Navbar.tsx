@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
           <Link to='/'>
             <div className="flex items-center text-gray-800 lg:font-bold sm:font relative">
               <img src="/heritlogo.png" alt="" className='w-8 h-8 mr-3' />
-              <span className='inline text-lg md:text-2xl'>Heritengine</span>
+                            <span className='inline text-base sm:text-lg lg:text-xl xl:text-2xl whitespace-nowrap overflow-hidden text-ellipsis'>Heritengine</span>
             </div>
           </Link>
         </div>
@@ -35,16 +35,16 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation Links */}
         <ul className="hidden md:flex items-center space-x-8 ml-4">
-          <li>
-            <a href="#gallery" className="text-gray-400 hover:text-gray-900 text-lg">
-              Gallery
-          </a>
-          </li>
-          <li>
-            <a href="#about" className="text-gray-400 hover:text-gray-900 text-lg">
-              About
-            </a>
-          </li>
+                    <li>
+            <a href="#gallery" className="text-gray-400 hover:text-gray-900 text-base sm:text-lg whitespace-nowrap overflow-hidden text-ellipsis">
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="text-gray-400 hover:text-gray-900 text-base sm:text-lg whitespace-nowrap overflow-hidden text-ellipsis">
+              About
+            </a>
+          </li>
         </ul>
 
         {/* Desktop Search Bar (moved to its own flex item for better control) */}
@@ -85,8 +85,8 @@ const Navbar: React.FC = () => {
                 <FcGallery className="text-orange-500" size={20} />
             </div>
               <div className="ml-3">
-                <p className="text-sm font-medium text-gray-900">Gallery</p>
-                <p className="text-xs text-gray-500 mt-1">Informative collections <br /> of cultures</p>
+                                <p className="text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis">Gallery</p>
+                <p className="text-[10px] sm:text-xs text-gray-500 mt-1 whitespace-nowrap overflow-hidden text-ellipsis">Informative collections of cultures</p>
               </div>
             </a>
             <div className="border-t border-gray-100"></div>
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
                <img src="/kunle.png" alt="" className='w-5' />
             </div>
               <div className="ml-3">
-                <p className="text-sm font-medium text-gray-900">About</p>
+                                <p className="text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis">About</p>
               </div>
             </a>
           </div>

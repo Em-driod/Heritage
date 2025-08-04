@@ -62,14 +62,14 @@ const Landsix = () => {
               src="/Group.png"
               alt="badge icon"
             />
-            <span className="text-[12px] font-medium lg:text-[14px]">
+            <span className="text-[10px] sm:text-[12px] lg:text-[14px] font-medium whitespace-nowrap overflow-hidden text-ellipsis">
               Use it your way
             </span>
           </div>
 
           {/* Main Heading */}
           <div
-            className="text-[clamp(2rem,4.5vw,3.5rem)] leading-tight text-center sm:text-left sm:text-[clamp(0.5rem,2vw,1.5rem)]"
+            className="text-[clamp(1.5rem,3.5vw,2.5rem)] sm:text-[clamp(2rem,4.5vw,3.5rem)] leading-tight text-center sm:text-left"
             style={{
               fontFamily: 'manrope, sans-serif',
               fontWeight: 800,
@@ -77,9 +77,9 @@ const Landsix = () => {
               lineHeight: '110%',
             }}
           >
-            Built for
+            <span className="whitespace-nowrap">Built for</span>
             <span
-              className="text-blue-700 italic"
+              className="text-blue-700 italic whitespace-nowrap"
               style={{
                 fontFamily: 'instrument-serif',
                 fontWeight: 100,
@@ -92,7 +92,7 @@ const Landsix = () => {
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>
             <span
-              className="text-yellow-600 italic"
+              className="text-yellow-600 italic whitespace-nowrap"
               style={{
                 fontFamily: 'instrument-serif',
                 fontWeight: 100,
@@ -102,9 +102,9 @@ const Landsix = () => {
             >
               Makers,
             </span>
-            and
+            <span className="whitespace-nowrap">and</span>
             <span
-              className="text-green-600 italic"
+              className="text-green-600 italic whitespace-nowrap"
               style={{
                 fontFamily: 'instrument-serif',
                 fontWeight: 100,

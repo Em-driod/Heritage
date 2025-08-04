@@ -82,25 +82,25 @@ const Landfifth = () => {
           />
         </div>
         <motion.h1
-          className="text-[48px] sm:text-[56px] text-[#333333] leading-tight mb-0"
+          className="text-[36px] sm:text-[48px] lg:text-[56px] text-[#333333] leading-tight mb-0"
           style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 600 }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          From culture
+          <span className="whitespace-nowrap">From culture</span>
           <br />
-          To{' '}
+          <span className="whitespace-nowrap">To</span>{' '}
           <span
-            className="font-thin italic"
+            className="font-thin italic whitespace-nowrap"
             style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 100 }}
           >
             {' '}
             creation
           </span>
           <div className="-mt-5">
-            <span className="text-gray-500 text-sm font-light">
+            <span className="text-gray-500 text-xs sm:text-sm font-light whitespace-nowrap overflow-hidden text-ellipsis">
               in Seconds
             </span>
           </div>
@@ -141,11 +141,10 @@ const Landfifth = () => {
               Pick a Culture
             </motion.h2>
             <motion.p
-              className="text-[14px] text-[#666666] leading-relax mb-[28px]"
+              className="text-[14px] text-[#666666] leading-tight mb-[28px]"
               whileHover={{ x: 5 }}
             >
-              Choose from hundreds of rich cultural traditions like Yoruba,
-              Maori, Edo, and many more. Each culture brings its <br /> unique
+              Choose from hundreds of rich cultural traditions like Yoruba, Maori, Edo,and many more.Each culture brings its <br /> unique
               <span className="text-orange-600 px-1 rounded-sm">
                 heritengine
               </span>{' '}

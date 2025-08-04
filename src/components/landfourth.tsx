@@ -35,9 +35,9 @@ const Landfourth = () => {
       title: 'Cultural Context',
       desc: 'Every visual comes with a short\nshort or symbol meaning',
       extra: (
-        <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-xs sm:text-sm">
-          <FaBookOpen className="text-xs sm:text-sm" />
-          <span className="ml-1 text-gray-500">Rich storytelling</span>
+        <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[10px] sm:text-xs lg:text-sm">
+          <FaBookOpen className="text-[10px] sm:text-xs lg:text-sm" />
+          <span className="ml-1 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis">Rich storytelling</span>
         </div>
       ),
     },
@@ -59,9 +59,9 @@ const Landfourth = () => {
       desc: 'Build brand identity rooted in\nsomething real.',
       extra: (
         <div className="flex items-center justify-center">
-          <div className="inline-flex items-center rounded-full py-[3px] px-[6px] sm:py-[4px] sm:px-[8px] lg:py-[6px] lg:px-[12px] text-gray-700 font-medium text-xs sm:text-sm">
-            <PiFlowerTulipBold className="text-xs sm:text-sm" />
-            <span className="ml-0 sm:ml-2 text-gray-500">Authentic foundations</span>
+          <div className="inline-flex items-center rounded-full py-[3px] px-[6px] sm:py-[4px] sm:px-[8px] lg:py-[6px] lg:px-[12px] text-gray-700 font-medium text-[10px] sm:text-xs lg:text-sm">
+            <PiFlowerTulipBold className="text-[10px] sm:text-xs lg:text-sm" />
+            <span className="ml-0 sm:ml-2 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis">Authentic foundations</span>
           </div>
         </div>
       ),
@@ -71,7 +71,7 @@ const Landfourth = () => {
   return (
     <div
       ref={sectionRef}
-      className="bg-[#FFEBE0] pt-12 pb-2 lg:py-12 sm:py-4 px-3 sm:px-4 flex flex-col items-center font-sans overflow-hidden"
+      className="bg-[#FFEBE0] pt-12 pb-4 lg:py-12 sm:py-4 px-3 sm:px-4 flex flex-col items-center font-sans overflow-hidden"
     >
       {/* Header */}
       <motion.div
@@ -81,14 +81,14 @@ const Landfourth = () => {
       >
         <div className="inline-flex items-center border-[#EF4444] border bg-white rounded-full py-2 px-4 shadow-sm mb-6">
           <img src="/Box.png" alt="Icon" className="w-6 h-6 mr-2" />
-          <span className="text-sm font-semibold text-[#EF4444]">
+          <span className="text-xs sm:text-sm font-semibold text-[#EF4444] whitespace-nowrap overflow-hidden text-ellipsis">
             What HeritengineAI Gives You
           </span>
         </div>
-        <h5 className="text-[28px] sm:text-[36px] lg:text-[50px] font-semibold text-[#333] leading-tight tracking-tight">
-          One click.<br />
+        <h5 className="text-[20px] sm:text-[28px] lg:text-[36px] xl:text-[50px] font-semibold text-[#333] leading-tight tracking-tight">
+          <span className="whitespace-nowrap">One click.</span><br />
           <span className="italic font-light">
-            <span className="font-normal">Infinite heritage.</span>
+            <span className="font-normal whitespace-nowrap">Infinite heritage.</span>
           </span>
         </h5>
       </motion.div>
@@ -118,8 +118,8 @@ const Landfourth = () => {
               transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
             />
             <div className="flex flex-col items-stretch flex-1">
-              <h3 className="text-[13px] sm:text-[16px] lg:text-[18px] font-semibold text-[#333] mb-1.5 sm:mb-2 leading-tight">{card.title}</h3>
-              <p className="text-[10px] sm:text-[12px] lg:text-[13px] text-[#666] whitespace-pre-line leading-relaxed flex-1 mb-1 sm:mb-3">{card.desc}</p>
+              <h3 className="text-[11px] sm:text-[13px] lg:text-[16px] xl:text-[18px] font-semibold text-[#333] mb-1.5 sm:mb-2 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">{card.title}</h3>
+              <p className="text-[9px] sm:text-[10px] lg:text-[12px] xl:text-[13px] text-[#666] leading-relaxed flex-1 mb-1 sm:mb-3 overflow-hidden">{card.desc}</p>
               <div className="h-[0.5px] sm:h-[1px] bg-[#eee] w-full mb-1 sm:mb-3" />
               {/* Extra Content */}
               <div className="mt-auto text-gray-400">{card.extra}</div>
