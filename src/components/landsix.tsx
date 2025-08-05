@@ -54,9 +54,9 @@ const Landsix = () => {
   return (
     <section className="pt-8 pb-4 lg:pt-16 lg:pb-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
       <div className="flex items-center justify-center p-4 bg-white">
-        <div className="lg:flex lg:flex-row sm:flex sm:flex- items-center justify-center sm:items-start sm:justify-start gap-[1.5vw] px-[4vw] sm:px-[3vw] lg:px-0 py-[2vw]">
+        <div className="flex flex-row   items-center  gap-2 px-[4vw] sm:px-56 lg:px-0 py-[2vw]">
           {/* Pill Box - Always Top Left */}
-          <div className="flex w-42 border items-center pl-1 border-red-300 rounded-full text-red-500  ">
+          <div className="flex w-42 border items-center pl-1 lg:ml-0 sm:ml-24 border-red-300 rounded-full text-red-500  ">
             <img
               className="w-[16px] h-[16px] mr-[6px] sm:w-[1.2vw] sm:h-[1.2vw] sm:mr-[0.5vw] lg:w-[30px] lg:h-[30px] lg:mr-[12px]"
               src="/Group.png"
@@ -69,7 +69,7 @@ const Landsix = () => {
 
           {/* Main Heading */}
           <div
-            className="text-[clamp(1.5rem,3.5vw,2.5rem)] sm:text-[clamp(2rem,4.5vw,3.5rem)] leading-tight text-center sm:text-left"
+            className="text-[clamp(1.5rem,3.5vw,2.5rem)] lg:ml-0 sm:ml-[-34px] sm:text-[clamp(1.5rem,4.5vw,3.5rem)] leading-tight text-center sm:text-left"
             style={{
               fontFamily: 'manrope, sans-serif',
               fontWeight: 800,

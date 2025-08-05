@@ -32,8 +32,8 @@ const Footer = () => {
             <div className="absolute bottom-0 left-0 w-full h-16 sm:h-20 lg:h-24 bg-gradient-to-t from-orange-100/50 to-transparent z-0"></div>
 
             <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 whitespace-nowrap overflow-hidden text-ellipsis">Support</h3>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-400 mb-1.5 sm:mb-2 whitespace-nowrap overflow-hidden text-ellipsis">Have questions? Get in touch.</p>
-            <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-1.5 sm:mb-2 whitespace-nowrap overflow-hidden text-ellipsis">You can email us at</p>
+            <p className="text-xs sm:text-[6px] lg:text-base text-gray-400 mb-1.5 sm:mb-2 whitespace-nowrap overflow-hidden text-ellipsis">Have questions? Get in touch.</p>
+            <p className="text-xs sm:text-[6px] lg:text-base text-gray-600 mb-1.5 sm:mb-2 whitespace-nowrap overflow-hidden text-ellipsis">You can email us at</p>
             <a href="mailto:Heritengine@gmail.com" className="font-semibold no-underline mb-4 sm:mb-6 lg:mb-8 hover:underline text-xs sm:text-sm lg:text-base whitespace-nowrap overflow-hidden text-ellipsis">
               Heritengine@gmail.com
             </a>

@@ -119,7 +119,7 @@ const Landfourth = () => {
             />
             <div className="flex flex-col items-stretch flex-1">
               <h3 className="text-[11px] sm:text-[13px] lg:text-[16px] xl:text-[18px] font-semibold text-[#333] mb-1.5 sm:mb-2 leading-tight whitespace-nowrap overflow-hidden text-ellipsis">{card.title}</h3>
-              <p className="text-[9px] sm:text-[10px] lg:text-[12px] xl:text-[13px] text-[#666] leading-relaxed flex-1 mb-1 sm:mb-3 overflow-hidden">{card.desc}</p>
+              <p className="text-[12px] sm:text-[14px] lg:text-[12px] xl:text-[13px] text-[#666] leading-relaxed flex-1 mb-1 sm:mb-3 overflow-hidden">{card.desc}</p>
               <div className="h-[0.5px] sm:h-[1px] bg-[#eee] w-full mb-1 sm:mb-3" />
               {/* Extra Content */}
               <div className="mt-auto text-gray-400">{card.extra}</div>

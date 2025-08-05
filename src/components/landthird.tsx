@@ -11,7 +11,7 @@ const Landthird = () => {
             <br />
             with <span className="px-1 rounded-md whitespace-nowrap">HeritengineAI</span>
           </p>
-          <p className="text-[10px] sm:text-xs lg:text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
+          <p className="sm:text-2xl lg:text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
             Vs. Traditional research today
           </p>
         </div>
@@ -23,7 +23,7 @@ const Landthird = () => {
             <br />
             <span className="whitespace-nowrap">Success</span>
           </p>
-          <p className="text-[10px] sm:text-xs lg:text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
+          <p className="sm:text-2xl lg:text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
             vs Generic search
           </p>
         </div>
@@ -35,7 +35,7 @@ const Landthird = () => {
             <br />
             <span className="whitespace-nowrap">discoveries</span>
           </p>
-          <p className="text-[10px] sm:text-xs lg:text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
+          <p className="sm:text-2xl lg:text-sm text-gray-600 whitespace-nowrap overflow-hidden text-ellipsis">
             with <span className="text-orange-400 px-1 rounded-md whitespace-nowrap">HeritengineAI</span>
           </p>
         </div>

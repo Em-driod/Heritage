@@ -38,8 +38,8 @@ const Landsecont: React.FC = () => {
           like <span className='italic' style={{ fontFamily: 'Instrument Serif, serif', fontWeight: 100 }}>guesswork.</span>
         </h1>
         <p className="mt-4 text-sm text-gray-400 sm:text-base sm:mt-6 sm:text-gray-600 max-w-md sm:max-w-xl mx-auto leading-relaxed">
-          Let's be honest, typing "tribal pattern" into Google <br /> isn't design research.{' '}
-          Heritengine helps you skip the <br />confusion and design with real meaning.
+          Let's be honest,typing "tribal pattern"into Google<br /> isn't design research.{' '}
+          Heritengine helps you skip the<br />confusion and design with real meaning.
         </p>
       </motion.div>
 
@@ -102,24 +102,24 @@ const Landsecont: React.FC = () => {
                   <div className="flex items-center mb-1">
                     <span className="text-xs text-gray-700 font-semibold">Japanese wears? - Wikipedia</span>
                   </div>
-                  <div className="text-[10px] sm:text-xs text-gray-500 mb-1">Japanese festive wears (1580-1631) is worn by the japanese…</div>
-                  <div className="text-[10px] sm:text-xs text-[#4caf50]">Wikipedia.com</div>
+                  <div className="text-[12px] sm:text-xs text-gray-500 mb-1">Japanese festive wears (1580-1631) is worn by the japanese…</div>
+                  <div className="text-[12px] sm:text-xs text-[#4caf50]">Wikipedia.com</div>
                 </div>
                 <hr className="border-t border-gray-200  mx-4" />
                 <div className="bg-white p-2 sm:p-3 ">
                   <div className="flex items-center ">
                     <span className="text-xs text-gray-700 font-semibold">Japanese have different wears</span>
                   </div>
-                  <div className="text-[10px] sm:text-xs text-gray-500 mb-1">Kimono and haori was originated by the Japanese in the year…</div>
-                  <div className="text-[10px] sm:text-xs text-[#4caf50]">Culture.com</div>
+                  <div className="text-[12px] sm:text-xs text-gray-500 mb-1">Kimono and haori was originated by the Japanese in the year…</div>
+                  <div className="text-[12px] sm:text-xs text-[#4caf50]">Culture.com</div>
                 </div>
                 <hr className="border-t border-gray-200  mx-4" />
                 <div className="bg-white rounded-b-xl p-2 sm:p-3">
                   <div className="flex items-center mb-1">
                     <span className="text-xs text-gray-700 font-semibold">Japanese Family Tree</span>
                   </div>
-                  <div className="text-[10px] sm:text-xs text-gray-500 mb-1">Discover the cultural tree of Japanese for free, and learn about their festive…</div>
-                  <div className="text-[10px] sm:text-xs text-[#4caf50]">Culturalsymbols.org</div>
+                  <div className="text-[12px] sm:text-xs text-gray-500 mb-1">Discover the cultural tree of Japanese for free, and learn about their festive…</div>
+                  <div className="text-[12px] sm:text-xs text-[#4caf50]">Culturalsymbols.org</div>
                 </div>
               </div>
               {/* X List */}
