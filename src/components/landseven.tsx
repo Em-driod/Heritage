@@ -8,18 +8,18 @@ const Landseven: React.FC = () => {
 
   return (
     <div ref={ref} className="flex items-center justify-center bg-white lg:p-4  py-8 lg:py-0">
-      <div className="relative flex flex-col items-center justify-center bg-gradient-to-r from-red-500  to-orange-500 text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 max-w-[900px]">
+      <div className="relative flex flex-col items-center justify-center bg-gradient-to-r from-red-500  to-orange-500 text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[60px] xl:py-[80px] px-4 sm:px-6 lg:px-16 xl:px-20 max-w-[900px] lg:max-w-[1100px] xl:max-w-[1300px]">
         <p className="text-white text-xs sm:text-sm md:text-base font-semibold mb-4 opacity-80 whitespace-nowrap overflow-hidden text-ellipsis">
           Beta Signup
         </p> 
-        <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-8">
+        <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight mb-8 text-center max-w-4xl">
           <span className="whitespace-nowrap">Get early access to the world's</span> <br /> 
           <span className="whitespace-nowrap">first culture to design AI</span>
         </h1>
         {/* Centralized container for the input and button wrapper */}
         <div className="flex justify-center w-full">
           {/* Wrapper for Input and Button - now relative to position the button inside */}
-          <div className="relative w-full max-w-lg">
+          <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl">
             <input
               type="email"
               placeholder="Enter your email"
