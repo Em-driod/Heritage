@@ -7,6 +7,7 @@ const cards = [
     description: "Create stunning digital experiences with our comprehensive design toolkit and collaboration features.",
     points: ["Design Systems", "Prototyping Tools", "Client Collaboration"],
     bg: "bg-gradient-to-r from-blue-100 to-blue-200",
+    border: "border-blue-300",
     iconBg: "bg-blue-500",
     img: "/6b.png",
     size: "large",
@@ -17,6 +18,7 @@ const cards = [
     description: "Build powerful brand identities with our suite of branding and visual identity tools.",
     points: ["Brand Guidelines", "Logo Creation", "Asset Management"],
     bg: "bg-gradient-to-r from-yellow-100 to-yellow-200",
+    border: "border-yellow-300",
     iconBg: "bg-yellow-500",
     img: "/6a.png",
     size: "large",
@@ -27,6 +29,7 @@ const cards = [
     description: "Design and showcase fashion collections with specialized tools for textile and apparel creators.",
     points: ["Pattern Design", "Color Matching", "Collection Planning"],
     bg: "bg-gradient-to-r from-pink-100 to-pink-200",
+    border: "border-pink-300",
     iconBg: "bg-pink-500",
     size: "small",
   },
@@ -36,6 +39,7 @@ const cards = [
     description: "Develop engaging mobile and gaming experiences with our interactive design platform.",
     points: ["Interactive Prototypes", "User Testing", "Asset Libraries"],
     bg: "bg-gradient-to-r from-purple-100 to-purple-200",
+    border: "border-purple-300",
     iconBg: "bg-purple-500",
     size: "small",
   },
@@ -45,6 +49,7 @@ const cards = [
     description: "Preserve and present cultural heritage through digital storytelling and interactive exhibitions.",
     points: ["Digital Archives", "Virtual Tours", "Educational Content"],
     bg: "bg-gradient-to-r from-green-100 to-green-200",
+    border: "border-green-300",
     iconBg: "bg-green-500",
     size: "small",
   },
@@ -54,9 +59,9 @@ const Landsix = () => {
   return (
     <section className="pt-8 pb-4 lg:pt-16 lg:pb-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
       <div className="flex items-center justify-center p-4 bg-white">
-        <div className="flex flex-row   items-center  gap-2 px-[4vw] sm:px-56 lg:px-0 py-[2vw]">
+        <div className="flex flex-row   items-center  px-[4vw] sm:px-56 lg:px-0 py-[2vw]">
           {/* Pill Box - Always Top Left */}
-          <div className="flex w-42 border items-center pl-1 lg:ml-0 sm:ml-24 border-red-300 rounded-full text-red-500  ">
+          <div className="flex w-42 border items-center pl-1 lg:ml-0 sm:ml-24 border-red-300 rounded-full text-red-500  ">
             <img
               className="w-[16px] h-[16px] mr-[6px] sm:w-[1.2vw] sm:h-[1.2vw] sm:mr-[0.5vw] lg:w-[30px] lg:h-[30px] lg:mr-[12px]"
               src="/Group.png"
@@ -69,7 +74,7 @@ const Landsix = () => {
 
           {/* Main Heading */}
           <div
-            className="text-[clamp(1.5rem,3.5vw,2.5rem)] lg:ml-0 sm:ml-[-34px] sm:text-[clamp(1.5rem,4.5vw,3.5rem)] leading-tight text-center sm:text-left"
+            className="text-[clamp(1.5rem,3.5vw,2.5rem)] lg:ml-0  sm:text-[clamp(1.5rem,4.5vw,3.5rem)] leading-tight text-center "
             style={{
               fontFamily: 'manrope, sans-serif',
               fontWeight: 800,
@@ -125,7 +130,7 @@ const Landsix = () => {
           .map((card, idx) => (
             <div
               key={idx}
-              className={`rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 lg:p-10 ${card.bg} shadow-lg h-full flex flex-col`}
+              className={`rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 lg:p-10 ${card.bg} border-2 ${card.border} shadow-lg h-full flex flex-col`}
             >
               {/* Main flex container for the card's top section */}
               <div className="flex items-start justify-between flex-grow">
@@ -176,7 +181,7 @@ const Landsix = () => {
           .map((card, idx) => (
             <div
               key={idx}
-              className={`rounded-xl p-6 ${card.bg} shadow-md h-full flex flex-col`}
+              className={`rounded-xl p-6 ${card.bg} border-2 ${card.border} shadow-md h-full flex flex-col`}
             >
               <div className="flex items-start justify-between flex-grow">
                 <div className="w-4/4 pr-4">

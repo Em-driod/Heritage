@@ -58,11 +58,9 @@ const Landfourth = () => {
       title: 'More Than Visuals',
       desc: 'Build brand identity rooted in\nsomething real.',
       extra: (
-        <div className="flex items-center justify-center">
-          <div className="inline-flex items-center rounded-full py-[3px] px-[6px] sm:py-[4px] sm:px-[8px] lg:py-[6px] lg:px-[12px] text-gray-700 font-medium text-[10px] sm:text-xs lg:text-sm">
-            <PiFlowerTulipBold className="text-[10px] sm:text-xs lg:text-sm" />
-            <span className="ml-0 sm:ml-2 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis">Authentic foundations</span>
-          </div>
+        <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[10px] sm:text-xs lg:text-sm">
+          <PiFlowerTulipBold className="text-[10px] sm:text-xs lg:text-sm" />
+          <span className="ml-1 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis">Authentic foundations</span>
         </div>
       ),
     },

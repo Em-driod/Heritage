@@ -17,7 +17,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/waitlist" element={<Waitlist />} />
-          {/* Add more routes as needed */}
+          {/* Add more routes as needed */} 
         
           
         </Routes>

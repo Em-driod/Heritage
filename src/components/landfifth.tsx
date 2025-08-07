@@ -284,16 +284,16 @@ const Landfifth = () => {
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
-                     <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
-             {/* Vertical line for mobile view above number 3 */}
-             <div className="lg:hidden w-86 h-px bg-pink-300 mx-auto mb-4"></div>
-             <motion.div
-               className="flex items-center mb-[20px]"
-               whileHover={{ scale: 1.05 }}
-             >
-               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
-                 3
-               </span>
+          <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
+            {/* Vertical line for mobile view above number 3 */}
+            <div className="lg:hidden w-86 h-px bg-pink-300 mx-auto mb-4"></div>
+            <motion.div
+              className="flex items-center mb-[20px]"
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
+                3
+              </span>
               <motion.img
                 src="/rain.png"
                 alt="Paint Palette Emoji"
@@ -439,16 +439,16 @@ const Landfifth = () => {
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
-                     <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
-             {/* Vertical line for mobile view above number 5 */}
-             <div className="lg:hidden w-86 h-px bg-pink-300 mx-auto mb-4"></div>
-             <motion.div
-               className="flex items-center mb-[20px]"
-               whileHover={{ scale: 1.05 }}
-             >
-               <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
-                 5
-               </span>
+          <div className="lg:w-1/2 mb-8 lg:mb-0 text-center lg:text-left lg:pr-[80px] flex flex-col items-center lg:items-start">
+            {/* Vertical line for mobile view above number 5 */}
+            <div className="lg:hidden w-86 h-px bg-pink-300 mx-auto mb-4"></div>
+            <motion.div
+              className="flex items-center mb-[20px]"
+              whileHover={{ scale: 1.05 }}
+            >
+              <span className="text-[32px] font-bold text-[#333333] mr-2 leading-none">
+                5
+              </span>
               <motion.span
                 className="text-[32px] leading-none"
                 animate={{ rotate: [0, -10, 10, 0] }}
@@ -474,14 +474,14 @@ const Landfifth = () => {
               Export your designs, share with your team, and customize to your
               heart's content. The creative possibilities are endless!
             </motion.p>
-            <div className="flex gap-x-1 text-[#666666] text-[16px] w-full max-w-[400px] mx-auto lg:mx-0 lg:text-left">
+            <div className="flex gap-x-1 text-[#666666] text-[16px] w-full max-w-[400px] mx-auto justify-center lg:justify-start lg:mx-0 lg:text-left">
               <motion.button
                 className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
                 whileHover={{ scale: 1.05, backgroundColor: '#f3f4f6' }}
                 whileTap={{ scale: 0.95 }}
               >
-                <button className="flex items-center px-2 py-1 lg:ml-0 sm:ml-10 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
-                  <span className="">
+                <button className="flex items-center justify-center px-2 py-1 lg:ml-0 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
+                  <span className="mr-1">
                     <img src="/Vector.png" alt="" />
                   </span>
                   Export
@@ -492,9 +492,9 @@ const Landfifth = () => {
                 whileHover={{ scale: 1.05, backgroundColor: '#f3f4f6' }}
                 whileTap={{ scale: 0.95 }}
               >
-                <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200">
+                <button className="flex items-center justify-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200">
                   <FaShare />
-                  <span className="mr-1"></span>Share
+                  <span className="ml-1">Share</span>
                 </button>
               </motion.button>
               <button className="ml-1">

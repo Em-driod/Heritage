@@ -48,8 +48,8 @@ const Navbar: React.FC = () => {
         </ul>
 
         {/* Desktop Search Bar (moved to its own flex item for better control) */}
-        <div className="hidden md:flex flex-grow justify-center mr-8">
-          <div className="flex items-center border border-gray-300 rounded-sm w-full max-w-2xl py-2 px-4 bg-gray-50 focus-within:ring-2 focus-within:ring-blue-300">
+        <div className="hidden md:flex flex-grow justify-center mr-2 ml-4">
+          <div className="flex items-center border border-gray-300 rounded-sm w-full max-w-[900px] py-2 px-4 bg-gray-50 focus-within:ring-2 focus-within:ring-blue-300">
             <CiSearch className='text-xl text-gray-500 mr-2' />
             <input
               type="text"

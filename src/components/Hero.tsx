@@ -626,24 +626,28 @@ const Hero: React.FC = () => {
       <div className="bg-gray-50 rounded-lg px-4 py-4">
         <h2 className="text-xs font-normal text-gray-600 mb-3 text-left sm:mb-4 sm:text-xs">Color Palette</h2>
         <div className="flex items-center justify-between space-x-2">
-                     <div className="flex space-x-1 sm:space-x-2">
+                     <div className="flex space-x-1 sm:space-x-2 overflow-visible">
              {colorPalette.map((palette, index) => (
-               <motion.div
-                 key={index}
-                 className="relative h-6 w-6 rounded-full border border-gray-300 sm:h-6 sm:w-6 cursor-pointer"
-                 style={{ backgroundColor: palette.hex }}
-                 whileHover={{ scale: 1.3, zIndex: 10 }}
-                 onMouseEnter={() => setHoveredPalette(index)}
-                 onMouseLeave={() => setHoveredPalette(null)}
-               >
-                 {palette.img && (
-                   <img 
-                     src={palette.img} 
-                     alt={palette.label}
-                     className="w-full h-full object-cover"
-                   />
-                 )}
-                                   <AnimatePresence>
+                <div
+                  key={index}
+                  className="relative h-6 w-6"
+                  onMouseEnter={() => setHoveredPalette(index)}
+                  onMouseLeave={() => setHoveredPalette(null)}
+                >
+                  <motion.div
+                    className={`h-6 w-6 rounded-full border border-gray-300 sm:h-6 sm:w-6 cursor-pointer transition-shadow duration-200 ${hoveredPalette === index ? 'z-20 shadow-lg' : ''}`}
+                    style={{ backgroundColor: palette.hex }}
+                    whileHover={{ scale: 1.3 }}
+                  >
+                    {palette.img && (
+                      <img 
+                        src={palette.img} 
+                        alt={palette.label}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                  </motion.div>
+                  <AnimatePresence>
                     {hoveredPalette === index && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.8 }}
@@ -655,7 +659,7 @@ const Hero: React.FC = () => {
                           stiffness: 300,
                           damping: 20
                         }}
-                                                 className="absolute left-1/2 -top-8 z-[9999] -translate-x-1/2 whitespace-nowrap rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-gray-800 shadow-xl backdrop-blur-sm "
+                        className="absolute left-1/2 -top-8 z-[9999] -translate-x-1/2 whitespace-nowrap rounded-lg border-2 border-gray-200 bg-white px-4 py-3 text-center text-sm font-semibold text-gray-800 shadow-xl backdrop-blur-sm pointer-events-none"
                         style={{
                           boxShadow: '0 10px 25px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.1)',
                           transform: 'translateX(-50%) translateY(0)'
@@ -689,8 +693,8 @@ const Hero: React.FC = () => {
                       </motion.div>
                     )}
                   </AnimatePresence>
-               </motion.div>
-             ))}
+                </div>
+              ))}
            </div>
           <div className="flex space-x-1 text-xs sm:space-x-2 sm:text-sm">
             <motion.button
