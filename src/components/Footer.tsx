@@ -27,7 +27,7 @@ const Footer = () => {
 
         {/* Middle Section (Support) */}
         <div className="flex flex-col w-full sm:w-auto">
-          <div className="relative bg-white  border-1 border-amber-400 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg flex flex-col items-start flex-1 min-w-[280px] sm:min-w-[320px] lg:min-w-[350px] overflow-hidden">
+          <div className="relative bg-white  border-1 border-amber-400 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg flex flex-col items-start flex-1 min-w-[280px] sm:min-w-[320px] lg:min-w-[350px] lg:mb-0 sm:mb-3 overflow-hidden">
             {/* Gradient overlay */}
             <div className="absolute bottom-0 left-0 w-full h-16 sm:h-20 lg:h-24 bg-gradient-to-t from-orange-100/50 to-transparent z-0"></div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom of support */}
-          <div className="bg-white border border-amber-500 w-full rounded-xl sm:rounded-2xl lg:p-0 sm:pl-24 mt-2 sm:mt-4.5 lg:mt-3 h-18 sm:h-12 lg:h-26">
+          <div className="bg-white border border-amber-500 w-full rounded-xl sm:rounded-2xl lg:p-0 sm:pl-24 mt-6 sm:mt-4.5 lg:mt-3 h-18 sm:h-12 lg:h-26">
             <div className="flex gap-3 sm:gap-4 lg:gap-5 justify-center items-center sm:justify-start sm:items-start lg:ml-20 mt-4 sm:mt-5 lg:mt-7 pt-3 sm:pt-4 lg:pt-5 relative z-10">
               <a href="/terms-of-use" className="text-[10px] sm:text-xs lg:text-sm text-gray-600 no-underline hover:underline whitespace-nowrap overflow-hidden text-ellipsis">Terms of use</a>
               <a href="/privacy-policy" className="text-[10px] sm:text-xs lg:text-sm text-gray-600 no-underline hover:underline whitespace-nowrap overflow-hidden text-ellipsis">Privacy Policy</a>

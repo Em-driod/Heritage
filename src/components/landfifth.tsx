@@ -343,7 +343,7 @@ const Landfifth = () => {
           <div className="lg:hidden w-full h-px bg-pink-300 my-8"></div>
 
           <motion.div
-            className="lg:w-1/2 flex items-center justify-center lg:pl-[80px] mt-10 lg:mt-0"
+            className="lg:w-1/2 flex items-center justify-center lg:pl-[80px] sm:mt-1 lg:mt-0"
             variants={imageVariants}
             whileHover="hover"
           >
@@ -357,12 +357,12 @@ const Landfifth = () => {
 
         {/* Section 4: Learn the Meaning */}
         <motion.div
-          className="sm:p-[20px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
+          className="sm:p-[10px] lg:p-[60px] flex flex-col lg:flex-row items-center relative"
           variants={sectionVariants}
           whileHover={{ y: -5 }}
         >
           <motion.div
-            className="lg:w-1/2 flex items-center justify-center order-1 lg:order-1 lg:pr-[80px] mt-10 lg:mt-0"
+            className="lg:w-1/2 flex items-center justify-center order-1 lg:order-1 lg:pr-[80px] sm:mt-1 lg:mt-0"
             variants={imageVariants}
             whileHover="hover"
           >
@@ -405,7 +405,7 @@ const Landfifth = () => {
             >
               Discover the rich stories and cultural significance behind every
               element. Understand the{' '}
-              <span className="bg-[#fff0c8] px-1 rounded-sm">heritage</span> and
+              heritage and
               respect the traditions that inspire your designs.
             </motion.p>
             <motion.div
@@ -423,7 +423,7 @@ const Landfifth = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="text- #581C87">Cultural Context</span>
-                    <p className="text-[10px] text-[ #7E22CE] leading-tight ">
+                    <p className="text-[10px] text-[ #7E22CE] leading-relaxed ">
                       Every symbol tells a story, every color has meaning
                     </p>
                   </div>
