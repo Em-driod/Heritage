@@ -50,9 +50,9 @@ const Hero: React.FC = () => {
         ];
       } else if (cultureParam === 'Igbo') {
         assetsData = [
-          { src: "/path-to-igbo-asset1.jpg", label: "Odinani" },
-          { src: "/path-to-igbo-asset2.jpg", label: "Agbogho Mmuo" },
-          { src: "/path-to-igbo-asset3.jpg", label: "Igbo Ukwu" },
+          { src: "/c01.png", label: "Odinani" },
+          { src: "/c02.png", label: "Agbogho Mmuo" },
+          { src: "/c03.png", label: "Igbo Ukwu" },
         ];
         paletteData = [
           { img: '/brownshit.png', label: 'Red Ochre' },

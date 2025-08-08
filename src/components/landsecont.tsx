@@ -68,7 +68,7 @@ const Landsecont: React.FC = () => {
 
             
             {/* Cloned 'Before: Google Search' Card */}
-            <div className="bg-[#FEE2E2] w-11/12 max-w-xs sm:max-w-sm lg:w-[550px] mx-auto rounded-2xl px-2 py-6 shadow-lg mt-4 " style={{ minHeight: '400px'  }}> {/* Responsive width, minHeight, and heavy mobile margin */}
+            <div className="bg-[#FEE2E2] w-[550px] max-w-full mx-auto rounded-2xl px-2 py-6 shadow-lg mt-4 " style={{ minHeight: '400px'  }}> {/* Responsive width, minHeight, and heavy mobile margin */}
               {/* Header */}
               <div className="flex items-center px-4 sm:px-6 pt-5 pb-2">
                 <span className="w-7 sm:w-8 mr-2"><img src="/sleep.png" alt="" className="w-full h-auto" /></span>
@@ -159,7 +159,7 @@ const Landsecont: React.FC = () => {
             </motion.div>
 
             {/* Cloned UI from screenshot */}
-            <div className="bg-[#DCFCE7] w-11/12 max-w-xs sm:max-w-sm lg:w-[550px] mx-auto rounded-2xl px-2 py-6 shadow-lg mt-4 " style={{ minHeight: '400px'  }}> {/* Changed to bg-white */}
+            <div className=" bg-[#DCFCE7] w-[550px] max-w-full mx-auto rounded-2xl px-2 py-6 shadow-lg mt-4 " style={{ minHeight: '400px'  }}> {/* Changed to bg-white */}
               {/* Header */}
               <div className="flex items-center mb-4">
                 <span className="mr-2 w-8"><img src="/victory.png" alt="" /></span>
