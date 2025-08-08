@@ -66,9 +66,9 @@ const Hero: React.FC = () => {
           { src: "/hongkong.png", label: "Sakura" },
         ];
         paletteData = [
-          { img:'brownshit.png', label: 'Cherry Blossom Pink' },
-          { img: '/multi.png', label: 'Indigo' },
-          { img: '/multi.png', label: 'Forest Green' },
+          { img:'brownshit.png', label: ' #9C1E00' },
+          { img: '/multi.png', label: '#F1B24A' },
+          { img: '/multi.png', label: '#F1B24A' },
         ];
       }
       setGeneratedAssets(assetsData);
