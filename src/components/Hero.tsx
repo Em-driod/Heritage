@@ -682,9 +682,9 @@ const Hero: React.FC = () => {
                             }
                           } else if (selectedCulture === 'Japan') {
                             switch (index) {
-                              case 0: return ".";
-                              case 1: return ".";
-                              case 2: return ".";
+                              case 0: return " #9C1E00";
+                              case 1: return "#F1B24A";
+                              case 2: return "#C2461A";
                               default: return palette.label;
                             }
                           }
