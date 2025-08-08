@@ -58,70 +58,63 @@ const cards = [
 const Landsix = () => {
   return (
     <section className="pt-8 pb-4 lg:pt-16 lg:pb-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
-      <div className="flex items-center justify-center p-8 bg-white">
-        <div className="flex flex-row items-center px-[4vw] sm:px-56 lg:px-0 py-[2vw]">
-          {/* Pill Box - Always Top Left */}
-          <div className="flex w-38 sm:w-42 border items-center pl-1 lg:ml-0 sm:ml-34 border-red-300 rounded-full text-red-500">
-            <img
-              className="w-[16px] h-[16px] mr-[6px] sm:w-[1.2vw] sm:h-[1.2vw] sm:mr-[0.5vw] lg:w-[30px] lg:h-[30px] lg:mr-[12px]"
-              src="/Group.png"
-              alt="badge icon"
-            />
-            <span className="text-[10px] sm:text-[12px] lg:text-[14px] font-medium whitespace-nowrap overflow-hidden text-ellipsis">
-              Use it your way
-            </span>
-          </div>
+   <div className="flex items-center justify-center bg-white mb-12">
+  {/* Pill Box */}
+  <div className="flex w-fit items-center rounded-full border border-red-300 pl-1 text-red-500 lg:p-2 sm:p-1 pr-6">
+    <img className="mr-[6px] ml-2 h-[16px] w-[16px]" src="/Group.png" alt="badge icon" />
+    <span className="whitespace-nowrap overflow-hidden text-ellipsis text-[10px] font-medium">
+      Use it your way
+    </span>
+  </div>
 
-          {/* Main Heading */}
-          <div
-            className=" lg:text-4xl sm:text-sm lg:ml-0 leading-tight text-center "
-            style={{
-              fontFamily: 'manrope, sans-serif',
-              fontWeight: 800,
-              fontStyle: 'normal',
-              lineHeight: '110%',
-            }}
-          >
-            <span className="whitespace-nowrap">Built for</span>
-            <span
-              className="text-blue-700 italic whitespace-nowrap"
-              style={{
-                fontFamily: 'instrument-serif',
-                fontWeight: 100,
-                letterSpacing: '-0.03em',
-                fontStyle: 'italic',
-              }}
-            >
-              Creators,
-            </span>
-            <br className="hidden sm:block" />
-            <span className="sm:hidden"> </span>
-            <span
-              className="text-yellow-600 italic whitespace-nowrap"
-              style={{
-                fontFamily: 'instrument-serif',
-                fontWeight: 100,
-                letterSpacing: '-0.05em',
-                fontStyle: 'italic',
-              }}
-            >
-              Makers,
-            </span>
-            <span className="whitespace-nowrap">and</span>
-            <span
-              className="text-green-600 italic whitespace-nowrap"
-              style={{
-                fontFamily: 'instrument-serif',
-                fontWeight: 100,
-                letterSpacing: '-0.05em',
-                fontStyle: 'italic',
-              }}
-            >
-              Curators
-            </span>
-          </div>
-        </div>
-      </div>
+  {/* Main Heading */}
+  <div
+    className="lg:text-4xl sm:text-2xl text-center leading-tight"
+    style={{
+      fontFamily: 'manrope, sans-serif',
+      fontWeight: 800,
+      fontStyle: 'normal',
+      lineHeight: '110%',
+    }}
+  >
+    <span className="whitespace-nowrap">Built for </span>
+    <span
+      className="whitespace-nowrap italic text-blue-700"
+      style={{
+        fontFamily: 'instrument-serif',
+        fontWeight: 100,
+        letterSpacing: '-0.03em',
+        fontStyle: 'italic',
+      }}
+    >
+      Creators,
+    </span>
+    <br />
+    <span
+      className="whitespace-nowrap italic text-yellow-600"
+      style={{
+        fontFamily: 'instrument-serif',
+        fontWeight: 100,
+        letterSpacing: '-0.05em',
+        fontStyle: 'italic',
+      }}
+    >
+      Makers,
+    </span>
+    <span className="whitespace-nowrap"> and </span>
+    <span
+      className="whitespace-nowrap italic text-green-600"
+      style={{
+        fontFamily: 'instrument-serif',
+        fontWeight: 100,
+        letterSpacing: '-0.05em',
+        fontStyle: 'italic',
+      }}
+    >
+      Curators
+    </span>
+  </div>
+</div>
 
       {/* First row: 2 big cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 mb-4 sm:mb-5 lg:mb-6">
