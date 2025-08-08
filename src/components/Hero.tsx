@@ -55,8 +55,8 @@ const Hero: React.FC = () => {
           { src: "/c03.png", label: "Igbo Ukwu" },
         ];
         paletteData = [
-          { img: '/brownshit.png', label: 'Red Ochre' },
           { color: 'Black', hex: '#000000', label: 'Black' },
+          { color: 'Red', hex: '#FF0000', label: 'Red' },
           { color: 'White', hex: '#FFFFFF', label: 'White' },
         ];
       } else if (cultureParam === 'Japan') {
