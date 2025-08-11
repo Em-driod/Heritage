@@ -5,6 +5,7 @@ import Home from './pages/House';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Waitlist from './pages/Waitlist';
+import Galary from './pages/Galary';
 
 
 
@@ -17,9 +18,10 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/waitlist" element={<Waitlist />} />
-          {/* Add more routes as needed */} 
-        
-          
+          <Route path="/gallery" element={<Galary />} />
+          {/* Add more routes as needed */}
+
+
         </Routes>
         <Footer />
       </div>
