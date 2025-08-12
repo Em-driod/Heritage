@@ -35,9 +35,9 @@ const Landfourth = () => {
       title: 'Cultural Context',
       desc: 'Every visual comes with a short\nshort or symbol meaning',
       extra: (
-        <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[10px] sm:text-xs lg:text-sm">
-          <FaBookOpen className="text-[10px] sm:text-xs lg:text-sm" />
-          <span className="ml-1 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis">Rich storytelling</span>
+        <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[12px] sm:text-xl lg:text-sm">
+          <FaBookOpen className="text-[12px] sm:text-xs lg:text-sm" />
+          <span className="ml-1 text-gray-500 text-[15px]  whitespace-nowrap overflow-hidden text-ellipsis">Rich storytelling</span>
         </div>
       ),
     },
@@ -58,9 +58,9 @@ const Landfourth = () => {
       title: 'More Than Visuals',
       desc: 'Build brand identity rooted in\nsomething real.',
       extra: (
-        <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[10px] sm:text-xs lg:text-sm">
-          <PiFlowerTulipBold className="text-[10px] sm:text-xs lg:text-sm" />
-          <span className="ml-1 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis">Authentic foundations</span>
+        <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[12px] sm:text-xs lg:text-sm">
+          <PiFlowerTulipBold className="text-[15px] sm:text-xs lg:text-sm" />
+          <span className="ml-0 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis  text-[14px] ">Authentic foundations</span>
         </div>
       ),
     },
@@ -96,7 +96,6 @@ const Landfourth = () => {
         {cards.map((card, i) => (
           <motion.div
             key={card.title}
-            // Reduced min-h for mobile (default) from min-h-[220px] to min-h-[180px]
             className="bg-white rounded-lg sm:rounded-xl shadow-md p-3 sm:p-4 lg:p-6 flex flex-col justify-between min-h-[180px] sm:min-h-[20px] sm:h-[50px] lg:min-h-[260px]"
             initial={{ opacity: 0, y: 40 }}
             animate={cardsControls}
@@ -120,7 +119,7 @@ const Landfourth = () => {
               <p className="text-[12px] sm:text-[14px] lg:text-[12px] xl:text-[13px] text-[#666] leading-relaxed flex-1 mb-1 sm:mb-3 overflow-hidden">{card.desc}</p>
               <div className="h-[0.5px] sm:h-[1px] bg-[#eee] w-full mb-1 sm:mb-3" />
               {/* Extra Content */}
-              <div className="mt-auto text-gray-400">{card.extra}</div>
+              <div className="mt-auto text-gray-400 ">{card.extra}</div>
             </div>
           </motion.div>
         ))}
