@@ -37,7 +37,7 @@ const Landfourth = () => {
       extra: (
         <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[12px] sm:text-xl lg:text-sm">
           <FaBookOpen className="text-[12px] sm:text-xs lg:text-sm" />
-          <span className="ml-1 text-gray-500 text-[15px]  whitespace-nowrap overflow-hidden text-ellipsis">Rich storytelling</span>
+          <span className="ml-1 text-gray-500 font-semibold text-[13.5px] whitespace-nowrap overflow-hidden text-ellipsis">Rich storytelling</span>
         </div>
       ),
     },
@@ -60,7 +60,7 @@ const Landfourth = () => {
       extra: (
         <div className="inline-flex items-center rounded-full py-[4px] px-[8px] sm:py-[6px] sm:px-[12px] text-gray-700 font-medium text-[12px] sm:text-xs lg:text-sm">
           <PiFlowerTulipBold className="text-[15px] sm:text-xs lg:text-sm" />
-          <span className="ml-0 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis  text-[14px] ">Authentic foundations</span>
+          <span className="ml-0 text-gray-500 whitespace-nowrap overflow-hidden text-ellipsis font-semibold text-[13.5px] ">Authentic foundations</span>
         </div>
       ),
     },

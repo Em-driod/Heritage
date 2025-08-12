@@ -60,7 +60,7 @@ const Landsix = () => {
     <section className="pt-8 pb-4 lg:pt-16 lg:pb-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
    <div className="flex items-center justify-center bg-white mb-12">
   {/* Pill Box */}
-  <div className="flex w-fit items-center rounded-full border border-red-300 pl-1 text-red-500 lg:p-2 sm:p-1 pr-6">
+  <div className="flex w-fit items-center rounded-full border border-red-300 pl-1 text-red-500 lg:p-2 sm:p-2 pr-3 top-[-20]   ">
     <img className="mr-[6px] ml-2 h-[16px] w-[16px]" src="/Group.png" alt="badge icon" />
     <span className="whitespace-nowrap overflow-hidden text-ellipsis text-[10px] font-medium">
       Use it your way
@@ -68,52 +68,52 @@ const Landsix = () => {
   </div>
 
   {/* Main Heading */}
-  <div
-    className="lg:text-4xl sm:text-2xl text-center leading-tight"
+ <div
+  className="lg:text-4xl sm:text-4xl text-2xl md:text-3xl text-center leading-tight"
+  style={{
+    fontFamily: 'manrope, sans-serif',
+    fontWeight: 800,
+    fontStyle: 'normal',
+    lineHeight: '110%',
+  }}
+>
+  <span className="whitespace-nowrap">Built for </span>
+  <span
+    className="whitespace-nowrap italic text-blue-700"
     style={{
-      fontFamily: 'manrope, sans-serif',
-      fontWeight: 800,
-      fontStyle: 'normal',
-      lineHeight: '110%',
+      fontFamily: 'instrument-serif',
+      fontWeight: 100,
+      letterSpacing: '-0.03em',
+      fontStyle: 'italic',
     }}
   >
-    <span className="whitespace-nowrap">Built for </span>
-    <span
-      className="whitespace-nowrap italic text-blue-700"
-      style={{
-        fontFamily: 'instrument-serif',
-        fontWeight: 100,
-        letterSpacing: '-0.03em',
-        fontStyle: 'italic',
-      }}
-    >
-      Creators,
-    </span>
-    <br />
-    <span
-      className="whitespace-nowrap italic text-yellow-600"
-      style={{
-        fontFamily: 'instrument-serif',
-        fontWeight: 100,
-        letterSpacing: '-0.05em',
-        fontStyle: 'italic',
-      }}
-    >
-      Makers,
-    </span>
-    <span className="whitespace-nowrap"> and </span>
-    <span
-      className="whitespace-nowrap italic text-green-600"
-      style={{
-        fontFamily: 'instrument-serif',
-        fontWeight: 100,
-        letterSpacing: '-0.05em',
-        fontStyle: 'italic',
-      }}
-    >
-      Curators
-    </span>
-  </div>
+    Creators,
+  </span>
+  <br />
+  <span
+    className="whitespace-nowrap italic text-yellow-600"
+    style={{
+      fontFamily: 'instrument-serif',
+      fontWeight: 100,
+      letterSpacing: '-0.05em',
+      fontStyle: 'italic',
+    }}
+  >
+    Makers,
+  </span>
+  <span className="whitespace-nowrap"> and </span>
+  <span
+    className="whitespace-nowrap italic text-green-600"
+    style={{
+      fontFamily: 'instrument-serif',
+      fontWeight: 100,
+      letterSpacing: '-0.05em',
+      fontStyle: 'italic',
+    }}
+  >
+    Curators
+  </span>
+</div>
 </div>
 
       {/* First row: 2 big cards */}

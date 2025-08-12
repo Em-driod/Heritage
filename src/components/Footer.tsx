@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="flex flex-col w-full sm:w-auto">
           <div className="relative bg-white  border-1 border-amber-400 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg flex flex-col items-start flex-1 min-w-[280px] sm:min-w-[320px] lg:min-w-[350px] lg:mb-0 sm:mb-3 overflow-hidden">
             {/* Gradient overlay */}
-            <div className="absolute bottom-0 left-0 w-full h-16 sm:h-20 lg:h-24 bg-gradient-to-t from-orange-100/50 to-transparent z-0"></div>
+           
 
             <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 whitespace-nowrap overflow-hidden text-ellipsis">Support</h3>
             <p className="text-xs sm:text-[6px] lg:text-base text-gray-400 mb-1.5 sm:mb-2 whitespace-nowrap overflow-hidden text-ellipsis">Have questions? Get in touch.</p>
@@ -38,7 +38,7 @@ const Footer = () => {
               Heritengine@gmail.com
             </a>
             <div className="rounded-full bg-orange-50 ml-8 sm:ml-12 lg:ml-18 flex justify-center items-center mt-4 sm:mt-12 lg:mt-20 shadow-md relative">
-              <img src="mailer.png" alt="" className='w-26 h-26 sm:w-20 sm:h-20 lg:w-34 lg:h-34' />
+              <img src="mailer.png" alt="" className='w-24 h-24 sm:w-18 sm:h-18 lg:w-34 lg:h-34' />
             </div>
           </div>
 

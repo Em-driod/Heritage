@@ -1,6 +1,7 @@
 import { motion, type Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaShare } from 'react-icons/fa';
+import { FaEdit } from "react-icons/fa";
 
 const Landfifth = () => {
   // Animation variants
@@ -497,9 +498,17 @@ const Landfifth = () => {
                   <span className="ml-1">Share</span>
                 </button>
               </motion.button>
-              <button className="ml-1">
-                <img src="/custom.png" alt="" />
-              </button>
+                <motion.button
+                className="px-2 py-1 sm:px-3 sm:py-1 text-gray-600 rounded-md hover:bg-gray-100 transition-colors duration-150"
+                whileHover={{ scale: 1.05, backgroundColor: '#f3f4f6' }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <button className="flex items-center justify-center px-2 py-1 bg-[#E5E7EB] text-[#7E22CE] rounded-md text-xs font-medium border border-[#E5E7EB]">
+                 <FaEdit />
+
+                  <span className="ml-1">Customize</span>
+                </button>
+              </motion.button>
             </div>
           </div>
 
