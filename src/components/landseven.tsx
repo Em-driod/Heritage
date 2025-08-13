@@ -1,21 +1,23 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Poppins&family=Instrument+Serif&family=Montserrat&family=Lato&family=Open+Sans&family=Fira+Sans&family=Ubuntu&family=Noto+Sans&family=Source+Sans+Pro&family=Roboto&family=Droid+Sans&family=Georgia&display=swap" rel="stylesheet"></link> 
 
 const Landseven: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false }); // Set once to false to re-trigger on scroll out and back in
 
   return (
-    <div ref={ref} className="flex items-center justify-center bg-white lg:p-4   py-8 lg:py-0">
-      <div  className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 max-w-[1200px]">
+    <div ref={ref} className="flex items-center justify-center bg-white lg:p-4 py-8 lg:py-0">
+      <div className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 w-[calc(100%-32px)] sm:w-[calc(100%-48px)] md:w-[600px] lg:w-[800px] xl:w-[900px] 2xl:w-[1000px]">
         <p className="text-white text-xs sm:text-sm md:text-base font-semibold mb-1 sm:mb-2 opacity-80 whitespace-nowrap overflow-hidden text-ellipsis">
           Beta Signup
-        </p> 
+        </p>
+        
         <h1 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight mb-8 text-center max-w-4xl">
           <span className="whitespace-nowrap">Get early access to the world's</span> <br /> 
           <span className="whitespace-nowrap">first culture to design AI</span>
         </h1>
+        
         {/* Centralized container for the input and button wrapper */}
         <div className="flex justify-center w-full">
           {/* Wrapper for Input and Button - now relative to position the button inside */}
