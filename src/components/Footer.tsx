@@ -37,8 +37,8 @@ const Footer = () => {
             <a href="mailto:Heritengine@gmail.com" className="font-semibold no-underline mb-4 sm:mb-6 lg:mb-8 hover:underline text-xs sm:text-sm lg:text-base whitespace-nowrap overflow-hidden text-ellipsis">
               Heritengine@gmail.com
             </a>
-            <div className="rounded-full bg-orange-50 ml-8 sm:ml-12 lg:ml-18 flex justify-center items-center mt-4 sm:mt-12 lg:mt-20 shadow-md relative">
-              <img src="mailer.png" alt="" className='w-24 h-24 sm:w-18 sm:h-18 lg:w-34 lg:h-34' />
+            <div className="rounded-full bg-orange-50 ml-8 sm:ml-12 lg:ml-18 flex justify-center items-center p-3 mt-4 sm:mt-12 lg:mt-20 shadow-md relative">
+              <img src="mailer.png" alt="" className='w-14 h-14 sm:w-10 sm:h-10 lg:w-24 lg:h-24' />
             </div>
           </div>
 
