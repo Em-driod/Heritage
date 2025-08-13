@@ -83,7 +83,7 @@ const Landfourth = () => {
             What HeritengineAI Gives You
           </span>
         </div>
-        <h5 className="text-[20px] sm:text-[28px] lg:text-[36px] xl:text-[50px] font-semibold text-[#333] leading-tight tracking-tight">
+        <h5 className="text-[36px] sm:text-[48px] lg:text-[56px] font-semibold text-[#333] leading-tight tracking-tight">
           <span className="whitespace-nowrap">One click.</span><br />
           <span className="italic font-light">
             <span className="font-normal whitespace-nowrap">Infinite heritage.</span>
