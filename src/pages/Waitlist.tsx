@@ -122,13 +122,13 @@ const Waitlist: React.FC = () => {
 
         <motion.div className="flex w-full max-w-md mt-6 sm:mt-8 gap-0.5" variants={itemVariants}>
           <input type="email" placeholder="Enter your email" className="flex-1 border border-gray-300 rounded-l-lg lg:px-2 sm:px-2 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
-          <button className="flex-shrink-0 bg-gradient-to-r from-orange-600 to-orange-400 hover:bg-orange-400 text-xs text-white font-thin px-4 py-2 rounded-r-lg w-[110px] whitespace-nowrap">Join Beta Squad</button>
+          <button className="flex-shrink-0  bg-gradient-to-r from-red-500 to-orange-500 hover:bg-orange-400 text-xs text-white font-thin px-4 py-2 rounded-r-lg w-[110px] whitespace-nowrap">Join Beta Squad</button>
         </motion.div>
 
         <motion.p className="text-xs sm:text-sm text-gray-500" variants={itemVariants}>We'll never spam. You'll only hear when it matters.</motion.p>
 
-        <motion.div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-700 mt-4" variants={containerVariants}>
-          {["No spam ever", "Invite only feedback", "Built for global creators"].map((text, i) => (
+        <motion.div className="flex items-center gap-3 sm:gap-0.5 text-[10px] sm:text-sm text-gray-700 mt-4">
+  {["No spam ever", "Invite only feedback", "Built for global creators"].map((text, i) => (
             <motion.div className="flex items-center gap-1" key={i} variants={itemVariants}>
               <img src={["/relay.png", "/answer.png", "/world.png"][i]} alt="" className="w-3 h-3 sm:w-4 sm:h-4" />
               {text}

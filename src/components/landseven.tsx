@@ -8,7 +8,7 @@ const Landseven: React.FC = () => {
 
   return (
     <div ref={ref} className="flex items-center justify-center bg-white lg:p-4 py-8 lg:py-0 mb-6">
-      <div className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 w-[calc(100%-32px)] sm:w-[calc(100%-48px)] md:w-[600px] lg:w-[1200px] xl:w-[1200px] 2xl:w-[1000px]">
+      <div className="relative flex flex-col items-center justify-center bg-gradient-to-r from-[#FF7A50] to-[#FF4E4E] text-white rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] overflow-hidden group transition duration-300 shadow-lg mx-auto py-[16px] sm:py-[40px] lg:py-[40px] px-4 sm:px-6 lg:px-10 w-[calc(100%-32px)] sm:w-[calc(100%-48px)] md:w-[600px] lg:w-[1080px] xl:w-[1200px] 2xl:w-[1000px]">
         <p className="text-white text-xs sm:text-sm md:text-base font-semibold mb-1 sm:mb-2 opacity-80 whitespace-nowrap overflow-hidden text-ellipsis">
           Beta Signup
         </p>
