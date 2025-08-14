@@ -18,9 +18,9 @@ const Home = () => {
      <Landfourth />
      <Landfifth />
      <Landsix />
-     <div className="mb-0 sm:mb-0 lg:mb-0 xl:mb-20">
+    
        <Landseven />
-     </div>
+    
     </div>
   )
 }
