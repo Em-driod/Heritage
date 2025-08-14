@@ -58,11 +58,11 @@ const cards = [
 const Landsix = () => {
   return (
     <section className="pt-8 pb-4 lg:pt-16 lg:pb-16 px-4 sm:px-8 lg:px-20 bg-white min-h-screen">
-   <div className="flex items-center justify-center bg-white mb-12">
+   <div className="flex items-center justify-center gap-1.5 bg-white mb-12">
   {/* Pill Box */}
-  <div className="flex w-fit items-center rounded-full border border-red-300 pl-1 text-red-500 lg:p-2 sm:p-2 pr-3 top-[-20]   ">
-    <img className="mr-[6px] ml-2 h-[16px] w-[16px]" src="/Group.png" alt="badge icon" />
-    <span className="whitespace-nowrap overflow-hidden text-ellipsis text-[10px] font-medium">
+  <div className="flex w-fit items-center rounded-full border border-red-300 pl-2 pr-4 py-2 sm:pl-3 sm:pr-6 sm:py-3 text-red-500 lg:p-2 top-[0]">
+    <img className="mr-2 ml-2 h-4 w-4 sm:h-5 sm:w-5" src="/Group.png" alt="badge icon" />
+    <span className="whitespace-nowrap overflow-hidden text-ellipsis text-xs sm:text-sm font-medium">
       Use it your way
     </span>
   </div>
