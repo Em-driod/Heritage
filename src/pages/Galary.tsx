@@ -25,13 +25,13 @@ const Galary = () => {
         Language &amp; identity
       </span>
       <ul className="list-disc pl-5">
-        <li className="text-gray-700 text-sm">
+        <li className="text-gray-700 text-sm mb-1">
           <span className="font-semibold">Language :</span> Yorùbá (a tonal language with deep proverbs, poetry, and praise names)
         </li>
-        <li className="text-gray-700 text-sm mt-1">
+        <li className="text-gray-700 text-sm mt-1 mb-1">
           <span className="font-semibold">Writing :</span> Developed using Latin script; early literacy promoted by Christian missionaries in the 1800s
         </li>
-        <li className="text-gray-700 text-sm mt-1">
+        <li className="text-gray-700 text-sm mt-1 mb-1">
           <span className="font-semibold">Identity :</span> Centered on lineage, spiritual connection, and oríkì (praise poetry)
         </li>
       </ul>
@@ -94,13 +94,84 @@ const Galary = () => {
 
   const igboContent = (
     <div>
-      <p>
-        The Igbo (also spelled Ibo) people are one of the largest ethnic groups in Africa, primarily located in{' '}
-        <span className="font-bold">southeastern Nigeria</span>, across states like Abia, Anambra, Ebonyi, Enugu, and Imo. With a population exceeding 30 million, they also have a strong diaspora presence worldwide.
-      </p>
-      <p>
-        The Igbo trace their origin to Nri, an ancient kingdom often referred to as the spiritual homeland of the Igbo. Historically, Igbo society was largely decentralized, consisting of autonomous communities and villages rather than a single, unified kingdom. Their cultural practices include the Mbari art tradition, a ritualistic art form dedicated to deities, and masquerade festivals like the Mmanwu.
-      </p>
+      <span
+        className="font-semibold h-[68px] flex items-center text-[#1E1B20] "
+        style={{
+          fontFamily: 'Manrope, sans-serif',
+          fontWeight: 600,
+          fontStyle: 'normal',
+          fontSize: '30px',
+          lineHeight: '60%',
+          letterSpacing: '-3%',
+        }}
+      >
+        <img src="/Church.png" alt="" />
+        <i className="fa-solid fa-language mr-3" aria-hidden="true"></i>
+        Language &amp; Religion
+      </span>
+      <ul className="list-disc pl-5">
+        <li className="text-gray-700 text-sm">
+          Speak the Igbo language with several dialects.
+        </li>
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Religiously diverse:</span> Traditional spirituality, Christianity (predominantly), and a growing cultural revival of indigenous beliefs.
+        </li>
+        
+      </ul>
+      <span
+        className="font-semibold h-[68px] flex items-center text-[#1E1B20]"
+        style={{
+          fontFamily: 'Manrope, sans-serif',
+          fontWeight: 600,
+          fontStyle: 'normal',
+          fontSize: '30px',
+          lineHeight: '60%',
+          letterSpacing: '-3%',
+        }}
+      ><img src="/Translator.png" alt="" />
+        <i className="fa-solid fa-language mr-3" aria-hidden="true"></i>
+        Clothing &amp; Symbol
+      </span>
+      <ul className="list-disc pl-5">
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Traditional belief system :</span> Ifá (divination system), with a pantheon of deities called Òrìṣà (e.g., Ọbàtálá)
+        </li>
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Key practices :</span> Rituals, festivals, drumming, ancestral reverence
+        </li>
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Modern influences :</span> Christianity and Islam coexist with traditional beliefs
+        </li>
+      </ul>
+
+      <span
+        className="font-semibold h-[68px] flex items-center text-[#1E1B20]"
+        style={{
+          fontFamily: 'Manrope, sans-serif',
+          fontWeight: 600,
+          fontStyle: 'normal',
+          fontSize: '30px',
+          lineHeight: '60%',
+          letterSpacing: '-3%',
+        }}
+      > <img src="/face.png" alt="" />
+        <i className="fa-solid fa-language mr-3" aria-hidden="true"></i>
+        Culture &amp; Symbols
+      </span>
+      <ul className="list-disc pl-5">
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Attire :</span> Agbada, Buba and Iro, Aso-Oke, Gele
+        </li>
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Art &amp; symbols :</span> Beadwork, talking drums (dundun), batik fabric, bronze sculpture (especially from ancient Ifẹ̀)
+        </li>
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Cuisine :</span> Àmàlà, Ewedu, Gbegiri, Ẹ̀bà, Ẹfó-riro, Jollof rice
+        </li>
+        <li className="text-gray-700 text-sm mt-1">
+          <span className="font-semibold">Values :</span> Respect for elders, communal life, proverbs, storytelling, and naming traditions
+        </li>
+      </ul>
     </div>
   );
 
@@ -210,7 +281,7 @@ const Galary = () => {
             </button>
           </div>
           {openSection === 'igbo' && (
-            <div className="mt-4 p-4 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out">
+            <div className="mt-4 p-4 bg-white rounded-lg transition-all duration-300 ease-in-out">
               {igboContent}
             </div>
           )}
