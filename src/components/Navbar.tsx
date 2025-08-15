@@ -5,9 +5,9 @@ import { BsThreeDots } from "react-icons/bs";
 import { FcGallery } from "react-icons/fc";
 
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [showAboutCard, setShowAboutCard] = useState<boolean>(false);
-  const aboutButtonRef = useRef<HTMLButtonElement | null>(null);
+	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+	const [showAboutCard, setShowAboutCard] = useState<boolean>(false);
+	const aboutButtonRef = useRef<HTMLButtonElement | null>(null);
 
   // Close the about card when clicking outside
   useEffect(() => {
@@ -63,13 +63,14 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
-              <button
-                ref={aboutButtonRef}
-                onClick={() => setShowAboutCard(!showAboutCard)}
-                className="text-gray-400 hover:text-gray-900 text-base sm:text-lg whitespace-nowrap overflow-hidden text-ellipsis"
-              >
-                About
-              </button>
+							<button
+								ref={aboutButtonRef}
+								onMouseEnter={() => setShowAboutCard(true)}
+								onMouseLeave={() => setShowAboutCard(false)}
+								className="text-gray-400 hover:text-gray-900 text-base sm:text-lg whitespace-nowrap overflow-hidden text-ellipsis"
+							>
+								About
+							</button>
             </li>
           </ul>
 
@@ -118,20 +119,21 @@ const Navbar: React.FC = () => {
               <div className="border-t border-gray-100"></div>
 
               {/* About Link (Mobile) */}
-              <button
-                onClick={() => {
-                  setShowAboutCard(!showAboutCard);
-                  setIsMenuOpen(false);
-                }}
-                className="flex items-start w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors duration-150"
-              >
-                <div className="flex-shrink-0 items-center">
-                  <img src="/kunle.png" alt="" className='w-5' />
-                </div>
-                <div className="ml-3">
-                  <p className="text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis">About</p>
-                </div>
-              </button>
+							<div
+								onMouseEnter={() => {
+									setShowAboutCard(true);
+									setIsMenuOpen(false);
+								}}
+								onMouseLeave={() => setShowAboutCard(false)}
+								className="flex items-start w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors duration-150 cursor-pointer"
+							>
+								<div className="flex-shrink-0 items-center">
+									<img src="/kunle.png" alt="" className='w-5' />
+								</div>
+								<div className="ml-3">
+									<p className="text-xs sm:text-sm font-medium text-gray-900 whitespace-nowrap overflow-hidden text-ellipsis">About</p>
+								</div>
+							</div>
             </div>
           </div>
         )}
