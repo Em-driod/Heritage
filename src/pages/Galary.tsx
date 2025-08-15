@@ -1,23 +1,12 @@
-import React, { useState } from 'react';
-import Modal from '../components/Modal'; // Assuming Modal.tsx or Modal.jsx is in the same directory
+import  { useState } from 'react';
 
 const Galary = () => {
-  interface ModalContent {
-    title: React.ReactNode;
-    content: React.ReactNode;
-  }
+  const [openSection, setOpenSection] = useState<string | null>(null);
 
-  const [modalContent, setModalContent] = useState<ModalContent | null>(null);
-
-  const handleOpenModal = (content: ModalContent) => {
-    setModalContent(content);
+  const toggleDropdown = (section: string) => {
+    setOpenSection(openSection === section ? null : section);
   };
 
-  const handleCloseModal = () => {
-    setModalContent(null);
-  };
-
-  // Content for each modal
   const yorubaContent = (
     <div>
       <span
@@ -30,7 +19,8 @@ const Galary = () => {
           lineHeight: '60%',
           letterSpacing: '-3%',
         }}
-      > <img src="/Translator.png" alt="" />
+      >
+        <img src="/Translator.png" alt="" />
         <i className="fa-solid fa-language mr-3" aria-hidden="true"></i>
         Language &amp; identity
       </span>
@@ -57,7 +47,6 @@ const Galary = () => {
         }}
       ><img src="/Church.png" alt="" />
         <i className="fa-solid fa-language mr-3" aria-hidden="true"></i>
-
         Religion &amp; Spirituality
       </span>
       <ul className="list-disc pl-5">
@@ -157,10 +146,18 @@ const Galary = () => {
           <div className="flex items-center mt-8">
             <span className="font-bold text-gray-700 mr-1 text-sm sm:text-base">• Primary Location:</span>
             <span className="text-gray-600 text-sm sm:text-base">Southwestern Nigeria</span>
-            <button onClick={() => handleOpenModal({ title: '', content: yorubaContent })} className="text-red-500 hover:underline ml-2 text-sm sm:text-base">
-              Read more...
+            <button
+              onClick={() => toggleDropdown('yoruba')}
+              className="text-red-500 hover:underline ml-2 text-sm sm:text-base"
+            >
+              {openSection === 'yoruba' ? 'Read less...' : 'Read more...'}
             </button>
           </div>
+          {openSection === 'yoruba' && (
+            <div className="mt-4 p-4 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out">
+              {yorubaContent}
+            </div>
+          )}
         </div>
         <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
           <div className="col-span-1">
@@ -205,10 +202,18 @@ const Galary = () => {
           <div className="flex items-center mt-8">
             <span className="font-bold text-gray-700 mr-1 text-sm sm:text-base">• Primary Location:</span>
             <span className="text-gray-600 text-sm sm:text-base">Southeastern Nigeria</span>
-            <button onClick={() => handleOpenModal({ title: 'Igbo', content: igboContent })} className="text-red-500 hover:underline ml-2 text-sm sm:text-base">
-              Read more...
+            <button
+              onClick={() => toggleDropdown('igbo')}
+              className="text-red-500 hover:underline ml-2 text-sm sm:text-base"
+            >
+              {openSection === 'igbo' ? 'Read less...' : 'Read more...'}
             </button>
           </div>
+          {openSection === 'igbo' && (
+            <div className="mt-4 p-4 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out">
+              {igboContent}
+            </div>
+          )}
         </div>
         <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
           <div className="col-span-1">
@@ -255,10 +260,18 @@ const Galary = () => {
           <div className="flex items-center mt-8">
             <span className="font-bold text-gray-700 mr-1 text-sm sm:text-base">• Primary Location:</span>
             <span className="text-gray-600 text-sm sm:text-base">Northern Nigeria</span>
-            <button onClick={() => handleOpenModal({ title: 'Hausa', content: hausaContent })} className="text-red-500 hover:underline ml-2 text-sm sm:text-base">
-              Read more...
+            <button
+              onClick={() => toggleDropdown('hausa')}
+              className="text-red-500 hover:underline ml-2 text-sm sm:text-base"
+            >
+              {openSection === 'hausa' ? 'Read less...' : 'Read more...'}
             </button>
           </div>
+          {openSection === 'hausa' && (
+            <div className="mt-4 p-4 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out">
+              {hausaContent}
+            </div>
+          )}
         </div>
         <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
           <div className="col-span-1">
@@ -275,11 +288,6 @@ const Galary = () => {
           </div>
         </div>
       </div>
-
-      {/* Modal is rendered here, only when modalContent is not null */}
-      <Modal show={modalContent !== null} onClose={handleCloseModal} title={modalContent?.title}>
-        {modalContent?.content}
-      </Modal>
     </div>
   );
 };
