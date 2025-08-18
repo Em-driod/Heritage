@@ -105,7 +105,7 @@ const Waitlist: React.FC = () => {
           </span>
         </motion.h1>
 
-        <motion.h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 sm:mb-7" variants={itemVariants}>Free in Beta!</motion.h2>
+        <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mt-0 sm:mt-0 flex items-center"  style={{ fontFamily: 'manrope', fontWeight: 600 }}  variants={itemVariants}>Free in Beta!</motion.h2>
 
         <motion.p className="text-[#7C787F] text-sm sm:text-base" variants={itemVariants}>
           Get early access to culturally intelligent design tools powered by AI. One click. Infinite tools.
@@ -194,7 +194,7 @@ const Waitlist: React.FC = () => {
           <div className="bg-white rounded shadow-sm p-3 flex flex-col items-start gap-3">
             <h3 className="font-semibold text-gray-400 text-sm sm:text-base">Color Palette</h3>
             <div className="flex items-center w-full justify-between sm:justify-around">
-              <div className="flex gap-2 sm:gap-4">
+              <div className="flex gap-2 sm:gap-1">
                 {colorPalettes.map((palette) => (
                   <div key={palette.id} className="relative w-6 h-6 sm:w-8 sm:h-8">
                     <div
