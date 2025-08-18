@@ -225,7 +225,7 @@ const Galary = () => {
             </button>
           </div>
           {openSection === 'yoruba' && (
-            <div className="mt-4 p-4 bg-gray-100 rounded-lg transition-all duration-300 ease-in-out">
+            <div className="mt-4 p-4 bg-white rounded-lg transition-all duration-300 ease-in-out">
               {yorubaContent}
             </div>
           )}

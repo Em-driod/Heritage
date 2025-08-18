@@ -120,10 +120,18 @@ const Waitlist: React.FC = () => {
           ))}
         </motion.ul>
 
-        <motion.div className="flex w-full max-w-md mt-6 sm:mt-8 gap-0.5" variants={itemVariants}>
-          <input type="email" placeholder="Enter your email" className="flex-1 border border-gray-300 rounded-l-lg lg:px-2 sm:px-2 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" />
-          <button className="flex-shrink-0  bg-gradient-to-r from-red-500 to-orange-500 hover:bg-orange-400 text-xs text-white font-thin px-4 py-2 rounded-r-lg w-[110px] whitespace-nowrap">Join Beta Squad</button>
-        </motion.div>
+        <motion.div className="flex w-full max-w-md mt-6 sm:mt-8 gap-0.5" variants={itemVariants}>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="flex-1 border border-gray-300 rounded-l-lg lg:px-2 sm:px-2 py-4 text-base focus:outline-none focus:ring-2 focus:ring-orange-500 h-14"
+          />
+          <button
+            className="flex-shrink-0 bg-gradient-to-r from-red-500 to-orange-600 hover:bg-orange-400 text-xs text-white font-thin px-4 py-4 rounded-r-lg w-[130px] whitespace-nowrap h-14 flex items-center justify-center "
+          >
+            Join Beta Squad
+          </button>
+        </motion.div>
 
         <motion.p className="text-xs sm:text-sm text-gray-500" variants={itemVariants}>We'll never spam. You'll only hear when it matters.</motion.p>
 
