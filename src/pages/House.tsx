@@ -12,14 +12,12 @@ const Home = () => {
      
 
       <Hero />
-   
-      <Landsecont />
+    <Landsecont />
       <Landthird />
      <Landfourth />
      <Landfifth />
      <Landsix />
-    
-       <Landseven />
+    <Landseven />
     
     </div>
   )

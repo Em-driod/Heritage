@@ -108,7 +108,7 @@ const Waitlist: React.FC = () => {
         <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mt-0 sm:mt-0 flex items-center"  style={{ fontFamily: 'manrope', fontWeight: 600 }}  variants={itemVariants}>Free in Beta!</motion.h2>
 
         <motion.p className="text-[#7C787F] text-sm sm:text-base" variants={itemVariants}>
-          Get early access to culturally intelligent design tools powered by AI. One click. Infinite tools.
+          Get early access to culturally intelligent design tools powered <br /> by AI. One click. Infinite tools.
         </motion.p>
 
         <motion.ul className="space-y-2 sm:space-y-6 mb-4 sm:mb-7 mt-4 sm:mt-7 text-gray-700 text-sm sm:text-base" variants={containerVariants}>
@@ -146,7 +146,7 @@ const Waitlist: React.FC = () => {
       </motion.div>
 
       {/* Right Section */}
-      <motion.div className="mt-8 sm:mt-12 md:mt-0 w-full md:w-[550px] bg-[#CBD5E1] rounded-xl p-4 sm:p-6 shadow-md space-y-4 sm:space-y-6" variants={rightSectionVariants} initial="hidden" animate="visible">
+  <motion.div className="mt-8 sm:mt-12 md:mt-0 w-full md:w-[550px] bg-[#CBD5E1] rounded-xl p-4 sm:p-6 shadow-md space-y-2 sm:space-y-3" variants={rightSectionVariants} initial="hidden" animate="visible">
         {/* Generated Assets */}
         <motion.div className="bg-white rounded-lg shadow-sm p-3" variants={itemVariants}>
           <h3 className="font-semibold text-gray-400 mb-2 text-sm sm:text-base">Generated Assets</h3>
