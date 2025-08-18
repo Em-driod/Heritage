@@ -221,7 +221,7 @@ const Waitlist: React.FC = () => {
               </div>
               
               <div className="flex gap-2 sm:gap-3">
-                <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
+                <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs ml-9 font-medium border border-pink-200">
                   <img src="/Vector.png" alt="" className="w-3 h-3 mr-1" /> Export
                 </button>
                 <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200">
