@@ -96,7 +96,7 @@ const Waitlist: React.FC = () => {
   return (
     <div className="min-h-screen mt-6 bg-white flex flex-col md:flex-row items-center md:justify-center px-4 sm:px-6 md:px-12 py-8 sm:py-12 text-gray-900">
       {/* Left Section */}
-      <motion.div className="w-full max-w-xl space-y-4 sm:space-y-6 md:mr-8 mt-8 sm:mt-14" variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div className="w-full max-w-xl space-y-2 sm:space-y-2 md:mr-8 mt-8 sm:mt-14" variants={containerVariants} initial="hidden" animate="visible">
         <motion.h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mt-8 sm:mt-12 flex items-center" style={{ fontFamily: 'manrope', fontWeight: 600 }} variants={itemVariants}>
           <img src="/victory.png" alt="" className="w-8 h-8 sm:w-12 sm:h-12 mr-2" />
           <span className="flex items-center">
@@ -190,47 +190,46 @@ const Waitlist: React.FC = () => {
         </motion.div>
 
         {/* Color Palettes */}
-        <motion.div variants={itemVariants}>
-          <div className="bg-white rounded shadow-sm p-3 flex flex-col items-start gap-3">
-            <h3 className="font-semibold text-gray-400 text-sm sm:text-base">Color Palette</h3>
-            <div className="flex items-center w-full justify-between sm:justify-around">
-              <div className="flex gap-2 sm:gap-1">
-                {colorPalettes.map((palette) => (
-                  <div key={palette.id} className="relative w-6 h-6 sm:w-8 sm:h-8">
-                    <div
-                      onMouseEnter={() => setHoveredPaletteId(palette.id)}
-                      onMouseLeave={() => setHoveredPaletteId(null)}
-                    >
-                      <img src={palette.image} alt={`Palette ${palette.id}`} className="w-full h-full object-cover rounded-full border border-gray-200 cursor-pointer" />
-                      <AnimatePresence>
-                        {hoveredPaletteId === palette.id && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 10 }}
-                            transition={{ duration: 0.3 }}
-                            className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-48 sm:w-64 bg-gray-50 p-3 rounded-lg shadow-lg text-xs z-10"
-                          >
-                            {palette.details}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="flex gap-2 sm:gap-3">
-                <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs ml-9 font-medium border border-pink-200">
-                  <img src="/Vector.png" alt="" className="w-3 h-3 mr-1" /> Export
-                </button>
-                <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200">
-                  <FaShare className="mr-1" /> Share
-                </button>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        <motion.div variants={itemVariants}>
+          <div className="bg-white rounded shadow-sm p-3 flex flex-col items-start gap-3">
+            <h3 className="font-semibold text-gray-400 text-sm sm:text-base">Color Palette</h3>
+            <div className="flex items-center w-full">
+              <div className="flex gap-2 sm:gap-1 flex-shrink-0">
+                {colorPalettes.map((palette) => (
+                  <div key={palette.id} className="relative w-6 h-6 sm:w-8 sm:h-8">
+                    <div
+                      onMouseEnter={() => setHoveredPaletteId(palette.id)}
+                      onMouseLeave={() => setHoveredPaletteId(null)}
+                    >
+                      <img src={palette.image} alt={`Palette ${palette.id}`} className="w-full h-full object-cover rounded-full border border-gray-200 cursor-pointer" />
+                      <AnimatePresence>
+                        {hoveredPaletteId === palette.id && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.3 }}
+                            className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-48 sm:w-64 bg-gray-50 p-3 rounded-lg shadow-lg text-xs z-10"
+                          >
+                            {palette.details}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex gap-2 sm:gap-3 flex-grow justify-end">
+                <button className="flex items-center px-2 py-1 bg-pink-100 text-pink-800 rounded-md text-xs font-medium border border-pink-200">
+                  <img src="/Vector.png" alt="" className="w-3 h-3 mr-1" /> Export
+                </button>
+                <button className="flex items-center px-2 py-1 bg-blue-100 text-blue-500 rounded-md text-xs font-medium border border-blue-200">
+                  <FaShare className="mr-1" /> Share
+                </button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );

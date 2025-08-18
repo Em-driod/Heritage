@@ -12,7 +12,7 @@ const Home = () => {
      
 
       <Hero />
-    <Landsecont />
+      <Landsecont />
       <Landthird />
      <Landfourth />
      <Landfifth />
