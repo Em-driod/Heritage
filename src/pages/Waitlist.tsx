@@ -149,7 +149,7 @@ const Waitlist: React.FC = () => {
 
       {/* Right Section */}
       <motion.div
-        className="mt-8 sm:mt-12 md:mt-0 w-full md:w-[580px] bg-[#CBD5E1] rounded-xl p-4 sm:p-6 shadow-lg space-y-2 sm:space-y-3"
+        className="mt-24 sm:mt-16 md:mt-0 w-full md:w-[580px] bg-[#CBD5E1] rounded-xl p-4 sm:p-6 shadow-lg space-y-2 sm:space-y-3"
         variants={rightSectionVariants}
         initial="hidden"
         animate="visible"
