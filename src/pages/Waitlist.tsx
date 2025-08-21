@@ -159,7 +159,7 @@ const Waitlist: React.FC = () => {
       >
         {/* Generated Assets */}
         <motion.div className="bg-white rounded-lg shadow-sm p-3" variants={itemVariants} whileHover={{ y: -2 }}>
-          <h3 className="font-semibold text-gray-400 mb-2 text-sm sm:text-base">Generated Assets</h3>
+          <h3 className="font-thin text-gray-400 mb-2 text-sm sm:text-base">Generated Assets</h3>
           <motion.ul className="space-y-3 sm:space-y-4" variants={containerVariants}>
             {generatedAssets.map((item) => (
               <motion.li
@@ -175,7 +175,7 @@ const Waitlist: React.FC = () => {
                     onMouseLeave={() => setHoveredAssetId(null)}
                     className="relative"
                   >
-                    <img src={item.image} alt={item.name} className="w-12 h-12 sm:w-16 sm:h-16 object-cover rounded-md mr-3 sm:mr-3 cursor-pointer" />
+                    <img src={item.image} alt={item.name} className="w-8 h-8 sm:w-10 sm:h-10 object-cover rounded-md mr-2 sm:mr-2 cursor-pointer" />
                     <AnimatePresence>
                       {hoveredAssetId === item.id && (
                         <motion.div
@@ -208,7 +208,7 @@ const Waitlist: React.FC = () => {
         {/* Color Palettes */}
         <motion.div variants={itemVariants}>
           <motion.div className="bg-white rounded shadow-sm p-3 flex flex-col items-start gap-3" whileHover={{ y: -2 }}>
-            <h3 className="font-semibold text-gray-400 text-sm sm:text-base">Color Palette</h3>
+            <h3 className="font-thin text-gray-400 text-sm sm:text-base">Color Palette</h3>
             <div className="flex items-center w-full">
               <div className="flex gap-2 sm:gap-1 flex-shrink-0">
                 {colorPalettes.map((palette) => (
@@ -217,7 +217,7 @@ const Waitlist: React.FC = () => {
                       onMouseEnter={() => setHoveredPaletteId(palette.id)}
                       onMouseLeave={() => setHoveredPaletteId(null)}
                     >
-                      <img src={palette.image} alt={`Palette ${palette.id}`} className="w-full h-full object-cover rounded-full border border-gray-200 cursor-pointer" />
+                      <img src={palette.image} alt={`Palette ${palette.id}`} className="w-5 h-5 sm:w-6 sm:h-6 object-cover rounded-full border border-gray-200 cursor-pointer" />
                       <AnimatePresence>
                         {hoveredPaletteId === palette.id && (
                           <motion.div
