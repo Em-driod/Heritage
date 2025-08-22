@@ -425,16 +425,16 @@ const Galary = () => {
         </div>
         <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
           <div className="col-span-1">
-            <img src="/odu.png" alt="Hausa traditional architecture" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/hau1.png" alt="Hausa traditional architecture" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/eyo.png" alt="Hausa horsemen during a festival" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/hau2.png" alt="Hausa horsemen during a festival" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/ilu.png" alt="Hausa crafts" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/hau3.png" alt="Hausa crafts" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/ofi.png" alt="Hausa traditional attire" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/hau4.png" alt="Hausa traditional attire" className="w-full h-auto object-cover rounded-lg" />
           </div>
         </div>
       </div>
