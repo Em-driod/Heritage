@@ -669,16 +669,16 @@ const Galary = () => {
         </div>
         <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
           <div className="col-span-1">
-            <img src="/1.png" alt="Italian culture" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/italian1.png" alt="Italian culture" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/2.png" alt="Italian cuisine" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/italian2.png" alt="Italian cuisine" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/3.png" alt="Italian landmarks" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/italian3.png" alt="Italian landmarks" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/4.png" alt="Italian fashion" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/italian4.png" alt="Italian fashion" className="w-full h-auto object-cover rounded-lg" />
           </div>
         </div>
       </div>
@@ -775,16 +775,16 @@ const Galary = () => {
         </div>
         <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
           <div className="col-span-1">
-            <img src="/1.png" alt="Mexican culture" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/mex1.png" alt="Mexican culture" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/2.png" alt="Mexican cuisine" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/mex2.png" alt="Mexican cuisine" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/3.png" alt="Mexican traditions" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/mex3.png" alt="Mexican traditions" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/4.png" alt="Mexican festivals" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/mex 4.png" alt="Mexican festivals" className="w-full h-auto object-cover rounded-lg" />
           </div>
         </div>
       </div>
