@@ -784,7 +784,7 @@ const Galary = () => {
             <img src="/mex3.png" alt="Mexican traditions" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/mex 4.png" alt="Mexican festivals" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/mex4.png" alt="Mexican festivals" className="w-full h-auto object-cover rounded-lg" />
           </div>
         </div>
       </div>
@@ -877,16 +877,16 @@ const Galary = () => {
         </div>
         <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
           <div className="col-span-1">
-            <img src="/1.png" alt="British culture" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/bri1.png" alt="British culture" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/2.png" alt="British landmarks" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/bri2.png" alt="British landmarks" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/3.png" alt="British traditions" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/bri3.png" alt="British traditions" className="w-full h-auto object-cover rounded-lg" />
           </div>
           <div className="col-span-1">
-            <img src="/4.png" alt="British cuisine" className="w-full h-auto object-cover rounded-lg" />
+            <img src="/bri4.png" alt="British cuisine" className="w-full h-auto object-cover rounded-lg" />
           </div>
         </div>
       </div>
