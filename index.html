@@ -7,6 +7,16 @@
     <title>Heritengine</title>
     <!-- Google Fonts: Manrope and Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      // Handle redirect from 404.html
+      (function() {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== window.location.pathname) {
+          window.history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
