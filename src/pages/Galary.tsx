@@ -890,6 +890,366 @@ const Galary = () => {
           </div>
         </div>
       </div>
+
+      {/* India Section */}
+      <hr className="my-16 border-t-2 border-gray-200" />
+      <div className="bg-white">
+        <div className="p-4 sm:p-8 mt-4 sm:mt-16">
+          <div className="flex items-center">
+            <img src="/Doc.png" alt="" className="h-8 w-8 sm:h-auto sm:w-auto" />
+            <div
+              className="text-3xl sm:text-5xl font-normal ml-2"
+              style={{
+                backgroundImage: 'linear-gradient(to right, #e75a7c, #f7b446)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              India
+            </div>
+          </div>
+          <div className="flex items-center space-x-2 mt-4">
+            <img src="/Family Tree.png" alt="" className="h-5 w-5 sm:h-auto sm:w-auto" />
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-700">Origin & Ancestry</h2>
+          </div>
+          <p className="mt-4 text-gray-600 text-sm sm:text-base">
+            India, the world's largest democracy, is a land of ancient civilizations, diverse cultures, and rich traditions. With a history spanning over 5,000 years, 
+            India is known for its spiritual heritage, architectural marvels, and as the birthplace of major world religions including Hinduism, Buddhism, Jainism, and Sikhism.
+          </p>
+          <div className="flex items-center mt-8">
+            <span className="font-bold text-gray-700 mr-1 text-sm sm:text-base">• Primary Location:</span>
+            <span className="text-gray-600 text-sm sm:text-base">South Asia</span>
+            <button
+              onClick={() => toggleDropdown('india')}
+              className="text-red-500 hover:underline ml-2 text-sm sm:text-base"
+            >
+              {openSection === 'india' ? 'Read less...' : 'Read more...'}
+            </button>
+          </div>
+          {openSection === 'india' && (
+            <div className="mt-4 p-4 bg-white rounded-lg transition-all duration-300 ease-in-out">
+              <div className="flex items-center py-2">
+                <img src="/Translator.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Language & Identity
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Languages:</span> Hindi, English (official), and 21 other recognized regional languages including Bengali, Telugu, Marathi, Tamil, and Urdu.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Scripts:</span> Devanagari, Bengali, Gurmukhi, Tamil, Telugu, and more.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Identity:</span> Unity in diversity, strong family values, respect for elders, and deep-rooted traditions.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Religion & Spirituality
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Major religions:</span> Hinduism (79.8%), Islam (14.2%), Christianity (2.3%), Sikhism (1.7%), Buddhism (0.7%), Jainism (0.4%), and others.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Key practices:</span> Yoga, meditation, temple worship, festivals, and pilgrimage.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Sacred sites:</span> Varanasi, Golden Temple, Bodh Gaya, Ajanta-Ellora, and Tirupati.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/face.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Culture & Symbols
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Attire:</span> Sari, salwar kameez, dhoti, kurta, and sherwani.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Art & symbols:</span> Lotus (national flower), peacock (national bird), Taj Mahal, classical dance forms, and Bollywood.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Cuisine:</span> Diverse regional cuisines featuring spices, rice, wheat, lentils, and vegetables. Popular dishes include biryani, butter chicken, dosa, and samosas.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Values:</span> Respect for all religions, hospitality, family bonds, and education.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Traditions & Festivals
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Diwali - Festival of Lights</li>
+                <li className="text-gray-700 text-sm">Holi - Festival of Colors</li>
+                <li className="text-gray-700 text-sm">Eid, Christmas, and Guru Nanak Jayanti</li>
+                <li className="text-gray-700 text-sm">Pongal, Onam, Bihu, and other regional harvest festivals</li>
+              </ul>
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
+          <div className="col-span-1">
+            <img src="/ind1.png" alt="Indian culture" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/ind2.png" alt="Indian landmarks" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/ind3.png" alt="Indian traditions" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/ind4.png" alt="Indian cuisine" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+        </div>
+      </div>
+
+      {/* China Section */}
+      <hr className="my-16 border-t-2 border-gray-200" />
+      <div className="bg-white">
+        <div className="p-4 sm:p-8 mt-4 sm:mt-16">
+          <div className="flex items-center">
+            <img src="/Doc.png" alt="" className="h-8 w-8 sm:h-auto sm:w-auto" />
+            <div
+              className="text-3xl sm:text-5xl font-normal ml-2"
+              style={{
+                backgroundImage: 'linear-gradient(to right, #e75a7c, #f7b446)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              China
+            </div>
+          </div>
+          <div className="flex items-center space-x-2 mt-4">
+            <img src="/Family Tree.png" alt="" className="h-5 w-5 sm:h-auto sm:w-auto" />
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-700">Origin & Ancestry</h2>
+          </div>
+          <p className="mt-4 text-gray-600 text-sm sm:text-base">
+            China, one of the world's oldest continuous civilizations, has a recorded history spanning over 4,000 years. 
+            As the most populous country, it's known for its ancient philosophy, technological innovations, and rich cultural heritage. 
+            China's influence has shaped East Asian culture through its writing system, philosophy, and traditions.
+          </p>
+          <div className="flex items-center mt-8">
+            <span className="font-bold text-gray-700 mr-1 text-sm sm:text-base">• Primary Location:</span>
+            <span className="text-gray-600 text-sm sm:text-base">East Asia</span>
+            <button
+              onClick={() => toggleDropdown('china')}
+              className="text-red-500 hover:underline ml-2 text-sm sm:text-base"
+            >
+              {openSection === 'china' ? 'Read less...' : 'Read more...'}
+            </button>
+          </div>
+          {openSection === 'china' && (
+            <div className="mt-4 p-4 bg-white rounded-lg transition-all duration-300 ease-in-out">
+              <div className="flex items-center py-2">
+                <img src="/Translator.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Language & Identity
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Language:</span> Mandarin Chinese (official), along with several major dialects including Cantonese, Shanghainese, and Hokkien.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Writing system:</span> Chinese characters (Hanzi), used for over 3,000 years.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Identity:</span> Strong sense of cultural continuity, family values, and respect for education and authority.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Philosophy & Religion
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Major philosophies:</span> Confucianism, Taoism, and Buddhism.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Religious practices:</span> Ancestor veneration, folk religion, Buddhism, Taoism, Islam, and Christianity.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Key concepts:</span> Harmony (和 hé), face (面子 miànzi), guanxi (relationships), and filial piety (孝 xiào).</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/face.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Culture & Arts
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Traditional arts:</span> Calligraphy, ink wash painting, porcelain, jade carving, and silk embroidery.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Performing arts:</span> Peking opera, Chinese dance, and traditional music with instruments like guzheng and pipa.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Martial arts:</span> Kung Fu, Tai Chi, and Wushu.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Literature:</span> Classic works like "The Art of War," "Dream of the Red Chamber," and ancient poetry.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Traditions & Festivals
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Chinese New Year (Spring Festival) - Most important traditional holiday</li>
+                <li className="text-gray-700 text-sm">Mid-Autumn Festival - Mooncakes and family reunions</li>
+                <li className="text-gray-700 text-sm">Dragon Boat Festival - Zongzi and dragon boat races</li>
+                <li className="text-gray-700 text-sm">Qingming Festival - Tomb-sweeping day to honor ancestors</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Cuisine & Tea Culture
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Regional cuisines:</span> Eight major culinary traditions including Sichuan, Cantonese, Shandong, and Huaiyang.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Staple foods:</span> Rice, wheat (noodles, dumplings), tofu, and a variety of vegetables and meats.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Tea culture:</span> Ceremonial tea preparation, with varieties like green tea, oolong, pu'er, and jasmine tea.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Dining customs:</span> Family-style meals, chopstick etiquette, and the importance of sharing food.</li>
+              </ul>
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
+          <div className="col-span-1">
+            <img src="/chi1.png" alt="Chinese culture" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/chi2.png" alt="Chinese landmarks" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/chi3.png" alt="Chinese traditions" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/chi4.png" alt="Chinese cuisine" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+        </div>
+      </div>
+
+      {/* Pakistan Section */}
+      <hr className="my-16 border-t-2 border-gray-200" />
+      <div className="bg-white">
+        <div className="p-4 sm:p-8 mt-4 sm:mt-16">
+          <div className="flex items-center">
+            <img src="/Doc.png" alt="" className="h-8 w-8 sm:h-auto sm:w-auto" />
+            <div
+              className="text-3xl sm:text-5xl font-normal ml-2"
+              style={{
+                backgroundImage: 'linear-gradient(to right, #e75a7c, #f7b446)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}
+            >
+              Pakistan
+            </div>
+          </div>
+          <div className="flex items-center space-x-2 mt-4">
+            <img src="/Family Tree.png" alt="" className="h-5 w-5 sm:h-auto sm:w-auto" />
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-700">Origin & Ancestry</h2>
+          </div>
+          <p className="mt-4 text-gray-600 text-sm sm:text-base">
+            Pakistan, officially the Islamic Republic of Pakistan, is a country in South Asia with a rich history that dates back to the ancient Indus Valley Civilization. 
+            Formed in 1947, it's a diverse nation with multiple ethnic groups, languages, and cultural traditions, 
+            united by the Islamic faith and a shared historical heritage.
+          </p>
+          <div className="flex items-center mt-8">
+            <span className="font-bold text-gray-700 mr-1 text-sm sm:text-base">• Primary Location:</span>
+            <span className="text-gray-600 text-sm sm:text-base">South Asia</span>
+            <button
+              onClick={() => toggleDropdown('pakistan')}
+              className="text-red-500 hover:underline ml-2 text-sm sm:text-base"
+            >
+              {openSection === 'pakistan' ? 'Read less...' : 'Read more...'}
+            </button>
+          </div>
+          {openSection === 'pakistan' && (
+            <div className="mt-4 p-4 bg-white rounded-lg transition-all duration-300 ease-in-out">
+              <div className="flex items-center py-2">
+                <img src="/Translator.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Language & Identity
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Official languages:</span> Urdu (national) and English.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Major regional languages:</span> Punjabi, Sindhi, Pashto, Balochi, and Saraiki.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Script:</span> Modified Perso-Arabic script (Nastaliq) for Urdu and other regional languages.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semi-bold">Identity:</span> Strong Islamic identity with regional cultural influences, emphasizing family values and hospitality.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Religion & Spirituality
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Religion:</span> Islam (96.4% Muslim, with Sunni majority and Shia minority), along with small Hindu, Christian, and Sikh communities.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Religious practices:</span> Daily prayers, Ramadan fasting, Zakat (charity), and Hajj pilgrimage.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Sufi influence:</span> Strong Sufi tradition with shrines and devotional music (Qawwali).</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Religious sites:</span> Faisal Mosque (Islam), Katas Raj Temples (Hinduism), and various Sufi shrines.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/face.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Culture & Arts
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Traditional attire:</span> Shalwar kameez (national dress), sherwani, and dupatta for women.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Music and dance:</span> Qawwali, Ghazal, folk music, and traditional dances like Bhangra and Kathak.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Handicrafts:</span> Pottery, carpets, woodwork, and truck art.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Literature:</span> Rich tradition of Urdu and regional language poetry and prose.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Cinema:</span> Lollywood (Punjabi/Urdu cinema) and Pashto film industry.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Cuisine
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Staples:</span> Wheat (roti, naan), rice (biryani, pulao), lentils (daal), and meat (chicken, beef, mutton).</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Popular dishes:</span> Biryani, nihari, haleem, karahi, seekh kebabs, and various types of curries.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Breads:</span> Naan, roti, paratha, and kulcha.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Beverages:</span> Chai (tea), lassi, and sugarcane juice.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Sweets:</span> Gulab jamun, jalebi, barfi, and kheer.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Traditions & Festivals
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Islamic holidays:</span> Eid-ul-Fitr, Eid-ul-Adha, and Ramadan.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">National days:</span> Pakistan Day (March 23), Independence Day (August 14), and Defense Day (September 6).</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Cultural festivals:</span> Basant (spring festival), Shandur Polo Festival, and Lok Mela.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Sufi festivals:</span> Urs celebrations at various shrines across the country.</li>
+              </ul>
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Sports & Recreation
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Cricket:</span> The most popular sport, with a passionate fan base and successful national team.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Hockey:</span> National sport, with a strong historical record in international competitions.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Polo:</span> Played in northern regions like Gilgit-Baltistan and Chitral.</li>
+                <li className="text-gray-700 text-sm"><span className="font-semibold">Traditional sports:</span> Kabaddi, wrestling (kushti), and tent pegging.</li>
+              </ul>
+            </div>
+          )}
+        </div>
+        <div className="grid grid-cols-2 gap-2 p-4 lg:pr-20 sm:pr-0 sm:p-8 max-w-full mx-auto">
+          <div className="col-span-1">
+            <img src="/pak1.png" alt="Pakistani culture" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/pak2.png" alt="Pakistani landmarks" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/pak3.png" alt="Pakistani traditions" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+          <div className="col-span-1">
+            <img src="/pak4.png" alt="Pakistani cuisine" className="w-full h-auto object-cover rounded-lg" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
