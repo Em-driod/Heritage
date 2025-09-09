@@ -621,36 +621,45 @@ const Galary = () => {
               <div className="flex items-center py-2">
                 <img src="/Translator.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Language & Identity
+                  History & Civilization
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Language:</span> Italian (official), regional dialects (Sicilian, Venetian, Neapolitan, etc.).</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Identity:</span> Strong regional pride, family-centric, Catholic heritage.</li>
+                <li className="text-gray-700 text-sm">Ancient Rome (753 BCE–476 CE) was one of the greatest civilizations in human history, influencing law, governance, architecture, and language.</li>
+
+  <li className="text-gray-700 text-sm"  >The Renaissance (1300s–1600s), born in cities like Florence, Rome, and Venice, saw revolutionary achievements in art, architecture, science, and philosophy. </li>
+<li className="text-gray-700 text-sm">Italy was unified as a nation-state in 1861, bringing together culturally rich regions with diverse dialects and traditions. </li>
+<li className="text-gray-700 text-sm">Today, Italy balances ancient heritage with modern creativity, remaining a global cultural and fashion capital.</li>
+                
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Religion & Spirituality
+                  Language & Religion
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Traditional beliefs:</span> Roman Catholicism, saints, festivals, and processions.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Key practices:</span> Sunday family meals, religious holidays, art and architecture.</li>
+                <li className="text-gray-700 text-sm">The majority of Italians identify as Roman Catholic, with Vatican City, the heart of global Catholicism, located in Rome. </li>
+ <li className="text-gray-700 text-sm"> Deep traditions of Catholic rituals, festivals, and saints' days still shape daily life in many regions. </li>
+<li className="text-gray-700 text-sm"> Italy also has growing communities of other Christian denominations, Muslims, and non-religious individuals. </li>
+<li className="text-gray-700 text-sm">The official language is Italian, a Romance language descended from Latin. </li>
+< li className="text-gray-700 text-sm">Many regions have strong dialects or regional languages (e.g., Neapolitan, Sicilian, Venetian, Sardinian).</li>
+<li className="text-gray-700 text-sm">Italian is renowned for its musicality, and is often associated with opera, poetry, and fine arts.</li>
+               
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/face.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Culture & Symbols
+                  Clothings & Symbols
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Attire:</span> Fashion-forward, tailored suits, regional costumes.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Art & symbols:</span> Renaissance art, Roman ruins, opera, Ferrari, pasta.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Cuisine:</span> Pizza, pasta, gelato, espresso, olive oil.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Values:</span> Creativity, hospitality, family, and tradition.</li>
+                <li className="text-gray-700 text-sm">Traditional attire varies by region—often elaborate, embroidered garments used during festivals and weddings. </li>
+<li  className="text-gray-700 text-sm">Italy is a modern fashion powerhouse—home to Milan Fashion Week and luxury brands like Gucci, Prada, Armani, Versace. </li>
+<li  className="text-gray-700 text-sm">National symbols: Olive branches, grapes, the Colosseum, Leaning Tower of Pisa, and the Tricolor flag (green, white, red).</li>
+             
               </ul>
    <span className="font-semibold h-[68px] flex items-center text-[#1E1B20]" style={{fontFamily: 'Manrope, sans-serif',fontWeight: 600,fontStyle: 'normal',fontSize: '30px',lineHeight: '60%',letterSpacing: '-3%',}}>
                 <img src="/face.png" alt="" />
