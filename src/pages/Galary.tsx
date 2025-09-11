@@ -663,15 +663,112 @@ const Galary = () => {
               </ul>
    <span className="font-semibold h-[68px] flex items-center text-[#1E1B20]" style={{fontFamily: 'Manrope, sans-serif',fontWeight: 600,fontStyle: 'normal',fontSize: '30px',lineHeight: '60%',letterSpacing: '-3%',}}>
                 <img src="/face.png" alt="" />
-                Culture & Symbols
+                Culture & Arts
               </span>
               <ul className="list-disc pl-5">
-                <li className="text-gray-700 text-sm mt-1"><span className="font-semibold">Attire :</span> Kimono, yukata, school uniforms.</li>
-                <li className="text-gray-700 text-sm mt-1"><span className="font-semibold">Art & symbols :</span> Origami, cherry blossoms, samurai, anime, manga.</li>
-                <li className="text-gray-700 text-sm mt-1"><span className="font-semibold">Cuisine :</span> Sushi, ramen, tempura, matcha, bento.</li>
-                <li className="text-gray-700 text-sm mt-1"><span className="font-semibold">Values :</span> Respect, discipline, innovation, and harmony.
-                </li>
+                <li className="text-gray-700 text-sm mt-1">Italy is the birthplace of Leonardo da Vinci, Michelangelo, Dante, Raphael, Botticelli, and Vivaldi. </li>
+<li className="text-gray-700 text-sm mt-1">It’s a global center of fine arts, literature, architecture, and design.</li>
+ <li className="text-gray-700 text-sm mt-1">   Famous for Baroque cathedrals, Roman ruins, and Renaissance masterpieces. </li>
+ <li className="text-gray-700 text-sm mt-1">  Italian culture values beauty, expression, and craftsmanship—la bella figura (making a good impression) is a cultural ideal.</li>
+               
               </ul>
+
+
+
+
+
+
+   <div className="flex items-center py-2 mt-4">
+                <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Cuisine
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Italian cuisine is among the most beloved in the world. </li>
+ <li className="text-gray-700 text-sm"> Pasta (spaghetti, penne, lasagna) </li>
+<li className="text-gray-700 text-sm"> Pizza (originating from Naples) </li>
+<li className="text-gray-700 text-sm">Cheese (Parmesan, mozzarella) </li>
+< li className="text-gray-700 text-sm">Wines (Chianti, Barolo, Prosecco).</li>
+<li className="text-gray-700 text-sm">Each region has distinct and recipe, shaped by geography and nature.</li>
+               
+              </ul>
+
+
+
+
+
+
+
+
+
+
+               <div className="flex items-center py-2 mt-4">
+                <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Craftmanship & Heritage
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Italy has centuries-old traditions of leatherwork, glassblowing (Murano), ceramics, tailoring, and silk weaving. </li>
+ <li className="text-gray-700 text-sm"> Italian artisanship is globally admired for its precision, elegance, and durability. </li>
+<li className="text-gray-700 text-sm"> Pizza (originating from Naples) </li>
+<li className="text-gray-700 text-sm">Venetian masks, Sicilian carts, and Florentine goldwork are heritage icons. </li>
+
+               
+              </ul>
+
+
+
+
+
+
+
+
+              
+               <div className="flex items-center py-2 mt-4">
+                <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Festivals & Traditions
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Rich calendar of cultural events: </li>
+ <li className="text-gray-700 text-sm"> Carnevale di Venezia (Venice Carnival) </li>
+<li className="text-gray-700 text-sm"> Palio di Siena (horse race)</li>
+<li className="text-gray-700 text-sm">Festa della Repubblica (Republic Day) </li>
+<li className="text-gray-700 text-sm">Deep regional pride and storytelling through folklore, music, and dance. </li>
+
+               
+              </ul>
+
+
+
+
+
+
+
+
+   <div className="flex items-center py-2 mt-4">
+                <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Lagacy & Global Impact
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Italian culture laid foundations for Western art, music, law, architecture, and science. </li>
+ <li className="text-gray-700 text-sm"> Global diaspora of Italian immigrants helped spread Italian food, language, Catholicism, and values </li>
+<li className="text-gray-700 text-sm"> Continues to lead in design, automotive (Ferrari, Lamborghini), gastronomy, and cultural diplomacy.</li>
+
+               
+              </ul>
+
+
+
+
+
+
+
 
             </div>
           )}
@@ -739,46 +836,199 @@ const Galary = () => {
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Language:</span> Spanish (official), Nahuatl, Maya, and other indigenous languages.</li>
+                <li className="text-gray-700 text-sm">Maya (2000 BCE–1500 CE): Known for astronomy, pyramids, and hieroglyphic writing.</li>
+<li className="text-gray-700 text-sm"> Aztecs (1325–1521 CE): Built the great city of Tenochtitlan (now Mexico City), practiced calendar astronomy and engineering.</li>
+<li className="text-gray-700 text-sm">   Olmec, Zapotec, Toltec, and Mixtec cultures contributed to spiritual, artistic, and architectural legacies.</li>
                 <li className="text-gray-700 text-sm"><span className="font-semibold">Identity:</span> Mestizo (mixed indigenous and European ancestry), strong regional pride, family-centric values.</li>
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Religion & Spirituality
+                  Colonial Period & Mestizaje
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Traditional beliefs:</span> Blend of Catholicism and indigenous rituals (e.g., Day of the Dead).</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Key practices:</span> Festivals, processions, folk saints, ancestral reverence.</li>
+                <li className="text-gray-700 text-sm">In 1521, Hernán Cortés conquered the Aztec Empire.</li>
+<li  className="text-gray-700 text-sm"> Colonization introduced Catholicism, Spanish language, and European institutions.</li>
+<li  className="text-gray-700 text-sm">The Mestizo identity (mixed Indigenous and European ancestry) became the foundation of modern Mexican identity.</li>
+<li  className="text-gray-700 text-sm">Independence from Spain was achieved in 1810–1821.</li>
+              
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/face.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Culture & Symbols
+                  Language & Ethnic Composition
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Attire:</span> Colorful dresses, sombreros, embroidered shirts.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Art & symbols:</span> Papel picado, murals, piñatas, Frida Kahlo, mariachi music.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Cuisine:</span> Tacos, tamales, mole, pozole, chiles en nogada.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Values:</span> Hospitality, respect for elders, storytelling, and community.</li>
+                <li className="text-gray-700 text-sm">Official language: Spanish </li>
+<li className="text-gray-700 text-sm">Over 7 million speak Indigenous languages like Nahuatl, Maya, Mixtec, Zapotec, and Otomi.</li>
+<li className="text-gray-700 text-sm">Ethnic groups: Mestizo (majority), Indigenous, Afro-Mexican, and smaller communities of Europeans, Asians, and Middle Eastern desce</li>
+               
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Traditions & Festivals
+                   Culture & Creative Legacy
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm">Día de los Muertos (Day of the Dead) celebrations</li>
-                <li className="text-gray-700 text-sm">Independence Day (September 16) with El Grito</li>
-                <li className="text-gray-700 text-sm">Las Posadas Christmas processions</li>
-                <li className="text-gray-700 text-sm">Guelaguetza festival in Oaxaca</li>
+                <li className="text-gray-700 text-sm">Art: Diego Rivera, Frida Kahlo, Rufino Tamayo.</li>
+                <li className="text-gray-700 text-sm">Architecture: Mesoamerican pyramids, colonial cathedrals, colorful Barrios</li>
+                <li className="text-gray-700 text-sm">Literature: Octavio Paz (Nobel Prize), Juan Rulfo.</li>
+                <li className="text-gray-700 text-sm">Music: Mariachi, Banda, Ranchera, Son Jarocho, Huapango.</li>
+                <li className="text-gray-700 text-sm">Dance: Jarabe Tapatío (Mexican Hat Dance), Danza de los Voladores.</li>
               </ul>
+
+
+
+
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                   Symbolism & Color
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">National colors: Green (hope), White (unity), Red (blood of heroes).</li>
+                <li className="text-gray-700 text-sm">Traditional Mexican culture uses vivid colors in everything from clothes to houses:</li>
+                <li className="text-gray-700 text-sm">Bright pink (rosa mexicano)</li>
+                <li className="text-gray-700 text-sm">Turquoise, marigold yellow, chili red, indigo, and cactus green</li>
+                <li className="text-gray-700 text-sm">Symbolic motifs: sugar skulls, serpents, eagles, corn, maguey, hearts, and sun patterns.</li>
+              </ul>
+
+            
+
+
+
+
+
+            
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                   Traditional Clothing
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Men: Guayabera shirts, Charro suits, Sarape.</li>
+                <li className="text-gray-700 text-sm">Women: Rebozos, Huipiles (embroidered blouses), Tehuana dresses (Oaxaca), colorful skirts</li>
+                <li className="text-gray-700 text-sm">Many designs represent specific regions, Indigenous identities, and festivals</li>
+              
+              </ul>
+              
+             
+
+
+
+
+
+              
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Religion & Spirituality
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Predominantly Roman Catholic (over 80%)</li>
+                <li className="text-gray-700 text-sm">Strong traditions of syncretism — Indigenous beliefs blended with Catholic saints and holidays.</li>
+                <li className="text-gray-700 text-sm">Popular figures: Virgen de Guadalupe, Santa Muerte, Día de los Muertos (Day of the Dead)</li>
+                  <li className="text-gray-700 text-sm">Rituals often include candles, marigolds, skulls, altars, incense</li>          
+              </ul>
+
+
+
+
+
+
+
+
+
+
+              
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Cuisine
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Declared an Intangible Cultural Heritage of Humanity by UNESCO</li>
+                <li className="text-gray-700 text-sm">Core ingredients: corn (maize), beans, chili peppers, avocados, squash, tomatoes, cacao</li>
+                <li className="text-gray-700 text-sm">Famous dishes: Tacos, Tamales, Mole, Pozole, Enchiladas, Chiles en Nogada.</li>
+                  <li className="text-gray-700 text-sm">Regional diversity from Yucatán (cochinita pibil) to Oaxaca (moles) to Puebla and Michoacán</li>          
+              </ul>
+              
+
+
+ 
+
+
+
+               
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Festivals & Traditions
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Día de los Muertos (Nov 1–2): Honoring ancestors with altars, marigolds, food, and skulls.</li>
+                <li className="text-gray-700 text-sm">Cinco de Mayo (Puebla): Victory over France, more popular in the U.S.</li>
+                <li className="text-gray-700 text-sm">Fiestas Patrias (September 16): Independence Day.</li>
+                  <li className="text-gray-700 text-sm">Other celebrations: Guelaguetza (Oaxaca), La Candelaria, Las Posadas, and Quinceañera traditions.</li>          
+              </ul>
+            
+
+
+
+
+
+
+
+
+
+              
+              <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Craftsmanship & Design
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Known for ceramics, embroideries, woven textiles, silverwork, masks, wood carvings, papel picado, alebrijes (fantastical animals).</li>
+                <li className="text-gray-700 text-sm">Artisanal styles vary by region and reflect deep symbolism, spirituality, and oral traditions.</li>
+                        
+              </ul>
+             
+
+
+
+
+                <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                   Global Influence
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Mexico’s cultural footprint extends through music, cuisine, festivals, and migration.</li>
+                <li className="text-gray-700 text-sm">Mexican-American communities have expanded cultural visibility through Chicano culture, Lowrider art, muralism, and political activism.</li>
+                <li className="text-gray-700 text-sm">Mexican creativity continues to shape fashion, cinema, art, and design worldwide.</li>        
+              </ul>
+
+
+
+
+
+
+
+
+
             </div>
           )}
         </div>
