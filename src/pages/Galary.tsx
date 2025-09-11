@@ -1087,50 +1087,110 @@ const Galary = () => {
               <div className="flex items-center py-2">
                 <img src="/Translator.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Language & Identity
+                 Ethnic & Linguistic Origins
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Language:</span> English (official), Welsh, Scottish Gaelic, Irish.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Identity:</span> Regional pride, monarchy, multiculturalism.</li>
+                <li className="text-gray-700 text-sm">Indigenous roots trace to Celtic peoples (Britons, Gaels, Picts) dating back over 2,000 years</li>
+                <li className="text-gray-700 text-sm">Later waves include: Roman settlers (43 CE), Anglo-Saxons, Norse Vikings, and Normans (1066)</li>
+                <li className="text-gray-700 text-sm">British identity today encompasses multiple nations:</li>\
+                <li className="text-gray-700 text-sm">English</li>
+                <li className="text-gray-700 text-sm">Scottish</li>
+                <li className="text-gray-700 text-sm">Welsh</li>
+                <li className="text-gray-700 text-sm">Northern Irish</li>
+                <li className="text-gray-700 text-sm">Language: Predominantly English, with Welsh, Scots Gaelic, Cornish, Irish also spoken and revived</li>
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/Church.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Religion & Spirituality
+                  Historical Timeline
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Traditional beliefs:</span> Anglican Christianity, Catholicism, secularism.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Key practices:</span> Royal ceremonies, holidays, literature.</li>
+                <li className="text-gray-700 text-sm">Ancient Britain: Stonehenge (~3000 BCE), Celtic tribes</li>
+                <li className="text-gray-700 text-sm">Roman Britain: (43–410 CE): Infrastructure, roads, Hadrian’s Wall</li>
+                <li className="text-gray-700 text-sm">Anglo-Saxon & Viking Ages: Germanic influence, early kingdoms</li>
+                <li className="text-gray-700 text-sm">Norman Conquest: (1066): Brought feudal system, French vocabulary</li>
+                <li className="text-gray-700 text-sm">British Empire: 16th–20th century — At its height, ruled 25% of the world.</li>
+                <li className="text-gray-700 text-sm">Industrial Revolution: Birthplace of global industrialization (1760s onward)</li>
+                <li className="text-gray-700 text-sm">Modern Britain: Post-imperial, multicultural, democratic monarchy.</li>
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/face.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Culture & Symbols
+                  Monarchy & Governance
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Attire:</span> Tweed, kilts, bowler hats, royal regalia.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Art & symbols:</span> Shakespeare, The Beatles, castles, tea, football.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Cuisine:</span> Fish and chips, roast beef, scones, tea.</li>
-                <li className="text-gray-700 text-sm"><span className="font-semibold">Values:</span> Politeness, tradition, humor, and innovation.</li>
+                <li className="text-gray-700 text-sm">Britain is a constitutional monarchy, headed by King Charles III (as of 2024)</li>
+                <li className="text-gray-700 text-sm">Parliament system originated in the 13th century; mother of modern democracy.</li>
+                <li className="text-gray-700 text-sm">British monarchic symbols: Crown, Royal Guard, Buckingham Palace, Union Jack.</li>
+                
               </ul>
 
               <div className="flex items-center py-2 mt-4">
                 <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
                 <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
-                  Traditions & Festivals
+                  Culture & Creative Heritage
                 </h2>
               </div>
               <ul className="list-disc pl-5 space-y-2 py-2">
-                <li className="text-gray-700 text-sm">Royal events and ceremonies (Trooping the Colour, Changing of the Guard)</li>
-                <li className="text-gray-700 text-sm">Bonfire Night (November 5th) with fireworks and bonfires</li>
-                <li className="text-gray-700 text-sm">Afternoon tea traditions and pub culture</li>
-                <li className="text-gray-700 text-sm">Highland Games in Scotland</li>
+                <li className="text-gray-700 text-sm">Literature: Shakespeare, Jane Austen, Charles Dickens, J.K. Rowling.</li>
+                <li className="text-gray-700 text-sm">Music: The Beatles, Rolling Stones, Adele, Elton John.</li>
+                <li className="text-gray-700 text-sm">Theatre: London’s West End, Globe Theatre.</li>
+                <li className="text-gray-700 text-sm">Cinema: James Bond, Harry Potter, Alfred Hitchcock.</li>
+                <li className="text-gray-700 text-sm">Visual Arts: Turner, Hockney, Banksy.</li>
+                <li className="text-gray-700 text-sm">Architecture: Gothic cathedrals, Tudor houses, Georgian townhomes, Brutalism.</li>
               </ul>
+
+
+              
+
+
+
+
+                <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                   Fashion & Style
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Classic tailoring: Savile Row, trench coats, tartan, tweed, Harris wool</li>
+                <li className="text-gray-700 text-sm">Subcultures: Punks (1970s), Mods (1960s), Britpop (1990s)</li>
+                <li className="text-gray-700 text-sm">Designers: Alexander McQueen, Vivienne Westwood, Stella McCartney</li>
+                
+              </ul>
+
+
+
+
+
+
+
+
+
+                <div className="flex items-center py-2 mt-4">
+                <img src="/confa.png" alt="" className="w-8 h-8 mr-2" />
+                <h2 className="text-xl md:text-2xl font-semibold text-[#1E1B20] font-manrope">
+                  Culture & Creative Heritage
+                </h2>
+              </div>
+              <ul className="list-disc pl-5 space-y-2 py-2">
+                <li className="text-gray-700 text-sm">Literature: Shakespeare, Jane Austen, Charles Dickens, J.K. Rowling.</li>
+                <li className="text-gray-700 text-sm">Music: The Beatles, Rolling Stones, Adele, Elton John.</li>
+                <li className="text-gray-700 text-sm">Theatre: London’s West End, Globe Theatre.</li>
+                <li className="text-gray-700 text-sm">Cinema: James Bond, Harry Potter, Alfred Hitchcock.</li>
+                <li className="text-gray-700 text-sm">Visual Arts: Turner, Hockney, Banksy.</li>
+                <li className="text-gray-700 text-sm">Architecture: Gothic cathedrals, Tudor houses, Georgian townhomes, Brutalism.</li>
+              </ul>
+
+
+
+
+
             </div>
           )}
         </div>
